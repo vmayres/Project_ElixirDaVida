@@ -1,90 +1,141 @@
-### Prefabs
-- Nome
-- Descrição
-- Quando são utilizados
-- Quais seus componentes
-    - Sprites
-    - Colisores
-    - Fontes de audio
-    - Scripts
-        - descreva o comportamento dos scripts
+# 🧍‍♂️ Atores do Jogo
 
-Nome: Vex
-Descrição: Player
-Quando são utilizados: Durante todo o jogo
-Componentes:
-	- Sprites: spritesheet com animações idle, walk, attack
-	- Colliders: RigidBody 2D (kinematic), Capsule Collider 2D
-	- Fontes de Audio: Sim
-	- Scripts: controle através do teclado e mouse para movimentação, ataque e interações. Seleção de poção.
+## 🎮 Vex (Player)
+**Descrição:** Personagem jogável.  
+**Quando é utilizado:** Durante todo o jogo.
 
-Nome: Golem
-Descrição: NPC que guia o usuário. Fica parado, porém o player pode interagir.
-Quando são utilizados: Quando o player entra na área de interação com ele na base
-Componentes:
-	- Sprites: spritesheet de movimento idle.
-	- Colliders: Box Collider 2D com Trigger ativado
-	- Fontes de Audio: Sim
-	- Scripts (descrição): script de fala; altera o conteúdo de acordo com a conclusão de fases para guiar o player
+**Componentes:**
+- **Sprites:** Spritesheet com animações de idle, walk, attack.
+- **Colliders:** RigidBody 2D (kinematic), Capsule Collider 2D.
+- **Fontes de Áudio:** Sim.
+- **Scripts:** Controle por teclado e mouse para movimentação, ataque e interações. Seleção de poção.
 
-Nome: Mestre Alquimista
-Descrição: boss final do jogo
-Quando são utilizados: ao chegar na última fase do jogo
-Componentes:
-	- Sprites: spritesheet de animação com idle, walk, e ataque
-	- Colliders: RigidBody 2D, Capsule Collider 2D com Trigger ativado
-	- Fontes de Audio: sim
-	- Scripts: andar e parar em posições especificas antes de ver o player. Quando o player entra em sua zona, ele anda até o player e ataca (bate). Se acertar (Trigger detectar o player) o player deve tomar dano. Se ele for acertado pelo player, deve tomar dano. Ao perder todas as vidas, morre, ou seja, o GameObject é deletado. Quando a vida está menor que a metade, entra em sua segunda fase: aumenta sua velocidade, dá 2 de dano e inclui um novo ataque (pula e ataca).
+---
 
-Nome: zumbis
-Descrição: principais inimigos do jogo
-Quando são utilizados: ao spawnar inimigos no inicio do jogo e em cada fase (dungeon)
-Componentes:
-	- Sprites: spritesheet de animação de idle, walk e combate. 2 tipos de visuais.
-	- Colliders: RigidBody 2D, Capsule Collider 2D com Trigger ativado
-	- Fontes de Audio: Sim
-	- Scripts: andar e parar em posições especificas antes de ver o player. Quando o player entra em sua zona, ele anda até o player e ataca (bate). Se acertar (Trigger detectar o player) o player deve tomar dano. Se ele for acertado pelo player, deve tomar dano. Ao perder todas as vidas, morre, ou seja, o GameObject é deletado.
+## 🪨 Golem (NPC)
+**Descrição:** NPC que guia o jogador. Permanece parado, mas interage com o player.  
+**Quando é utilizado:** Quando o jogador entra na área de interação com ele na base.
 
-Nome: Paciente zero
-Descrição: Chefe secundario
-Quando são utilizados: quando o player entrar na sala do chefe da segunda dungeon
-Componentes:
-	- Sprites: spritesheet de animação de idle, walk e combate.
-	- Colliders: RigidBody 2D, Capsule Collider 2D com Trigger ativado
-	- Fontes de Audio: Sim
-    - Scripts: andar e parar, andar até o player e atacar (bate) se dentro de seu campo de visão, tomar dano e morrer, menos de metade da vida ativa 2 fase: mais rápido
+**Componentes:**
+- **Sprites:** Spritesheet de animação idle.
+- **Colliders:** Box Collider 2D com Trigger ativado.
+- **Fontes de Áudio:** Sim.
+- **Scripts:** Script de fala; altera o conteúdo conforme o progresso do jogador nas fases.
 
-Nome: Poções
-Descrição: Poções que causam efeitos nos inimigos
-	- Gelo (congela inimigos), Fogo (causa dano), Raio (dano em sequência) e Explosão (dano em área)
-Quando são utilizados: ao utilizar o ataque do player (ataque funciona apenas com a poção selecionada)
-Componentes:
-	- Sprites: spritesheets de animação para cada tipo de poção
-	- Colliders: Box Collider 2D com Trigger ativado
-	- Fontes de Audio: sim
-	- Scripts: arremesso com range variável para cada tipo de poção, dano ao inimigo ao colidir, outros efeitos adversos: 
-		- gelo: imobiliza inimigos dirante 3s
-		- fogo: dano base
-		- explosão: collider maior de forma a causar dano em área
-		- raio: ao colidir com um inimigo, atingirá outros em sequencia a partir de uma distância x do alvo atingido
+---
 
-Nome: Vida
-Descrição: corações que medem quantas vidas o Player tem 
-Quando são utilizados: Toda vez que o Player toma dano ou ganha vida eles devem ser alterados
-Componentes:
-	- Sprites: poção de coração cheio e vazio
-	- Colliders: Não
-	- Fontes de Audio: Não
-	- Scripts: criação visual do numero de corações correspondente à vida do Player - dinâmico, deve ser alterado conforme as vidas do player.
+## 🧪 Mestre Alquimista (Boss Final)
+**Descrição:** Boss final do jogo.  
+**Quando é utilizado:** Ao chegar na última fase do jogo.
 
-Nome: itens
-Descrição: itens coletáveis do jogo (ingredientes do elixir da vida, poções de restauração de vida, armadura para vida extra) e itens de ativação de habilidade
-Quando são utilizados: espalhados pela dungeon e ao completar a dungeon.
-Componentes:
-	- Sprites: imagem do objeto e iluminação para brilho.
-	- Colliders: Collider 2D com trigger ativado
-	- Fontes de Audio: não
-	- Scripts: ao colidir com o player, devem desaparecer. Devem flutuar.
-        se for ingrediente: entra para contagem de itens do elixir da vida
-        se forem itens de vida (vida extra ou armadura): aumentam a vida atual ou máxima do player
-        se forem coletáveis de poção ou bota: desbloqueia, habilidades
+**Componentes:**
+- **Sprites:** Spritesheet com animações de idle, walk, ataque.
+- **Colliders:** RigidBody 2D, Capsule Collider 2D com Trigger ativado.
+- **Fontes de Áudio:** Sim.
+- **Scripts:**  
+  - Anda até posições específicas antes de ver o player.  
+  - Ao detectar o player, anda até ele e ataca.  
+  - Se acerta o player, causa dano.  
+  - Se for acertado, toma dano.  
+  - Ao atingir metade da vida, entra na segunda fase:  
+    - Aumenta velocidade.  
+    - Ataques causam 2 de dano.  
+    - Ganha novo ataque (salta e ataca).  
+  - Ao perder toda a vida:
+    - Se usado elixir: fica vivo e vai para cutscene. 
+    - Se não usado elixir: morre e vai para cutscene. 
+---
+
+## 🧟‍♂️ Zumbis
+**Descrição:** Inimigos comuns.  
+**Quando são utilizados:** Durante todo o jogo e em todas as fases (dungeons).
+
+**Componentes:**
+- **Sprites:** Spritesheet com animações de idle, walk e combate (2 tipos visuais).
+- **Colliders:** RigidBody 2D, Capsule Collider 2D com Trigger ativado.
+- **Fontes de Áudio:** Sim.
+- **Scripts:**  
+  - Patrulham até detectar o player.  
+  - Correm e atacam o player.  
+  - Ao acertar, causam dano.  
+  - Ao serem atingidos, perdem vida.  
+  - Ao morrer, são destruídos.
+
+---
+
+## ☣️ Paciente Zero (Mini-Boss)
+**Descrição:** Chefe secundário.  
+**Quando é utilizado:** Ao entrar na sala do chefe da segunda dungeon.
+
+**Componentes:**
+- **Sprites:** Spritesheet com animações de idle, walk e combate.
+- **Colliders:** RigidBody 2D, Capsule Collider 2D com Trigger ativado.
+- **Fontes de Áudio:** Sim.
+- **Scripts:**  
+  - Patrulha e detecta o player.  
+  - Corre e ataca.  
+  - Ao ser atingido, toma dano.  
+  - Quando vida < 50%, entra na 2ª fase (mais rápido e agressivo).  
+  - Ao morrer, é destruído.
+
+---
+
+## 🧪 Poções
+**Descrição:** Poções mágicas com efeitos únicos.  
+**Tipos:**  
+- Gelo (congela inimigos)  
+- Fogo (causa dano direto)  
+- Raio (dano em cadeia)  
+- Explosão (dano em área)
+
+**Quando são utilizadas:** Ao atacar com a poção selecionada.
+
+**Componentes:**
+- **Sprites:** Spritesheets animadas para cada tipo.
+- **Colliders:** Box Collider 2D com Trigger ativado.
+- **Fontes de Áudio:** Sim.
+- **Scripts:**  
+  - Arremesso com range específico por tipo.  
+  - Causam dano e efeitos distintos:  
+    - **Gelo:** Congela por 3s.  
+    - **Fogo:** Dano base.  
+    - **Explosão:** Área maior de dano.  
+    - **Raio:** Dano em cadeia em inimigos próximos.
+
+---
+
+## ❤️ Vida (UI)
+**Descrição:** Corações que representam a vida do jogador.  
+**Quando são utilizados:** Sempre que o player toma ou recupera dano.
+
+**Componentes:**
+- **Sprites:** Coração cheio e vazio.
+- **Colliders:** Não.
+- **Fontes de Áudio:** Não.
+- **Scripts:** Atualização dinâmica dos corações exibidos na UI conforme a vida atual do jogador.
+
+---
+
+## 🎁 Itens Coletáveis
+**Descrição:**  
+- Ingredientes do Elixir da Vida  
+- Poções de cura  
+- Equipamentos (peitoral, bota)  
+- Itens de habilidade
+
+**Quando são utilizados:** Espalhados pelas dungeons e após completá-las.
+
+**Componentes:**
+- **Sprites:** Imagem do item + brilho/iluminação.
+- **Colliders:** Collider 2D com Trigger ativado.
+- **Fontes de Áudio:** Não.
+- **Scripts:**  
+  - Ao colidir com o player, somem.  
+  - **Efeitos:**  
+    - **Ingrediente:** entra na contagem do Elixir.  
+    - **Vida extra/armadura:** aumenta vida atual ou máxima.  
+    - **Bota/poção especial:** desbloqueia nova habilidade.
+  - Devem ter animação de flutuar no cenário.
+
+---
+
