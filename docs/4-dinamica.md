@@ -1,19 +1,3 @@
-### Dinâmica
-
-- Quais os elementos de atenção e envolvimento na história?
-    - Atenção – Interesse imediato.
-    - Envolvimento – Interesse de longo prazo.
-
-- Quais os tipos de decisões do seu jogador? 
-    - Ex: Discernível; Integrado; Ambíguo; Dois gumes; Novela
-    - Onde e como eles acontecem
-
-- Guiando o Jogador:
-    - Quais os elementos de orientação direta?
-        - Onde e como eles acontecem
-    - Quais os elementos de orientação indireta?
-        - Onde e como eles acontecem
-
 # 🎮 Dinâmica
 
 ---
@@ -55,27 +39,6 @@
 - Exemplo: A Poção de Fogo atinge múltiplos inimigos, mas pode te machucar se usada muito perto.
 
 ---
-
-## 🧭 Guiando o Jogador
-
-### 🎯 Orientação Direta
-- **Onde?** Durante fases iniciais e dentro da HUD.
-- **Como?**
-  - Ícones e setas indicam missões e locais importantes.
-  - O Golem explica as mecânicas ao longo da jornada.
-  - Objetivos são listados de forma clara no menu de pausa.
-
-### 🌲 Orientação Indireta
-- **Onde?** No design dos cenários e posicionamento de elementos.
-- **Como?**
-  - Trilha visual com luzes, partículas ou objetos brilhantes.
-  - Ambientes naturalmente bloqueados guiam o jogador para o caminho correto.
-  - A música muda conforme o jogador se aproxima de áreas importantes ou perigosas.
-  - O próprio comportamento dos inimigos pode indicar a presença de segredos ou itens.
-
----
-
-
 
 ## 🧭 Guiando o Jogador
 
