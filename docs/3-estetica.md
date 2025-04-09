@@ -87,20 +87,6 @@ O **fluxo é balanceado**, com foco em aprendizado constante e sensação de pro
 
 ---
 
-## 👁️‍🗨️ Elementos de Atenção e Envolvimento
-
-### 🔦 Atenção
-- Cutscene de abertura impactante.  
-- Sistema de combate dinâmico.  
-- Progressão visível: novas poções e upgrades constantes.  
-
-### 🎭 Envolvimento
-- Mistério envolvendo o mestre.  
-- Evolução do personagem e personalização de estratégias.  
-- Escolhas com impacto narrativo (dois finais possíveis).  
-
----
-
 ## 🕹️ Experiência para o Jogador
 
 A proposta é oferecer uma **experiência de imersão e progressão contínua**, onde o jogador:
