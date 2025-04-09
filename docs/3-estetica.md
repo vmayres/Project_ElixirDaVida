@@ -78,20 +78,3 @@ O jogo ativa principalmente os **sentidos visuais e auditivos** para criar uma a
 
 ---
 
-## 🧭 Guiando o Jogador
-
-### 📌 Orientação Direta
-
-- Ícones e indicadores visuais no HUD para:
-  - Objetivos principais.
-  - Pontos de interesse.
-- Golem atua como NPC orientador nas fases iniciais.
-
-### 🧠 Orientação Indireta
-
-- O próprio **design do ambiente** guia o jogador:
-  - Barreiras visuais indicam áreas ainda inacessíveis.
-  - Inimigos e obstáculos sugerem o uso de poções específicas.
-  - Explorando, o jogador descobre itens úteis.
-
----
