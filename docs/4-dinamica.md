@@ -30,14 +30,8 @@
   - Falar ou não com NPCs.
   - Explorar ou ignorar áreas escondidas.
   - Decidir coletar itens opcionais.
+  - Decidir o final da batalha final.
 - Exemplo: Voltar ao laboratório após achar um item estranho para ouvir a dica do Golem, ou seguir adiante às cegas.
-
-### ⚖️ **Dois Gumes**
-- Decisões com risco e benefício simultâneo:
-  - Usar poções com efeitos colaterais.
-  - Fazer um dash ofensivo em vez de defensivo.
-- Exemplo: A Poção de Fogo atinge múltiplos inimigos, mas pode te machucar se usada muito perto.
-
 ---
 
 ## 🧭 Guiando o Jogador
