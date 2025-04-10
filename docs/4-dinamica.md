@@ -7,13 +7,11 @@
 ### ⚡ Atenção (Interesse imediato)
 - A abertura do jogo com uma **cutscene cinematográfica** e a transformação do mestre em zumbi cria um gancho emocional forte.
 - O mistério da floresta e a aparição do Golem despertam curiosidade imediata.
-- O visual encantador em pixel art com efeitos mágicos estimula o jogador desde os primeiros minutos.
 
 ### 🔁 Envolvimento (Interesse de longo prazo)
 - O objetivo de salvar o mestre e a jornada por **ingredientes raros** cria uma motivação contínua.
 - A progressão com **novas poções**, **habilidades**, e **fases únicas** mantém o jogo dinâmico.
 - A possibilidade de múltiplos finais e decisões críticas cria **replayability**.
-- Elementos de construção de base e fortalecimento da personagem (ex: corações extras, upgrades) reforçam o investimento do jogador.
 
 ---
 
