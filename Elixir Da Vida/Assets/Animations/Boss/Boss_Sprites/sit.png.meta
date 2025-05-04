@@ -128,9 +128,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 191
-        width: 128
-        height: 46
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: sit_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 196
-        width: 65
-        height: 49
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: sit_2
       rect:
         serializedVersion: 2
-        x: 14
-        y: 127
-        width: 49
-        height: 46
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: sit_3
       rect:
         serializedVersion: 2
-        x: 81
-        y: 127
-        width: 46
-        height: 46
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: sit_4
       rect:
         serializedVersion: 2
-        x: 140
-        y: 130
-        width: 45
-        height: 49
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: sit_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 192
-        height: 54
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: sit_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 49
-        height: 45
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: sit_7
       rect:
         serializedVersion: 2
-        x: 65
-        y: 0
-        width: 46
-        height: 45
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +303,10 @@ TextureImporter:
       name: sit_8
       rect:
         serializedVersion: 2
-        x: 135
-        y: 2
-        width: 45
-        height: 49
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,11 +321,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sit_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2c2c2049cadfb458e3e0ec1e4a265e
+      internalID: 2146522468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sit_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e847934c71b9ffe488b7bdc36770ac82
+      internalID: -479554665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sit_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86bba74e2aa0e649b3e466c89024c40
+      internalID: 911323279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6481552ee0951fb4186190f85ebadb63
     internalID: 0
     vertices: []
     indices: 
@@ -337,6 +403,8 @@ TextureImporter:
     nameFileIdTable:
       sit_0: -1780346783942680854
       sit_1: -5835926142609931317
+      sit_10: -479554665
+      sit_11: 911323279
       sit_2: -6548175957524531438
       sit_3: 1056712624508818636
       sit_4: -3289999227947949178
@@ -344,6 +412,7 @@ TextureImporter:
       sit_6: 5518955271013388159
       sit_7: 1618981678213280874
       sit_8: -3147318851508016046
+      sit_9: 2146522468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

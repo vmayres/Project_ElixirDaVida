@@ -172,10 +172,10 @@ TextureImporter:
       name: slash_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 193
-        width: 30
-        height: 49
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: slash_1
       rect:
         serializedVersion: 2
-        x: 82
+        x: 64
         y: 192
-        width: 26
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: slash_2
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 192
-        width: 27
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: slash_3
       rect:
         serializedVersion: 2
-        x: 211
+        x: 192
         y: 192
-        width: 26
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: slash_4
       rect:
         serializedVersion: 2
-        x: 275
+        x: 256
         y: 192
-        width: 36
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: slash_5
       rect:
         serializedVersion: 2
-        x: 339
+        x: 320
         y: 192
-        width: 39
-        height: 50
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: slash_6
       rect:
         serializedVersion: 2
-        x: 17
-        y: 129
-        width: 28
-        height: 51
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: slash_7
       rect:
         serializedVersion: 2
-        x: 79
-        y: 129
-        width: 29
-        height: 49
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: slash_8
       rect:
         serializedVersion: 2
-        x: 143
-        y: 129
-        width: 30
-        height: 51
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: slash_9
       rect:
         serializedVersion: 2
-        x: 203
-        y: 129
-        width: 34
-        height: 51
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: slash_10
       rect:
         serializedVersion: 2
-        x: 263
-        y: 129
-        width: 38
-        height: 51
+        x: 256
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,10 +414,10 @@ TextureImporter:
       name: slash_11
       rect:
         serializedVersion: 2
-        x: 326
-        y: 129
-        width: 39
-        height: 51
+        x: 320
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: slash_12
       rect:
         serializedVersion: 2
-        x: 17
-        y: 65
-        width: 30
-        height: 50
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,10 +458,10 @@ TextureImporter:
       name: slash_13
       rect:
         serializedVersion: 2
-        x: 83
-        y: 65
-        width: 25
-        height: 50
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: slash_14
       rect:
         serializedVersion: 2
-        x: 144
-        y: 65
-        width: 28
-        height: 48
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: slash_15
       rect:
         serializedVersion: 2
-        x: 212
-        y: 65
-        width: 26
-        height: 49
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +524,10 @@ TextureImporter:
       name: slash_16
       rect:
         serializedVersion: 2
-        x: 276
-        y: 65
-        width: 36
-        height: 50
+        x: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: slash_17
       rect:
         serializedVersion: 2
-        x: 339
-        y: 65
-        width: 40
-        height: 50
+        x: 320
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +568,10 @@ TextureImporter:
       name: slash_18
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1
-        width: 24
-        height: 51
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,10 +590,10 @@ TextureImporter:
       name: slash_19
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1
-        width: 28
-        height: 49
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,10 +612,10 @@ TextureImporter:
       name: slash_20
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1
-        width: 26
-        height: 51
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,10 +634,10 @@ TextureImporter:
       name: slash_21
       rect:
         serializedVersion: 2
-        x: 211
-        y: 1
-        width: 34
-        height: 51
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,10 +656,10 @@ TextureImporter:
       name: slash_22
       rect:
         serializedVersion: 2
-        x: 275
-        y: 1
-        width: 38
-        height: 51
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +678,10 @@ TextureImporter:
       name: slash_23
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1
-        width: 35
-        height: 51
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -700,7 +700,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b7798d2564240de42976e003c562e8c0
     internalID: 0
     vertices: []
     indices: 

@@ -172,10 +172,10 @@ TextureImporter:
       name: halfslash_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 0
         y: 192
-        width: 32
-        height: 49
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: halfslash_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 193
-        width: 34
-        height: 52
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: halfslash_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 194
-        width: 32
-        height: 52
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: halfslash_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 195
-        width: 32
-        height: 52
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: halfslash_4
       rect:
         serializedVersion: 2
-        x: 269
-        y: 195
-        width: 32
-        height: 52
+        x: 256
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: halfslash_5
       rect:
         serializedVersion: 2
-        x: 336
-        y: 193
-        width: 34
-        height: 52
+        x: 320
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: halfslash_6
       rect:
         serializedVersion: 2
-        x: 19
-        y: 129
-        width: 39
-        height: 52
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: halfslash_7
       rect:
         serializedVersion: 2
-        x: 76
-        y: 129
-        width: 40
-        height: 50
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: halfslash_8
       rect:
         serializedVersion: 2
-        x: 136
-        y: 129
-        width: 36
-        height: 49
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,9 +371,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 129
-        width: 43
-        height: 49
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,9 +393,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 129
-        width: 43
-        height: 49
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,10 +414,10 @@ TextureImporter:
       name: halfslash_11
       rect:
         serializedVersion: 2
-        x: 332
-        y: 129
-        width: 40
-        height: 50
+        x: 320
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,10 +436,10 @@ TextureImporter:
       name: halfslash_12
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 64
-        width: 32
-        height: 54
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,10 +458,10 @@ TextureImporter:
       name: halfslash_13
       rect:
         serializedVersion: 2
-        x: 80
+        x: 64
         y: 64
-        width: 33
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: halfslash_14
       rect:
         serializedVersion: 2
-        x: 145
+        x: 128
         y: 64
-        width: 34
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: halfslash_15
       rect:
         serializedVersion: 2
-        x: 210
+        x: 192
         y: 64
-        width: 34
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,10 +524,10 @@ TextureImporter:
       name: halfslash_16
       rect:
         serializedVersion: 2
-        x: 274
+        x: 256
         y: 64
-        width: 34
-        height: 51
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: halfslash_17
       rect:
         serializedVersion: 2
-        x: 336
+        x: 320
         y: 64
-        width: 33
-        height: 52
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +568,10 @@ TextureImporter:
       name: halfslash_18
       rect:
         serializedVersion: 2
-        x: 6
-        y: 1
-        width: 39
-        height: 52
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,10 +590,10 @@ TextureImporter:
       name: halfslash_19
       rect:
         serializedVersion: 2
-        x: 76
-        y: 1
-        width: 41
-        height: 50
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,10 +612,10 @@ TextureImporter:
       name: halfslash_20
       rect:
         serializedVersion: 2
-        x: 148
-        y: 1
-        width: 36
-        height: 49
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,10 +634,10 @@ TextureImporter:
       name: halfslash_21
       rect:
         serializedVersion: 2
-        x: 213
-        y: 1
-        width: 43
-        height: 49
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,10 +656,10 @@ TextureImporter:
       name: halfslash_22
       rect:
         serializedVersion: 2
-        x: 277
-        y: 1
-        width: 43
-        height: 49
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,10 +678,10 @@ TextureImporter:
       name: halfslash_23
       rect:
         serializedVersion: 2
-        x: 332
-        y: 1
-        width: 41
-        height: 50
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -700,7 +700,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 65dbea0504ef0894fb91c306b836967f
     internalID: 0
     vertices: []
     indices: 

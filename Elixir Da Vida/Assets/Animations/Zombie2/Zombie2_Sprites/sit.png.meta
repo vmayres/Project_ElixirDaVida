@@ -136,10 +136,10 @@ TextureImporter:
       name: sit_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 193
-        width: 30
-        height: 40
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,10 +158,10 @@ TextureImporter:
       name: sit_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 193
-        width: 30
-        height: 41
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +180,10 @@ TextureImporter:
       name: sit_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 203
-        width: 30
-        height: 40
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: sit_3
       rect:
         serializedVersion: 2
-        x: 14
-        y: 130
-        width: 33
-        height: 41
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: sit_4
       rect:
         serializedVersion: 2
-        x: 81
-        y: 129
-        width: 30
-        height: 42
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: sit_5
       rect:
         serializedVersion: 2
-        x: 140
-        y: 131
-        width: 28
-        height: 48
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: sit_6
       rect:
         serializedVersion: 2
-        x: 19
-        y: 65
-        width: 29
-        height: 48
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,10 +290,10 @@ TextureImporter:
       name: sit_7
       rect:
         serializedVersion: 2
-        x: 80
-        y: 65
-        width: 30
-        height: 43
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,10 +312,10 @@ TextureImporter:
       name: sit_8
       rect:
         serializedVersion: 2
-        x: 146
-        y: 65
-        width: 28
-        height: 52
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,10 +334,10 @@ TextureImporter:
       name: sit_9
       rect:
         serializedVersion: 2
-        x: 17
-        y: 2
-        width: 33
-        height: 40
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,10 +356,10 @@ TextureImporter:
       name: sit_10
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1
-        width: 30
-        height: 41
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: sit_11
       rect:
         serializedVersion: 2
-        x: 152
-        y: 3
-        width: 28
-        height: 48
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2af12c4df4df2b541a7d3a4f481259bf
     internalID: 0
     vertices: []
     indices: 
