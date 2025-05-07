@@ -1445,7 +1445,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1123033194}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: ChangeSceneFade
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5086,6 +5086,7 @@ MonoBehaviour:
   mapController: {fileID: 0}
   pausePanelRect: {fileID: 0}
   transitionDuration: 0.5
+  loadToColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1154078834
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,8 +5173,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1123033194}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_MethodName: ChangeScenePlay
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5419,7 +5420,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 3.17789
-  m_PointLightOuterRadius: 16.875313
+  m_PointLightOuterRadius: 10.882216
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -5438,7 +5439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218400083}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7193639, w: 0.6946334}
+  m_LocalRotation: {x: 0, y: 0, z: -0.66694957, w: 0.7451029}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

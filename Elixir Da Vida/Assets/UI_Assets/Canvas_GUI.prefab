@@ -221,8 +221,11 @@ MonoBehaviour:
   heartDisplay: {fileID: 8450501564251440627}
   dashBar: {fileID: 5250888545452593924}
   potionSelector: {fileID: 7154492772682313928}
+  inventoryControll: {fileID: 0}
   maxLife: 3
   lastlife: 0
+  contadorPotion: 0
+  contadorEquip: 0
 --- !u!114 &2963487978368261335
 MonoBehaviour:
   m_ObjectHideFlags: 0

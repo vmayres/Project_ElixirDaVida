@@ -32,7 +32,6 @@ public class MenuControllers : MonoBehaviour
     public Vector2 posicaoFechado = new Vector2(-500f, -200f); 
     public Vector2 posicaoAberto = new Vector2(0f, 0f);         // Centro da tela
     public bool inInventory = false;
-    private bool emTransicao = false;
 
     [Header("Mapa")]
     public MapController mapController;  // Referência ao MapController
@@ -44,6 +43,7 @@ public class MenuControllers : MonoBehaviour
     private Vector2 centerPos = Vector2.zero;
     private Vector2 leftOffset = new Vector2(-4f, 0); // Ajuste isso conforme sua resolução
 
+    public Color loadToColor = Color.black;
 
     void Start()
     {
@@ -108,8 +108,8 @@ public class MenuControllers : MonoBehaviour
     public void ToggleSound()
     {
         somLigado = !somLigado;
-        // PlayerPrefs.SetInt("SomLigado", somLigado ? 1 : 0);
-        // PlayerPrefs.Save();
+        PlayerPrefs.SetInt("SomLigado", somLigado ? 1 : 0);
+        PlayerPrefs.Save();
         AtualizarSom();
     }
 
@@ -128,8 +128,33 @@ public class MenuControllers : MonoBehaviour
         }
     }
 
+    public void ChangeScenePlay()
+    {
+        // Verifica se já viu a cutscene
+        if (!PlayerPrefs.HasKey("CutsceneVista"))
+        {
+            // Marca como vista
+            PlayerPrefs.SetInt("CutsceneVista", 1);
+            PlayerPrefs.Save();
+
+            // Vai para a cutscene
+            Initiate.Fade("CutScene", loadToColor, 0.5f);
+        }
+        else
+        {
+            // Vai direto para o jogo
+            Initiate.Fade("TestePause", loadToColor, 0.5f);
+        }
+    }
+
+    public void ChangeSceneFade(string sceneName)
+    {
+        Time.timeScale = 1;
+        Initiate.Fade(sceneName, loadToColor, 0.5f);
+    }
     public void ChangeScene(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -224,7 +249,6 @@ public class MenuControllers : MonoBehaviour
             mapController.mapaRect.anchoredPosition = mapController.posicaoFechado;
         }
 
-        emTransicao = true;
         inventarioTransform.gameObject.SetActive(true);
 
         float t = 0f;
@@ -249,12 +273,10 @@ public class MenuControllers : MonoBehaviour
         inventarioTransform.anchoredPosition = posFinal;
 
         inInventory = true;
-        emTransicao = false;
     }
 
     IEnumerator FecharInventario()
     {
-        emTransicao = true;
 
         float t = 0f;
         Vector3 escalaInicial = Vector3.one;
@@ -279,7 +301,6 @@ public class MenuControllers : MonoBehaviour
         inventarioTransform.gameObject.SetActive(false);
 
         inInventory = false;
-        emTransicao = false;
     }
 
     public void Quit()
