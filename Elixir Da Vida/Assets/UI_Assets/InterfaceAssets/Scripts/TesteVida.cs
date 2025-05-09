@@ -7,19 +7,22 @@ public class TesteVida : MonoBehaviour
     public PotionSelect potionSelector;
     public InventoryControll inventoryControll;
     // public HeartControll heartControll;
-    public int maxLife = 3;
+    public int maxLife;
     public int lastlife;
-    private int currentLife;
+    public int currentLife;
     public int contadorPotion = 0;
     public int contadorEquip = 0;
 
 
     void Start()
     {
-        currentLife = maxLife;
-        lastlife = maxLife;
-        heartDisplay.SetupHearts(maxLife);
-        heartDisplay.UpdateHearts(currentLife, lastlife);
+        maxLife = GameProgress.Instance.heartsMax;
+        currentLife = GameProgress.Instance.heartsCurrent;
+        lastlife = currentLife;
+        heartDisplay.ResetHearts(maxLife, currentLife);
+        heartDisplay.UpdateHearts(currentLife, maxLife);
+
+        contadorPotion = potionSelector.unlockedCount;
     }
 
     void Update()
@@ -59,7 +62,6 @@ public class TesteVida : MonoBehaviour
             potionSelector.RotateLeft();
 
         if (Input.GetKeyDown(KeyCode.N)){ // Teste: ganha uma poção}
-            potionSelector.UnlockNextPotion();
             inventoryControll.DesbloquearPocao(contadorPotion);
             contadorPotion+=1;
         }
@@ -70,25 +72,16 @@ public class TesteVida : MonoBehaviour
         int previousLife = currentLife;
         currentLife = Mathf.Max(0, currentLife - amount);
         heartDisplay.UpdateHearts(currentLife, previousLife);
+        GameProgress.Instance.heartsCurrent = currentLife;
     }
-
 
     void Heal(int amount)
     {
         int previousLife = currentLife;
         currentLife = Mathf.Min(maxLife, currentLife + amount);
         heartDisplay.UpdateHearts(currentLife, previousLife);
+        GameProgress.Instance.heartsCurrent = currentLife;
     }
-
-    // void IncreaseMaxLife(int amount)
-    // {
-    //     maxLife += amount;
-    //     int previousLife = currentLife;
-    //     currentLife = maxLife;
-
-    //     heartDisplay.SetupHearts(maxLife);
-    //     heartDisplay.UpdateHearts(currentLife, previousLife);
-    // }
 
     void IncreaseMaxLife(int amount)
     {
@@ -99,7 +92,6 @@ public class TesteVida : MonoBehaviour
         // heartDisplay.SetupHearts(maxLife);
         // heartDisplay.UpdateHearts(currentLife, previousLife);
         heartDisplay.ResetHearts(maxLife, currentLife);
+        GameProgress.Instance.heartsMax = currentLife;
     }
-
-
 }

@@ -11,10 +11,12 @@ public class MenuControllers : MonoBehaviour
     public GameObject settingsPanel;      // Painel de configurações
     public GameObject controlsPanel;      // Painel de controles
     public GameObject quitPanel;          // Painel de Are You Sure
+    public GameObject savesPanel;         // Painel dos saves do jogo
     private bool isPaused = false;
     private bool inSettings = false;
     private bool inControls = false;
     private bool inAreYourSure = false;
+    private bool inSavePage = false;
 
     [Header("Controle de Som")]
     public SpriteRenderer somButton;
@@ -128,24 +130,24 @@ public class MenuControllers : MonoBehaviour
         }
     }
 
-    public void ChangeScenePlay()
-    {
-        // Verifica se já viu a cutscene
-        if (!PlayerPrefs.HasKey("CutsceneVista"))
-        {
-            // Marca como vista
-            PlayerPrefs.SetInt("CutsceneVista", 1);
-            PlayerPrefs.Save();
+    // public void ChangeScenePlay()
+    // {
+    //     // Verifica se já viu a cutscene
+    //     if (!PlayerPrefs.HasKey("CutsceneVista"))
+    //     {
+    //         // Marca como vista
+    //         PlayerPrefs.SetInt("CutsceneVista", 1);
+    //         PlayerPrefs.Save();
 
-            // Vai para a cutscene
-            Initiate.Fade("CutScene", loadToColor, 0.5f);
-        }
-        else
-        {
-            // Vai direto para o jogo
-            Initiate.Fade("TestePause", loadToColor, 0.5f);
-        }
-    }
+    //         // Vai para a cutscene
+    //         Initiate.Fade("CutScene", loadToColor, 0.5f);
+    //     }
+    //     else
+    //     {
+    //         // Vai direto para o jogo
+    //         Initiate.Fade("TestePause", loadToColor, 0.5f);
+    //     }
+    // }
 
     public void ChangeSceneFade(string sceneName)
     {
@@ -186,6 +188,12 @@ public class MenuControllers : MonoBehaviour
         painel.anchoredPosition = endPos;
     }
 
+    public void TogglePlay()
+    {
+        inSavePage = !inSavePage;
+        savesPanel.SetActive(inSavePage);
+        mainPanel.SetActive(!inSavePage);
+    }
 
     // Alterna entre Menu ou PauseMenu e Configurações
     public void ToggleMainSettings()

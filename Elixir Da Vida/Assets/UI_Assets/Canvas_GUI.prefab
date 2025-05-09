@@ -59,10 +59,10 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1156711
-  m_SortingOrder: 1
+  m_SortingOrder: 500
   m_TargetDisplay: 0
 --- !u!114 &1137891875071556354
 MonoBehaviour:
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!1 &1455362427673394019
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8590433421469135615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 0
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &2087901272768607955
 GameObject:
@@ -224,6 +224,7 @@ MonoBehaviour:
   inventoryControll: {fileID: 0}
   maxLife: 3
   lastlife: 0
+  currentLife: 0
   contadorPotion: 0
   contadorEquip: 0
 --- !u!114 &2963487978368261335
@@ -485,7 +486,7 @@ RectTransform:
   m_Father: {fileID: 7309110766609657155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.074}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 2.9800186, y: 0.14000034}
   m_SizeDelta: {x: -2.25, y: -4.58}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -579,6 +580,7 @@ MonoBehaviour:
   dashBarUI: {fileID: 1455362427673394019}
   slider: {fileID: 7587118116718783935}
   rechargeTime: 2
+  dashUnlocked: 0
 --- !u!1 &5558834610772582638
 GameObject:
   m_ObjectHideFlags: 0

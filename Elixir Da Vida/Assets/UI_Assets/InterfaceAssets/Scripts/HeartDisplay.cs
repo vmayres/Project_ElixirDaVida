@@ -8,19 +8,17 @@ public class HeartDisplay : MonoBehaviour
     public GameObject heartPrefab;
     public Sprite fullHeartSprite;
     public Sprite emptyHeartSprite;
-
-    // private List<Image> hearts = new List<Image>();
     private List<HeartControll> hearts = new List<HeartControll>();
 
-    public void SetupHearts(int maxLife)
-    {
-        while (hearts.Count < maxLife)
-        {
-            GameObject heart = Instantiate(heartPrefab, transform);
-            HeartControll heartControll = heart.GetComponent<HeartControll>();
-            hearts.Add(heartControll);
-        }
-    }
+    // public void SetupHearts(int maxLife)
+    // {
+    //     while (hearts.Count < maxLife)
+    //     {
+    //         GameObject heart = Instantiate(heartPrefab, transform);
+    //         HeartControll heartControll = heart.GetComponent<HeartControll>();
+    //         hearts.Add(heartControll);
+    //     }
+    // }
 
     public void ResetHearts(int maxLife, int currentHealth)
     {
@@ -43,6 +41,7 @@ public class HeartDisplay : MonoBehaviour
             // heartControll.Pop();
             Animator animator = heart.GetComponent<Animator>();
             animator.SetTrigger("Pop");
+
         }
     }
 

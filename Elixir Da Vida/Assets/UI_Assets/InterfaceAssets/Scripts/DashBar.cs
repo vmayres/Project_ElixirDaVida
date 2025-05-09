@@ -10,7 +10,7 @@ public class DashBar : MonoBehaviour
 
     [Header("Configurações")]
     public float rechargeTime = 2f;      // Tempo total para recarregar
-    private bool dashUnlocked = false;
+    public bool dashUnlocked = false;
     private bool isRecharging = false;
 
     private CanvasGroup canvasGroup;
@@ -18,13 +18,20 @@ public class DashBar : MonoBehaviour
 
     void Start()
     {
+        
         canvasGroup = dashBarUI.GetComponent<CanvasGroup>();
         rectTransform = dashBarUI.GetComponent<RectTransform>();
 
-        // Inicializa escondido
-        canvasGroup.alpha = 0f;
-        rectTransform.localScale = Vector3.zero;
-        dashBarUI.SetActive(false);
+        if(!GameProgress.Instance.dashes){
+            // Inicializa escondido
+            canvasGroup.alpha = 0f;
+            rectTransform.localScale = Vector3.zero;
+            dashBarUI.SetActive(false);
+        }
+        else{
+            UnlockDash();
+        }
+        
 }
 
     public void UnlockDash()

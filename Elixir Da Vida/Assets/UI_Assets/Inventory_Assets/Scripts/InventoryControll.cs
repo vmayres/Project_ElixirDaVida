@@ -18,7 +18,7 @@ public class InventoryControll : MonoBehaviour
     public string[] titulosDasPocoes;
     public string[] descricoesDasPocoes;
     public SlotPocao[] slotsDasPocoes;
-    [SerializeField] private bool[] pocaoDesbloqueada = new bool[4];
+    [SerializeField] public bool[] pocaoDesbloqueada = new bool[4];
 
 
     [System.Serializable]
@@ -53,9 +53,28 @@ public class InventoryControll : MonoBehaviour
     public Image iconeElixirDaVida;
     public TextMeshProUGUI tituloElixirDaVida;
 
+    [Header("Scripts")]
+    public PotionSelect potionSelect;
     void Start()
     {
+        for (int i = 0; i < titulosDasPocoes.Length; i++)
+            pocaoDesbloqueada[i] = GameProgress.Instance.unlockedItems.Contains(titulosDasPocoes[i]);
+
+        for (int i = 0; i < tituloDosItens.Length; i++)
+            itemColetado[i] = GameProgress.Instance.unlockedItems.Contains(tituloDosItens[i]);
+
+        for (int i = 0; i < titulosDosEquipamentos.Length; i++)
+            equipamentoColetado[i] = GameProgress.Instance.unlockedItems.Contains(titulosDosEquipamentos[i]);
+
         AtualizarInventario();
+
+        if(pocaoDesbloqueada.Length != 0){
+            for(int i = 0; i < pocaoDesbloqueada.Length; i++){
+                if (pocaoDesbloqueada[i])
+                    potionSelect.UnlockNextPotion();
+            }
+        }
+
     }
 
     // void Update(){
@@ -67,7 +86,12 @@ public class InventoryControll : MonoBehaviour
         if (IndiceValido(indice, pocaoDesbloqueada.Length))
         {
             pocaoDesbloqueada[indice] = true;
+
+            if (!GameProgress.Instance.unlockedItems.Contains(titulosDasPocoes[indice]))
+                GameProgress.Instance.unlockedItems.Add(titulosDasPocoes[indice]);
+
             AtualizarInventario();
+            potionSelect.UnlockNextPotion();
         }
     }
 
@@ -76,6 +100,10 @@ public class InventoryControll : MonoBehaviour
         if (IndiceValido(indice, itemColetado.Length))
         {
             itemColetado[indice] = true;
+
+            if (!GameProgress.Instance.unlockedItems.Contains(tituloDosItens[indice]))
+                GameProgress.Instance.unlockedItems.Add(tituloDosItens[indice]);
+
             AtualizarInventario();
         }
     }
@@ -85,6 +113,10 @@ public class InventoryControll : MonoBehaviour
         if (IndiceValido(indice, equipamentoColetado.Length))
         {
             equipamentoColetado[indice] = true;
+
+            if (!GameProgress.Instance.unlockedItems.Contains(titulosDosEquipamentos[indice]))
+                GameProgress.Instance.unlockedItems.Add(titulosDosEquipamentos[indice]);
+
             AtualizarInventario();
         }
     }

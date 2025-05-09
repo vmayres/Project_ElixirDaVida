@@ -13,7 +13,7 @@ public class PotionSelect : MonoBehaviour
     public List<float> alphas; // ex: [0.3f, 0.6f, 1f, 0.6f]
 
 
-    private int unlockedCount = 0;
+    public int unlockedCount = 0;
     private int currentIndex = 0;
 
     public void UnlockNextPotion()
