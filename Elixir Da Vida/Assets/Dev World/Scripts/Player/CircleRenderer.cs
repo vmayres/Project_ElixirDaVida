@@ -17,7 +17,7 @@ public class CircleRenderer : MonoBehaviour
     private LineRenderer lineRenderer;
     private PlayerControl.PotionType lastPotion;
 
-    void Awake()
+    private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.loop = true;
@@ -32,7 +32,18 @@ public class CircleRenderer : MonoBehaviour
         player = GetComponentInParent<PlayerControl>();
     }
 
-    void Update()
+    private void Start() // assim que iniciar a cena ele vai pegar cria o circulo
+    {
+        if (player == null) return;
+
+        PotionBase potionBase = GetPotionBaseFromPrefab(player.ActivePotion);
+        if (potionBase != null)
+        {
+            SetRadius(potionBase.range);
+        }
+    }
+
+    private void Update()
     {
         if (player == null) return;
 
@@ -52,17 +63,10 @@ public class CircleRenderer : MonoBehaviour
 
     private PotionBase GetPotionBaseFromPrefab(PlayerControl.PotionType type)
     {
-        GameObject prefab = type switch
-        {
-            PlayerControl.PotionType.Fire => firePotionPrefab,
-            PlayerControl.PotionType.Ice => icePotionPrefab,
-            PlayerControl.PotionType.Earth => earthPotionPrefab,
-            PlayerControl.PotionType.Lightning => lightningPotionPrefab,
-            _ => null
-        };
-
+        GameObject prefab = player.GetPotionPrefab(type);
         return prefab != null ? prefab.GetComponent<PotionBase>() : null;
     }
+
 
     public void SetRadius(float newRadius)
     {

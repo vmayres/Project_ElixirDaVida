@@ -57,6 +57,10 @@ MonoBehaviour:
   dashCooldown: 1
   invulnerabilityTimeAfterHit: 1
   isInvulnerable: 0
+  firePotionPrefab: {fileID: 3443957356103181600, guid: 25638f458a7014c448b831cd9146f2d7, type: 3}
+  icePotionPrefab: {fileID: 6352109810439241696, guid: 34d4ed4dc202ee34981901e5e5e24a3e, type: 3}
+  earthPotionPrefab: {fileID: 4600336580212695233, guid: a8a9fb6c70d509341907e4976fa072b3, type: 3}
+  lightningPotionPrefab: {fileID: 696654920869680246, guid: f76b4015c745664468228b46a4f35915, type: 3}
   _activePotion: 0
   circleRenderer: {fileID: 3345629295383975011}
 --- !u!58 &7949835688758323804

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +26,12 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private bool isInvulnerable = false;
 
     // Lista das possíveis poções (precisa ser pública!)
+    [Header("Prefabs das Poções")]
+    [SerializeField] public GameObject firePotionPrefab;
+    [SerializeField] public GameObject icePotionPrefab;
+    [SerializeField] public GameObject earthPotionPrefab;
+    [SerializeField] public GameObject lightningPotionPrefab;
+
     public enum PotionType
     {
         Fire,
@@ -34,10 +39,22 @@ public class PlayerControl : MonoBehaviour
         Earth,
         Lightning,
     }
-    [Header("Poções")]
+
     [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Poção ativa inicial
     private HashSet<PotionType> unlockedPotions = new HashSet<PotionType>();    // Poções desbloqueadas
-    public PotionType ActivePotion{ get => _activePotion; }
+    public PotionType ActivePotion { get => _activePotion; }
+
+    public GameObject GetPotionPrefab(PotionType type)
+    {
+        return type switch
+        {
+            PotionType.Fire => firePotionPrefab,
+            PotionType.Ice => icePotionPrefab,
+            PotionType.Earth => earthPotionPrefab,
+            PotionType.Lightning => lightningPotionPrefab,
+            _ => null
+        };
+    }
 
     // Current room
     private Collider2D _currentRoom;
@@ -49,16 +66,15 @@ public class PlayerControl : MonoBehaviour
     // 
     void Start()
     {
-        circleRenderer.SetRadius(2.5f);
 
     }
 
     //
     void Update()
     {
+        // === MOVIMENTO ===
         if (!isDashing)
         {
-            // === MOVIMENTO ===
             //  retorna os inputs do eixo horizontal e vertical ( valores entre -1 e 1)
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");

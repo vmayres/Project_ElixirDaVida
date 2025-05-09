@@ -8,12 +8,6 @@ public class TargetCursor : MonoBehaviour
     [SerializeField] private CircleRenderer circleRenderer;
     [SerializeField] private Camera mainCamera;
 
-    [Header("Prefabs das Poções")]
-    [SerializeField] private GameObject firePotionPrefab;
-    [SerializeField] private GameObject icePotionPrefab;
-    [SerializeField] private GameObject earthPotionPrefab;
-    [SerializeField] private GameObject lightningPotionPrefab;
-
     [SerializeField] private float potionCooldown = 2.0f;
     private float timeSinceLastPotion = Mathf.Infinity;
 
@@ -57,13 +51,6 @@ public class TargetCursor : MonoBehaviour
 
     private GameObject GetPotionPrefab(PlayerControl.PotionType type)
     {
-        return type switch
-        {
-            PlayerControl.PotionType.Fire => firePotionPrefab,
-            PlayerControl.PotionType.Ice => icePotionPrefab,
-            PlayerControl.PotionType.Earth => earthPotionPrefab,
-            PlayerControl.PotionType.Lightning => lightningPotionPrefab,
-            _ => null
-        };
+        return player.GetPotionPrefab(type); // Agora vem do PlayerControl
     }
 }

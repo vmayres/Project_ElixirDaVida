@@ -11,30 +11,68 @@ public abstract class PotionBase : MonoBehaviour
     public float damage;        // Dano causado pela poção
     public float range;         // Alcance da poção
     public float effectRadius;  // Raio do efeito da poção
-    public float cooldown;      // Tempo de recarga da poção
 
     // Metodos da super classe
     public virtual IEnumerator LaunchPotion(Vector3 targetPosition, Vector3 spawnPosition)
     {
-        // Instancia o próprio prefab no ponto de spawn
         GameObject potionInstance = Instantiate(gameObject, spawnPosition, Quaternion.identity);
 
-        // Move a poção em linha reta até o ponto de destino
-        while (potionInstance != null && Vector3.Distance(potionInstance.transform.position, targetPosition) > 0.1f)
+        float distance = Vector3.Distance(spawnPosition, targetPosition);
+        float duration = distance / 12f;
+        float elapsedTime = 0f;
+
+        float h0 = 1.55f;
+        float a = 0.505f;
+        float maxRange = range;
+
+        float sixtyPercent = 0.6f * maxRange;
+        float maxHeight = h0 + maxRange / 2f - a * Mathf.Pow(maxRange / 2f, 2);
+
+        bool isShortRange = distance <= sixtyPercent;
+
+        while (elapsedTime < duration && potionInstance != null)
         {
-            // Calcula a direção do movimento
-            Vector3 direction = (targetPosition - potionInstance.transform.position).normalized;
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / duration);
 
-            // Move a poção na direção do alvo
-            potionInstance.transform.position += direction * Time.deltaTime * 5f; // Ajuste a velocidade conforme necessário
+            // Movimento linear (XY ou XZ, conforme o seu jogo usa)
+            Vector3 newPosition = Vector3.Lerp(spawnPosition, targetPosition, t);
+            potionInstance.transform.position = newPosition;
 
-            yield return null; // Espera até o próximo frame
+            // Escala visual
+            float scaleFactor;
+
+            if (isShortRange)
+            {
+                // Lançamento curto: escala de 1.0 até 0.5 linearmente
+                scaleFactor = Mathf.Lerp(1f, 0.5f, t);
+            }
+            else
+            {
+                // Lançamento longo com arco visual
+                if (t <= 0.5f)
+                {
+                    // Primeira metade: cresce de 1.0 até 1.2
+                    scaleFactor = Mathf.Lerp(1f, 1.2f, t / 0.5f);
+                }
+                else
+                {
+                    // Segunda metade: diminui de 1.2 até 0.5
+                    scaleFactor = Mathf.Lerp(1.2f, 0.5f, (t - 0.5f) / 0.5f);
+                }
+            }
+
+            potionInstance.transform.localScale = new Vector3(scaleFactor, scaleFactor, 1f);
+
+            yield return null;
         }
 
-        // Destroi a poção ao chegar no destino
         if (potionInstance != null)
         {
             Destroy(potionInstance);
         }
     }
+
+
+
 }
