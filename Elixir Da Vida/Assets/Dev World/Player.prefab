@@ -294,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8070221257369098952}
   - component: {fileID: 7754195723877659937}
+  - component: {fileID: 9193860023048779154}
   m_Layer: 0
   m_Name: TargetCursor
   m_TagString: Untagged
@@ -371,6 +372,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9193860023048779154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212792428539085748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6defa7f44c1aa438e7b8c0b22bfb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 5560890612974099939}
+  player: {fileID: 8714079564077493750}
+  circleRenderer: {fileID: 3345629295383975011}
+  mainCamera: {fileID: 0}
+  potionCooldown: 2
 --- !u!1 &4744472718483319264
 GameObject:
   m_ObjectHideFlags: 0

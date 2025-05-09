@@ -41,8 +41,11 @@ public class PlayerControl : MonoBehaviour
     }
 
     [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Poção ativa inicial
-    private HashSet<PotionType> unlockedPotions = new HashSet<PotionType>();    // Poções desbloqueadas
-    public PotionType ActivePotion { get => _activePotion; }
+    public PotionType ActivePotion
+    {
+        get => _activePotion;
+        set => _activePotion = value;
+    }
 
     public GameObject GetPotionPrefab(PotionType type)
     {

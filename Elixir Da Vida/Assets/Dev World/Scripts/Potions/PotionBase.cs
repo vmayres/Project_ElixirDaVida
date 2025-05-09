@@ -8,7 +8,7 @@ Ela contém propriedades comuns a todas as poções, como nome, dano e tempo de rec
 public abstract class PotionBase : MonoBehaviour
 {
     public string potionName;   // Nome da poção
-    public float damage;        // Dano causado pela poção
+    public int damage;        // Dano causado pela poção
     public float range;         // Alcance da poção
     public float effectRadius;  // Raio do efeito da poção
 

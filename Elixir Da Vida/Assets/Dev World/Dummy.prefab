@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1923558997260920259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.035, y: 0.356, z: 0.12040404}
+  m_LocalPosition: {x: 0, y: 0.356, z: 0.12040404}
   m_LocalScale: {x: 0.8, y: 0.67, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,6 +97,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5285250736046379499}
   - component: {fileID: 704552543027197697}
+  - component: {fileID: -6798821163576842573}
+  - component: {fileID: -2548415836387889380}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Enemy
@@ -113,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 9144909198869267938}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.45, y: 2.56, z: -0.12040404}
+  m_LocalPosition: {x: 0, y: 0, z: -0.12040404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -156,3 +158,30 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.45
+--- !u!114 &-6798821163576842573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144909198869267938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee34bfa06fa2ccf4488933becbd8497b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 3
+  frozen: 0
+  spriteRenderer: {fileID: 2190644129194956104}
+--- !u!114 &-2548415836387889380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144909198869267938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd4fc62517549c40a1ad1c35e62e893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

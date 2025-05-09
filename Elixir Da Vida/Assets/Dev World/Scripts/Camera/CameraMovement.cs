@@ -23,7 +23,7 @@ public class CameraMovement : MonoBehaviour
         cam = GetComponent<Camera>();
         cam.orthographicSize = defaultSize;
         cam.clearFlags = CameraClearFlags.SolidColor;
-        cam.backgroundColor = new Color(0.192f, 0.301f, 0.474f, 1f);
+        cam.backgroundColor = new Color(0, 0, 0, 1f);
 
         if (player != null)
         {

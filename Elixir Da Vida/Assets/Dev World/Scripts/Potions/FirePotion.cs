@@ -1,10 +1,10 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FirePotion : PotionBase
 {
-    [SerializeField] private Sprite aoeSprite; // Arraste um sprite circular vermelho no inspector
-    [SerializeField] private float aoeDuration = 1.0f;
+    private float aoeDuration = 1.0f;
 
     public override IEnumerator LaunchPotion(Vector3 targetPosition, Vector3 spawnPosition)
     {
@@ -13,19 +13,28 @@ public class FirePotion : PotionBase
 
         Debug.Log("[FIRE] Efeito de queimadura iniciado.");
 
-        // === VISUAL: cria sprite de efeito ao redor ===
-        GameObject aoeVisual = new GameObject("FireAoEVisual");
+        // === VISUAL: cria círculo de efeito ao redor usando LineRenderer ===
+        GameObject aoeVisual = new GameObject("AoEVisual");
         aoeVisual.transform.position = targetPosition;
 
-        SpriteRenderer renderer = aoeVisual.AddComponent<SpriteRenderer>();
-        renderer.sprite = aoeSprite;
-        renderer.sortingOrder = 10;
-        renderer.color = new Color(1f, 0f, 0f, 0.5f); // vermelho translúcido
+        LineRenderer lineRenderer = aoeVisual.AddComponent<LineRenderer>();
+        lineRenderer.loop = true;
+        lineRenderer.useWorldSpace = false;
+        lineRenderer.widthMultiplier = 0.02f;
+        lineRenderer.positionCount = 64; // Número de segmentos do círculo
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
 
-        float scale = effectRadius * 2f;
-        aoeVisual.transform.localScale = new Vector3(scale, scale, 1f);
+        float radius = effectRadius;
+        for (int i = 0; i < lineRenderer.positionCount; i++)
+        {
+            float angle = i * Mathf.PI * 2f / lineRenderer.positionCount;
+            lineRenderer.SetPosition(i, new Vector3(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0f));
+        }
 
         // === LÓGICA: detectar inimigos na área (2D) ===
+        HashSet<Collider2D> hitEnemies = new HashSet<Collider2D>();
         float elapsed = 0f;
 
         while (elapsed < aoeDuration)
@@ -33,9 +42,21 @@ public class FirePotion : PotionBase
             Collider2D[] hits = Physics2D.OverlapCircleAll(targetPosition, effectRadius);
             foreach (var hit in hits)
             {
-                if (hit.CompareTag("Enemy"))
+                if (hit.CompareTag("Enemy") && !hitEnemies.Contains(hit))
                 {
-                    Debug.Log($" Inimigo atingido: {hit.name}");
+                    hitEnemies.Add(hit);
+                    Debug.Log($"Inimigo atingido: {hit.name}");
+
+                    // Chama a função TakeDamage no objeto atingido
+                    var enemyManager = hit.GetComponent<EnemyManager>();
+                    if (enemyManager != null)
+                    {
+                        enemyManager.TakeDamage(this.damage); // Aplica 1 de dano
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Objeto com tag 'Enemy' não possui o componente 'EnemyManager': {hit.name}");
+                    }
                 }
             }
 
@@ -44,7 +65,5 @@ public class FirePotion : PotionBase
         }
 
         Destroy(aoeVisual);
-
-        Debug.Log("[FIRE] Área de efeito finalizada.");
     }
 }

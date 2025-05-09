@@ -4401,8 +4401,8 @@ GameObject:
   - component: {fileID: 124711351424350516}
   - component: {fileID: 5014547686656961155}
   m_Layer: 0
-  m_Name: Room 4D
-  m_TagString: Untagged
+  m_Name: Room Ice
+  m_TagString: RoomArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

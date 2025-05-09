@@ -244,6 +244,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1272,7 +1285,53 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire+Sparks-Sheet_0: 217192047022198102
+      Fire+Sparks-Sheet_1: 8303181775059068671
+      Fire+Sparks-Sheet_10: 1536862608720429792
+      Fire+Sparks-Sheet_11: 3381009316842742974
+      Fire+Sparks-Sheet_12: -3607181129209868120
+      Fire+Sparks-Sheet_13: 8318965886586237296
+      Fire+Sparks-Sheet_14: 6884212500481897058
+      Fire+Sparks-Sheet_15: 4349624604732716229
+      Fire+Sparks-Sheet_16: 7109618459706400087
+      Fire+Sparks-Sheet_17: -7397284978699198343
+      Fire+Sparks-Sheet_18: 8996960041040069454
+      Fire+Sparks-Sheet_19: -3907661587718967264
+      Fire+Sparks-Sheet_2: -8862926905630745024
+      Fire+Sparks-Sheet_20: 1085780861199399601
+      Fire+Sparks-Sheet_21: -4271602974165755970
+      Fire+Sparks-Sheet_22: 1827399536247292292
+      Fire+Sparks-Sheet_23: 6770502878285232742
+      Fire+Sparks-Sheet_24: -716826795070325261
+      Fire+Sparks-Sheet_25: 3294978171305010
+      Fire+Sparks-Sheet_26: 6909282684130310427
+      Fire+Sparks-Sheet_27: 5124380955904944675
+      Fire+Sparks-Sheet_28: 4603750524737627574
+      Fire+Sparks-Sheet_29: 2226128810570319151
+      Fire+Sparks-Sheet_3: 6355986036165056768
+      Fire+Sparks-Sheet_30: -4318424234601643559
+      Fire+Sparks-Sheet_31: 1887526765986503641
+      Fire+Sparks-Sheet_32: -4041441002827526602
+      Fire+Sparks-Sheet_33: 891129521785254605
+      Fire+Sparks-Sheet_34: 8503176994424473202
+      Fire+Sparks-Sheet_35: -2149038688528260682
+      Fire+Sparks-Sheet_36: 1015379523216432701
+      Fire+Sparks-Sheet_37: 2955942908739552101
+      Fire+Sparks-Sheet_38: -5356588295738123741
+      Fire+Sparks-Sheet_39: -2449161137804187295
+      Fire+Sparks-Sheet_4: 6709944746019152292
+      Fire+Sparks-Sheet_40: 2910144499765267094
+      Fire+Sparks-Sheet_41: 8738694254688158113
+      Fire+Sparks-Sheet_42: 439083269993186962
+      Fire+Sparks-Sheet_43: 7694883448263193425
+      Fire+Sparks-Sheet_44: 2084970164999192653
+      Fire+Sparks-Sheet_45: -925195588106281848
+      Fire+Sparks-Sheet_5: 6364517135629600063
+      Fire+Sparks-Sheet_6: 6863232869044346232
+      Fire+Sparks-Sheet_7: 2839084523745776301
+      Fire+Sparks-Sheet_8: 3796017995452969559
+      Fire+Sparks-Sheet_9: 1734234170855555213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,8 +8,6 @@ public class room : MonoBehaviour
     {
         IsWall,
         IsOpen,
-        IsFragile,
-        Islocked,
     }
 
     [SerializeField] public DoorState upDoorState = DoorState.IsWall;
@@ -22,13 +20,8 @@ public class room : MonoBehaviour
     [SerializeField] public GameObject leftDoor;
     [SerializeField] public GameObject rightDoor;
 
-    [SerializeField] private Sprite wallSprite; // Sprite para portas do tipo Wall
-    [SerializeField] private Sprite fragileSprite; // Sprite para portas do tipo Fragile
-    [SerializeField] private Sprite lockedSprite; // Sprite para portas do tipo Locked
-
     private void OnValidate()
     {
-        // Atualiza o estado das portas com base no DoorState
         UpdateDoorState(upDoor, upDoorState);
         UpdateDoorState(downDoor, downDoorState);
         UpdateDoorState(leftDoor, leftDoorState);
@@ -39,45 +32,28 @@ public class room : MonoBehaviour
     {
         if (door == null) return;
 
-        var spriteRenderer = door.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null) return;
-
         switch (state)
         {
             case DoorState.IsWall:
-                door.SetActive(true);
-                spriteRenderer.sprite = wallSprite;
+                door.SetActive(true); // Porta está ativa como parede
                 break;
 
             case DoorState.IsOpen:
-                door.SetActive(false);
-                break;
-
-            case DoorState.IsFragile:
-                door.SetActive(true);
-                spriteRenderer.sprite = fragileSprite;
-                break;
-
-            case DoorState.Islocked:
-                door.SetActive(true);
-                spriteRenderer.sprite = wallSprite; // Ou outro sprite para portas trancadas
+                door.SetActive(false); // Porta está desativada (aberta)
                 break;
         }
     }
 
-    // Função para destruir/desativar uma porta do tipo Fragile
     public void OpenDoor(GameObject door)
     {
         if (door == null) return;
-        door.SetActive(false);
-        Debug.Log($"{door.name} foi aberta//destruida!");
+        UpdateDoorState(door, DoorState.IsOpen);
     }
 
-    private void Update()
+    public void CloseDoor(GameObject door)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            OpenDoor(upDoor);
-        }
+        if (door == null) return;
+        UpdateDoorState(door, DoorState.IsWall);
     }
+
 }
