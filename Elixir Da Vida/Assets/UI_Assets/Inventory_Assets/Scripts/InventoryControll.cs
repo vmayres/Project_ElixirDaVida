@@ -1,194 +1,232 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 using System.Linq;
+
 
 public class InventoryControll : MonoBehaviour
 {
-    [System.Serializable]
-    public class SlotPocao
+    public static InventoryControll Instance { get; private set; }
+
+    [Header("Save")]
+    public List<InventoryEntry> pocoes;
+    public List<InventoryEntry> itens;
+    public List<InventoryEntry> equipamentos;
+
+    public int maxHealth;
+    public int currentHealth;
+    public bool dashUnlocked;
+
+    private void Awake()
     {
-        public Image icone;
-        public TextMeshProUGUI titulo;
-        public TextMeshProUGUI descricao;
-    }
-    [Header("Poções")]
-    public Sprite sombraSprite;
-    public Sprite[] iconesDasPocoes;
-    public string[] titulosDasPocoes;
-    public string[] descricoesDasPocoes;
-    public SlotPocao[] slotsDasPocoes;
-    [SerializeField] public bool[] pocaoDesbloqueada = new bool[4];
-
-
-    [System.Serializable]
-    public class SlotItem
-    {
-        public Image icone;
-        public TextMeshProUGUI titulo;
-    }
-    [Header("Itens do Elixir")]
-    public Sprite[] iconesDosItens;
-    public string[] tituloDosItens;
-    public string[] descricoesDosItens;
-    public SlotItem[] slotsDosItens;
-    [SerializeField] private bool[] itemColetado = new bool[3];
-
-    
-    [System.Serializable]
-    public class SlotEquipamento
-    {
-        public Image icone;
-        public TextMeshProUGUI titulo;
-        public TextMeshProUGUI descricao;
-    }
-    [Header("Equipamentos")]
-    public Sprite[] iconesDosEquipamentos;
-    public string[] titulosDosEquipamentos;
-    public string[] descricoesDosEquipamentos;
-    public SlotEquipamento[] slotsDosEquipamentos;
-    [SerializeField] private bool[] equipamentoColetado = new bool[3];
-
-    [Header("Elixir da Vida")]
-    public Image iconeElixirDaVida;
-    public TextMeshProUGUI tituloElixirDaVida;
-
-    [Header("Scripts")]
-    public PotionSelect potionSelect;
-    void Start()
-    {
-        for (int i = 0; i < titulosDasPocoes.Length; i++)
-            pocaoDesbloqueada[i] = GameProgress.Instance.unlockedItems.Contains(titulosDasPocoes[i]);
-
-        for (int i = 0; i < tituloDosItens.Length; i++)
-            itemColetado[i] = GameProgress.Instance.unlockedItems.Contains(tituloDosItens[i]);
-
-        for (int i = 0; i < titulosDosEquipamentos.Length; i++)
-            equipamentoColetado[i] = GameProgress.Instance.unlockedItems.Contains(titulosDosEquipamentos[i]);
-
-        AtualizarInventario();
-
-        if(pocaoDesbloqueada.Length != 0){
-            for(int i = 0; i < pocaoDesbloqueada.Length; i++){
-                if (pocaoDesbloqueada[i])
-                    potionSelect.UnlockNextPotion();
-            }
-        }
-
-    }
-
-    // void Update(){
-    //     AtualizarInventario();
-    // }
-
-    public void DesbloquearPocao(int indice)
-    {
-        if (IndiceValido(indice, pocaoDesbloqueada.Length))
+        if (Instance == null)
         {
-            pocaoDesbloqueada[indice] = true;
-
-            if (!GameProgress.Instance.unlockedItems.Contains(titulosDasPocoes[indice]))
-                GameProgress.Instance.unlockedItems.Add(titulosDasPocoes[indice]);
-
-            AtualizarInventario();
-            potionSelect.UnlockNextPotion();
-        }
-    }
-
-    public void ColetarItem(int indice)
-    {
-        if (IndiceValido(indice, itemColetado.Length))
-        {
-            itemColetado[indice] = true;
-
-            if (!GameProgress.Instance.unlockedItems.Contains(tituloDosItens[indice]))
-                GameProgress.Instance.unlockedItems.Add(tituloDosItens[indice]);
-
-            AtualizarInventario();
-        }
-    }
-
-    public void ColetarEquipamento(int indice)
-    {
-        if (IndiceValido(indice, equipamentoColetado.Length))
-        {
-            equipamentoColetado[indice] = true;
-
-            if (!GameProgress.Instance.unlockedItems.Contains(titulosDosEquipamentos[indice]))
-                GameProgress.Instance.unlockedItems.Add(titulosDosEquipamentos[indice]);
-
-            AtualizarInventario();
-        }
-    }
-
-    void AtualizarInventario()
-    {
-        for (int i = 0; i < slotsDasPocoes.Length; i++)
-            AtualizarSlotPocao(slotsDasPocoes[i], i);
-
-        for (int i = 0; i < slotsDosItens.Length; i++)
-            AtualizarSlotItem(slotsDosItens[i], i);
-
-        for (int i = 0; i < slotsDosEquipamentos.Length; i++)
-            AtualizarSlotEquipamento(slotsDosEquipamentos[i], i);
-
-        AtualizarElixirDaVida();
-    }
-
-    void AtualizarSlotPocao(SlotPocao slot, int i)
-    {
-        slot.icone.sprite = iconesDasPocoes[i];
-        slot.icone.color = pocaoDesbloqueada[i] ? Color.white : Color.black;
-        slot.titulo.text = pocaoDesbloqueada[i] ? titulosDasPocoes[i] : "???";
-        // slot.descricao.text = pocaoDesbloqueada[i] ? descricoesDasPocoes[i] : "???";
-
-        var tooltip = slot.icone.GetComponent<DescriptionSlot>();
-        if (tooltip != null)
-        {
-            tooltip.descricao = pocaoDesbloqueada[i] ? descricoesDasPocoes[i] : "???";
-        }
-    }
-
-    void AtualizarSlotItem(SlotItem slot, int i)
-    {
-        slot.icone.sprite = iconesDosItens[i];
-        slot.icone.color = itemColetado[i] ? Color.white : Color.black;
-        slot.titulo.text = itemColetado[i] ? tituloDosItens[i] : "???";
-
-        var tooltip = slot.icone.GetComponent<DescriptionSlot>();
-        if (tooltip != null)
-        {
-            tooltip.descricao = itemColetado[i] ? descricoesDosItens[i] : "???";
-        }
-    }
-
-    void AtualizarSlotEquipamento(SlotEquipamento slot, int i)
-    {
-        slot.icone.sprite = iconesDosEquipamentos[i];
-        slot.icone.color = equipamentoColetado[i] ? Color.white : Color.black;
-        slot.titulo.text = equipamentoColetado[i] ? titulosDosEquipamentos[i] : "???";
-        // slot.descricao.text = equipamentoColetado[i] ? descricoesDosEquipamentos[i] : "???";
-
-        var tooltip = slot.icone.GetComponent<DescriptionSlot>();
-        if (tooltip != null)
-        {
-            tooltip.descricao = equipamentoColetado[i] ? descricoesDosEquipamentos[i] : "???";
-        }
-    }
-
-    void AtualizarElixirDaVida()
-    {
-        if (itemColetado.All(c => c))
-        {
-            iconeElixirDaVida.color = new Color(1f, 0f, 0.278f);
-            tituloElixirDaVida.text = "Elixir da Vida";
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Para manter o objeto entre cenas
         }
         else
         {
-            iconeElixirDaVida.color = Color.black;
-            tituloElixirDaVida.text = "????";
+            Destroy(gameObject); // Garante que só exista uma instância do singleton
         }
+        
     }
 
-    bool IndiceValido(int i, int tamanho) => i >= 0 && i < tamanho;
+    void Start(){
+        CarregarDoProgressoSalvo();
+    }
+
+    public void CarregarDoProgressoSalvo()
+    {
+        if (GameProgress.Instance == null)
+        {
+            Debug.LogWarning("GameProgress.Instance está nulo. Certifique-se de carregar o progresso primeiro.");
+            return;
+        }
+
+        // Atualizando o estado de desbloqueio para os itens de poções
+        foreach (var pocao in pocoes)
+        {
+            // Verifica se o id da poção está na lista de desbloqueados
+            pocao.desbloqueada = GameProgress.Instance.pocoes.Any(p => p.id == pocao.id); // Comparando com o id de InventoryEntry
+        }
+
+        // Atualizando o estado de desbloqueio para os itens
+        foreach (var item in itens)
+        {
+            item.desbloqueada = GameProgress.Instance.itens.Any(i => i.id == item.id); // Comparando com o id de InventoryEntry
+        }
+
+        // Atualizando o estado de desbloqueio para os equipamentos
+        foreach (var equipamento in equipamentos)
+        {
+            equipamento.desbloqueada = GameProgress.Instance.equipamentos.Any(e => e.id == equipamento.id); // Comparando com o id de InventoryEntry
+        }  
+
+        maxHealth = GameProgress.Instance.heartsMax;
+        currentHealth = GameProgress.Instance.heartsCurrent;
+        dashUnlocked = GameProgress.Instance.dashes;
+
+        Debug.Log("Inventário carregado do GameProgress.");
+    }
+
+
+    // [System.Serializable]
+    // public class Slot
+    // {
+    //     public Image icone;
+    //     public TextMeshProUGUI titulo;
+    // }
+
+    // [Header("Poções")]
+    // public Slot[] slotsDasPocoes;
+
+    // [Header("Itens do Elixir")]
+    // public Slot[] slotsDosItens;
+
+    // [Header("Equipamentos")]
+    // public Slot[] slotsDosEquipamentos;
+
+    // [Header("Elixir da Vida")]
+    // public Image iconeElixirDaVida;
+    // public TextMeshProUGUI tituloElixirDaVida;
+
+    // [Header("Scripts")]
+    // public PotionSelect potionSelect;
+    // public InventoryDisplay inventoryDisplay;
+    // public DashBar dashBar;
+    // public bool dashUnlocked = false;
+
+    // private Dictionary<string, InventoryEntry> dicionarioPocoes;
+    // private Dictionary<string, InventoryEntry> dicionarioItens;
+    // private Dictionary<string, InventoryEntry> dicionarioEquipamentos;
+
+    // void Awake()
+    // {
+    //     if (Instance != null && Instance != this)
+    //     {
+    //         Destroy(gameObject);
+    //         return;
+    //     }
+    //     Instance = this;
+    //     DontDestroyOnLoad(gameObject);
+        // dicionarioPocoes = inventoryData.pocoes.ToDictionary(p => p.id);
+        // dicionarioItens = inventoryData.itens.ToDictionary(i => i.id);
+        // dicionarioEquipamentos = inventoryData.equipamentos.ToDictionary(e => e.id);
+    // }
+
+
+    // void Start()
+    // {
+        // VerificarDesbloqueio(inventoryData.pocoes);
+        // VerificarDesbloqueio(inventoryData.itens);
+        // VerificarDesbloqueio(inventoryData.equipamentos);
+
+        // // inventoryDisplay.AtualizarInventario();
+
+        // foreach (var entry in inventoryData.pocoes)
+        // {
+        //     if (entry.desbloqueada)
+        //         potionSelect.UnlockPotionByID(entry.id);
+        // }
+    // }
+
+    // void VerificarDesbloqueio(List<InventoryEntry> lista)
+    // {
+    //     foreach (var entry in lista)
+    //         entry.desbloqueada = GameProgress.Instance.unlockedItems.Contains(entry.id);
+    // }
+
+
+    // public void DesbloquearItem(string id, CategoriaItem categoria)
+    // {
+    //     Dictionary<string, InventoryEntry> dicionario = null;
+
+    //     switch (categoria)
+    //     {
+    //         case CategoriaItem.Pocao:
+    //             dicionario = dicionarioPocoes;
+    //             break;
+    //         case CategoriaItem.Item:
+    //             dicionario = dicionarioItens;
+    //             break;
+    //         case CategoriaItem.Equipamento:
+    //             dicionario = dicionarioEquipamentos;
+    //             break;
+    //     }
+
+    //     if (dicionario != null && dicionario.TryGetValue(id, out var entry))
+    //     {
+    //         entry.desbloqueada = true;
+    //         // if (!GameProgress.Instance.unlockedItems.Contains(id))
+    //         //     GameProgress.Instance.unlockedItems.Add(id);
+
+    //         //Poções
+    //         if (categoria == CategoriaItem.Pocao)
+    //             potionSelect.UnlockPotionByID(id);
+
+    //         //Equipamentos
+    //         if (categoria == CategoriaItem.Equipamento && id == "boots")
+    //         {
+    //             dashBar.UnlockDash();
+    //             dashUnlocked = true;
+    //             Debug.Log("Dash desbloqueado!");
+    //         }
+    //         if (categoria == CategoriaItem.Equipamento && id == "armour")
+    //         {
+    //             TesteVida.Instance.IncreaseMaxLife(1);
+    //         }
+    //         if (categoria == CategoriaItem.Equipamento && id == "crossbow")
+    //         {
+    //             //codigo de desbloquear mais range
+    //         }
+
+    //         AtualizarInventario();
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning($"Item com id '{id}' não encontrado na categoria '{categoria}'");
+    //     }
+    // }
+
+    // void AtualizarInventario()
+    // {
+    //     for (int i = 0; i < slotsDasPocoes.Length; i++)
+    //         AtualizarSlot(slotsDasPocoes[i], inventoryData.pocoes, i);
+
+    //     for (int i = 0; i < slotsDosItens.Length; i++)
+    //         AtualizarSlot(slotsDosItens[i], inventoryData.itens, i);
+
+    //     for (int i = 0; i < slotsDosEquipamentos.Length; i++)
+    //         AtualizarSlot(slotsDosEquipamentos[i], inventoryData.equipamentos, i);
+
+    //     AtualizarElixirDaVida();
+    // }
+
+    // void AtualizarSlot(Slot slot, List<InventoryEntry> lista, int i)
+    // {
+    //     if (i < 0 || i >= lista.Count) return;
+    //     var entry = lista[i];
+    //     slot.icone.sprite = entry.icone;
+    //     slot.icone.color = entry.desbloqueada ? Color.white : Color.black;
+    //     slot.titulo.text = entry.desbloqueada ? entry.titulo : "???";
+
+    //     var tooltip = slot.icone.GetComponent<DescriptionSlot>();
+    //     if (tooltip != null)
+    //         tooltip.descricao = entry.desbloqueada ? entry.descricao : "???";
+    // }
+
+    // void AtualizarElixirDaVida()
+    // {
+    //     if (inventoryData.itens.All(c => c.desbloqueada))
+    //     {
+    //         iconeElixirDaVida.color = new Color(1f, 0f, 0.278f);
+    //         tituloElixirDaVida.text = "Elixir da Vida";
+    //     }
+    //     else
+    //     {
+    //         iconeElixirDaVida.color = Color.black;
+    //         tituloElixirDaVida.text = "????";
+    //     }
+    // }
 }

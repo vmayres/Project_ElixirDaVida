@@ -1,61 +1,93 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using System.Collections.Generic;
 
 
 public class PotionSelect : MonoBehaviour
 {
-    public List<GameObject> potions; // Ordem das poções
-    public List<Vector3> positions;  // Posições ao redor da roda (4 pontos)
-    public List<Vector3> scales;     // Escalas para cada ponto (ex: [pequena, média, GRANDE, média])
-    public List<float> alphas; // ex: [0.3f, 0.6f, 1f, 0.6f]
-
-
-    public int unlockedCount = 0;
-    private int currentIndex = 0;
-
-    public void UnlockNextPotion()
+    [System.Serializable]
+    public class PotionData
     {
-        if (unlockedCount < potions.Count)
+        public string id;
+        public GameObject potionPrefab;
+        public GameObject uiImage;
+    }
+
+    public PotionData[] potions;
+    private int selectedPotionIndex = 0;
+
+    [Header("Configurações de Animação")]
+    public Vector3[] positions;
+    public Vector3[] scales;
+    public float[] alphas;
+
+    void Start()
+    {
+        AtualizarSelecaoVisual();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            SelecionarProxima();
+        else if (Input.GetKeyDown(KeyCode.Q))
+            SelecionarAnterior();
+    }
+
+    void SelecionarProxima()
+    {
+        int total = GetUnlockedPotionIndices().Count;
+        if (total == 0) return;
+        selectedPotionIndex = (selectedPotionIndex + 1) % total;
+        AtualizarSelecaoVisual();
+    }
+
+    void SelecionarAnterior()
+    {
+        int total = GetUnlockedPotionIndices().Count;
+        if (total == 0) return;
+        selectedPotionIndex = (selectedPotionIndex - 1 + total) % total;
+        AtualizarSelecaoVisual();
+    }
+
+    void AtualizarSelecaoVisual()
+    {
+        // Lista de poções ativas (desbloqueadas)
+        var poçõesDesbloqueadas = new List<int>();
+        for (int i = 0; i < potions.Length; i++)
         {
-            potions[unlockedCount].SetActive(true);
-            unlockedCount++;
-            UpdatePotionPositions();
+            if (potions[i].uiImage != null && potions[i].uiImage.activeSelf)
+            {
+                poçõesDesbloqueadas.Add(i);
+            }
+        }
+
+        // Impede index inválido
+        if (selectedPotionIndex >= poçõesDesbloqueadas.Count)
+            selectedPotionIndex = 0;
+
+        for (int i = 0; i < poçõesDesbloqueadas.Count && i < positions.Length; i++)
+        {
+            int indexNaLista = (i - selectedPotionIndex + poçõesDesbloqueadas.Count) % poçõesDesbloqueadas.Count;
+            int indexReal = poçõesDesbloqueadas[i];
+
+            GameObject uiObj = potions[indexReal].uiImage;
+            RectTransform rt = uiObj.GetComponent<RectTransform>();
+            Image img = uiObj.GetComponent<Image>();
+
+            if (rt != null && img != null)
+            {
+                StartCoroutine(AnimatePotion(rt, positions[indexNaLista], scales[indexNaLista], alphas[indexNaLista], img));
+            }
         }
     }
 
-    public void RotateLeft()
-    {
-        if (unlockedCount <= 1) return;
-        currentIndex = (currentIndex + 1) % unlockedCount;
-        UpdatePotionPositions();
-    }
 
-    public void RotateRight()
+    IEnumerator AnimatePotion(RectTransform rt, Vector3 targetPos, Vector3 targetScale, float targetAlpha, Image img)
     {
-        if (unlockedCount <= 1) return;
-        currentIndex = (currentIndex - 1 + unlockedCount) % unlockedCount;
-        UpdatePotionPositions();
-    }
-
-    void UpdatePotionPositions()
-    {
-        for (int i = 0; i < unlockedCount; i++)
-        {
-            int posIndex = (i - currentIndex + unlockedCount) % unlockedCount;
-            StartCoroutine(AnimatePotion(potions[i], positions[posIndex], scales[posIndex], alphas[posIndex]));
-        }
-    }
-
-    IEnumerator AnimatePotion(GameObject potion, Vector3 targetPos, Vector3 targetScale, float targetAlpha)
-    {
-        RectTransform rt = potion.GetComponent<RectTransform>();
-        Image img = potion.GetComponent<Image>();
-
         Vector3 startPos = rt.anchoredPosition;
-        Vector3 startScale = potion.transform.localScale;
+        Vector3 startScale = rt.localScale;
         float startAlpha = img.color.a;
 
         float duration = 0.25f;
@@ -67,7 +99,7 @@ public class PotionSelect : MonoBehaviour
             float progress = Mathf.SmoothStep(0, 1, t / duration);
 
             rt.anchoredPosition = Vector3.Lerp(startPos, targetPos, progress);
-            potion.transform.localScale = Vector3.Lerp(startScale, targetScale, progress);
+            rt.localScale = Vector3.Lerp(startScale, targetScale, progress);
 
             Color c = img.color;
             c.a = Mathf.Lerp(startAlpha, targetAlpha, progress);
@@ -76,12 +108,42 @@ public class PotionSelect : MonoBehaviour
             yield return null;
         }
 
-        // Garantir que termina exatamente no alvo
         rt.anchoredPosition = targetPos;
-        potion.transform.localScale = targetScale;
+        rt.localScale = targetScale;
         Color finalColor = img.color;
         finalColor.a = targetAlpha;
         img.color = finalColor;
     }
 
+    public GameObject GetSelectedPotionPrefab()
+    {
+        return potions[selectedPotionIndex].potionPrefab;
+    }
+
+    public void UnlockPotionByID(string id)
+    {
+        foreach (var potion in potions)
+        {
+            if (potion.id == id && potion.uiImage != null)
+            {
+                potion.uiImage.SetActive(true);
+                AtualizarSelecaoVisual();
+                Debug.Log($"Poção '{id}' desbloqueada.");
+                return;
+            }
+        }
+
+        Debug.LogWarning($"Nenhuma poção com ID '{id}' foi encontrada no PotionSelect.");
+    }
+
+    List<int> GetUnlockedPotionIndices()
+    {
+        List<int> list = new List<int>();
+        for (int i = 0; i < potions.Length; i++)
+        {
+            if (potions[i].uiImage != null && potions[i].uiImage.activeSelf)
+                list.Add(i);
+        }
+        return list;
+    }
 }

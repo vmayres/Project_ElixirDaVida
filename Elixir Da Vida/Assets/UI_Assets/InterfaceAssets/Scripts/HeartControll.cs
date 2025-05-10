@@ -30,12 +30,12 @@ public class HeartControll : MonoBehaviour
         spriteRenderer.sprite = fullHeartSprite; // Garantir que o sprite final é o cheio
     }
 
-    public void SetEmpty()
-    {
-        animator.ResetTrigger("Gain");
-        animator.ResetTrigger("Lose");
-        spriteRenderer.sprite = emptyHeartSprite;
-    }
+    // public void SetEmpty()
+    // {
+    //     animator.ResetTrigger("Gain");
+    //     animator.ResetTrigger("Lose");
+    //     spriteRenderer.sprite = emptyHeartSprite;
+    // }
 
     // public void Pop()
     // {

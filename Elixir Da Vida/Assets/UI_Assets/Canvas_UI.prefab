@@ -7758,6 +7758,93 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3816334083912468924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4631363001069309963}
+  - component: {fileID: 1032052082471166457}
+  m_Layer: 0
+  m_Name: mapa(2)_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4631363001069309963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816334083912468924}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.5799866, y: -59.599976, z: -8154.1855}
+  m_LocalScale: {x: 44.279995, y: 44.279995, z: 44.279995}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1277906862662962389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1032052082471166457
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816334083912468924}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1156711
+  m_SortingLayer: 1
+  m_SortingOrder: 5000
+  m_Sprite: {fileID: 6753667123050262741, guid: c61d9447066354a4fb35873473d7c9bf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 16, y: 12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &3823163454094877398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8737,6 +8824,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4631363001069309963}
   - {fileID: 4128636643801623946}
   - {fileID: 5814633861037678921}
   - {fileID: 7568311696260229101}
@@ -15276,8 +15364,7 @@ MonoBehaviour:
   confirmDeletePanel: {fileID: 0}
   loadToColor: {r: 0, g: 0, b: 0, a: 1}
   testeVida: {fileID: 0}
-  inventoryController: {fileID: 8764826188666721497}
-  dashBar: {fileID: 0}
+  inventoryDisplay: {fileID: 0}
 --- !u!1 &7425736423539657978
 GameObject:
   m_ObjectHideFlags: 0
@@ -17314,82 +17401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000767df73b801548806b795d740389d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sombraSprite: {fileID: 6342558707131439644, guid: 10941c1647fcebf4683e97fdf7364a3e, type: 3}
-  iconesDasPocoes:
-  - {fileID: 960099310682468794, guid: b08fa8912cc8133479c53d4d9621d876, type: 3}
-  - {fileID: -1169675433603995751, guid: b08fa8912cc8133479c53d4d9621d876, type: 3}
-  - {fileID: 7612028094638372450, guid: b08fa8912cc8133479c53d4d9621d876, type: 3}
-  - {fileID: -1171790437229086565, guid: b08fa8912cc8133479c53d4d9621d876, type: 3}
-  titulosDasPocoes:
-  - Fire
-  - Earth
-  - Ice
-  - Lightining
-  descricoesDasPocoes:
-  - Damage
-  - Earthquake
-  - Freeze
-  - Electrocute
-  slotsDasPocoes:
-  - icone: {fileID: 4352425982661733564}
-    titulo: {fileID: 3809814688385355938}
-    descricao: {fileID: 4947095673561697878}
-  - icone: {fileID: 1455063240301315442}
-    titulo: {fileID: 3349326252689476434}
-    descricao: {fileID: 6128742272911066627}
-  - icone: {fileID: 1174195334591224692}
-    titulo: {fileID: 8440587638866932748}
-    descricao: {fileID: 5454146373637899275}
-  - icone: {fileID: 7343567744328655958}
-    titulo: {fileID: 5339006974599204247}
-    descricao: {fileID: 6377929480098079444}
-  pocaoDesbloqueada: 00000000
-  iconesDosItens:
-  - {fileID: -8540037476490131968, guid: ba1906c6bedfe394bb8f8bd39960cc81, type: 3}
-  - {fileID: -8540037476490131968, guid: ba1906c6bedfe394bb8f8bd39960cc81, type: 3}
-  - {fileID: -8540037476490131968, guid: ba1906c6bedfe394bb8f8bd39960cc81, type: 3}
-  tituloDosItens:
-  - Item 1
-  - Item 2
-  - Item 3
-  descricoesDosItens:
-  - Item 1
-  - Item 2
-  - Item 3
-  slotsDosItens:
-  - icone: {fileID: 2478312024854679194}
-    titulo: {fileID: 3308680161047843710}
-  - icone: {fileID: 5066594949055191568}
-    titulo: {fileID: 4926604587826198830}
-  - icone: {fileID: 338384154566480673}
-    titulo: {fileID: 7115922928693931544}
-  itemColetado: 000000
-  iconesDosEquipamentos:
-  - {fileID: -1149615948937016739, guid: ec17bfd4485f5de4799bc37279045546, type: 3}
-  - {fileID: 21300000, guid: 25bc3b9fb0ec72a4281067f4548185d7, type: 3}
-  - {fileID: 6062530703685243295, guid: bc9774c27edd74e47971485f686f485c, type: 3}
-  titulosDosEquipamentos:
-  - Armour
-  - Boots of Speed
-  - Crossbow
-  descricoesDosEquipamentos:
-  - Gives more life
-  - Gives dash ability
-  - More range
-  slotsDosEquipamentos:
-  - icone: {fileID: 208890097043041672}
-    titulo: {fileID: 7567862851801795932}
-    descricao: {fileID: 1112371777882338788}
-  - icone: {fileID: 7593318522606446507}
-    titulo: {fileID: 5139140199942091442}
-    descricao: {fileID: 351751867710427884}
-  - icone: {fileID: 7142867513594254842}
-    titulo: {fileID: 5558619069075923737}
-    descricao: {fileID: 8613014101633774689}
-  equipamentoColetado: 000000
-  iconeElixirDaVida: {fileID: 9135582301226099020}
-  tituloElixirDaVida: {fileID: 1747421183627654575}
-  potionSelect: {fileID: 0}
+  pocoes: []
+  itens: []
+  equipamentos: []
 --- !u!114 &6437929568805712908
 MonoBehaviour:
   m_ObjectHideFlags: 0

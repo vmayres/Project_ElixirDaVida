@@ -4,13 +4,13 @@ using System.Collections;
 
 public class DashBar : MonoBehaviour
 {
+
     [Header("Componentes")]
     public GameObject dashBarUI;         // O GameObject que contém o Slider
     public Slider slider;                // O componente Slider
 
     [Header("Configurações")]
-    public float rechargeTime = 2f;      // Tempo total para recarregar
-    public bool dashUnlocked = false;
+    public float rechargeTime = 1f;      // Tempo total para recarregar
     private bool isRecharging = false;
 
     private CanvasGroup canvasGroup;
@@ -18,25 +18,24 @@ public class DashBar : MonoBehaviour
 
     void Start()
     {
-        
         canvasGroup = dashBarUI.GetComponent<CanvasGroup>();
         rectTransform = dashBarUI.GetComponent<RectTransform>();
 
-        if(!GameProgress.Instance.dashes){
+        if (!GameProgress.Instance.dashes)
+        {
             // Inicializa escondido
             canvasGroup.alpha = 0f;
             rectTransform.localScale = Vector3.zero;
             dashBarUI.SetActive(false);
         }
-        else{
+        else
+        {
             UnlockDash();
         }
-        
-}
+    }
 
     public void UnlockDash()
     {
-        dashUnlocked = true;
         dashBarUI.SetActive(true);
         slider.value = 1f;
         StartCoroutine(FadeInGrow());
@@ -66,11 +65,9 @@ public class DashBar : MonoBehaviour
         rectTransform.localScale = Vector3.one;
     }
 
-
-
     public bool TryUseDash()
     {
-        if (!dashUnlocked || slider.value < 1f || isRecharging)
+        if (slider.value < 1f || isRecharging)
             return false;
 
         slider.value = 0f;

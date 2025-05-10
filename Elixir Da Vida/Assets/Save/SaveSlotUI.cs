@@ -12,13 +12,14 @@ public class SaveSlotUI : MonoBehaviour
 
     [Header("Scripts")]
     public TesteVida testeVida;
-    public InventoryControll inventoryController;
-    public DashBar dashBar;
+    public InventoryDisplay inventoryDisplay;
+    // public InventoryControll inventoryController;
+    // public DashBar dashBar;
 
 
     void Start()
     {
-        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Menu")
+        if(SceneManager.GetActiveScene().name == "Menu")
             DisplaySaveInfo();
     }
 
@@ -52,7 +53,10 @@ public class SaveSlotUI : MonoBehaviour
         {
             GameProgress.Instance.currentSlot = slotIndex;
             GameProgress.Instance.playTime = 0f;
-            GameProgress.Instance.unlockedItems.Clear();
+            // GameProgress.Instance.unlockedItems.Clear();
+            GameProgress.Instance.pocoes.Clear();
+            GameProgress.Instance.itens.Clear();
+            GameProgress.Instance.equipamentos.Clear();
             GameProgress.Instance.heartsMax = 3;
             GameProgress.Instance.heartsCurrent = 3;
             GameProgress.Instance.dashes = false;
@@ -80,13 +84,14 @@ public class SaveSlotUI : MonoBehaviour
 
     public void OnClickSave()
     {
-        GameProgress.Instance.currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        GameProgress.Instance.heartsMax = testeVida.maxLife;
-        GameProgress.Instance.heartsCurrent = testeVida.currentLife;
-        GameProgress.Instance.dashes = dashBar.dashUnlocked;
-
-
-        // public List<string> unlockedItems = new List<string>();
+        GameProgress.Instance.currentScene = SceneManager.GetActiveScene().name;
+        GameProgress.Instance.heartsMax = InventoryControll.Instance.maxHealth;
+        GameProgress.Instance.heartsCurrent = InventoryControll.Instance.currentHealth;
+        GameProgress.Instance.dashes = InventoryControll.Instance.dashUnlocked;
+        
+        GameProgress.Instance.pocoes = InventoryControll.Instance.pocoes;
+        GameProgress.Instance.itens = InventoryControll.Instance.itens;
+        GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos;
 
         Vector2 posicao = new Vector2(0f, 0f);
         GameProgress.Instance.playerPosition = posicao;

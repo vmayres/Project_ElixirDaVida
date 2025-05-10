@@ -1,4 +1,4 @@
-    using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
@@ -129,25 +129,6 @@ public class MenuControllers : MonoBehaviour
             somButton.sprite = spriteAtual;
         }
     }
-
-    // public void ChangeScenePlay()
-    // {
-    //     // Verifica se já viu a cutscene
-    //     if (!PlayerPrefs.HasKey("CutsceneVista"))
-    //     {
-    //         // Marca como vista
-    //         PlayerPrefs.SetInt("CutsceneVista", 1);
-    //         PlayerPrefs.Save();
-
-    //         // Vai para a cutscene
-    //         Initiate.Fade("CutScene", loadToColor, 0.5f);
-    //     }
-    //     else
-    //     {
-    //         // Vai direto para o jogo
-    //         Initiate.Fade("TestePause", loadToColor, 0.5f);
-    //     }
-    // }
 
     public void ChangeSceneFade(string sceneName)
     {
