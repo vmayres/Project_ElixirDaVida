@@ -50,11 +50,20 @@ public class GameProgress : MonoBehaviour
         data.dashes = dashes;
         data.saveSlot = currentSlot;
 
-        data.pocoes = pocoes;
-        data.itens = itens;
-        data.equipamentos = equipamentos;
+        // data.pocoes = pocoes.ToList();
+        // data.itens = itens.ToList();
+        // data.equipamentos = equipamentos.ToList();
+
+        data.pocoes = pocoes.Select(p => new InventoryEntry(p)).ToList();
+        data.itens = itens.Select(i => new InventoryEntry(i)).ToList();
+        data.equipamentos = equipamentos.Select(e => new InventoryEntry(e)).ToList();
+
+
 
         SaveSystem.SaveGame(data);
+        string path = SaveSystem.GetSavePath(data.saveSlot);
+        Debug.Log($"Salvando no slot {data.saveSlot}, caminho: {path}");
+
     }
 
     public void Load(int slot)
@@ -72,9 +81,12 @@ public class GameProgress : MonoBehaviour
             dashes = data.dashes;
             currentSlot = slot;
 
-            pocoes = data.pocoes ?? new List<InventoryEntry>();
-            itens = data.itens ?? new List<InventoryEntry>();
-            equipamentos = data.equipamentos ?? new List<InventoryEntry>();
+            pocoes = data.pocoes;
+            itens = data.itens;
+            equipamentos = data.equipamentos;
+
+            string path = SaveSystem.GetSavePath(slot);
+            Debug.Log($"Carregando do slot {slot}, caminho: {path}");
 
         }
     }

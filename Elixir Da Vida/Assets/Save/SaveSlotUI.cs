@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Linq;
+
 
 public class SaveSlotUI : MonoBehaviour
 {
@@ -10,9 +12,9 @@ public class SaveSlotUI : MonoBehaviour
     public GameObject confirmDeletePanel;
     public Color loadToColor = Color.black;
 
-    [Header("Scripts")]
-    public TesteVida testeVida;
-    public InventoryDisplay inventoryDisplay;
+    // [Header("Scripts")]
+    // public TesteVida testeVida;
+    // public InventoryDisplay inventoryDisplay;
     // public InventoryControll inventoryController;
     // public DashBar dashBar;
 
@@ -53,16 +55,30 @@ public class SaveSlotUI : MonoBehaviour
         {
             GameProgress.Instance.currentSlot = slotIndex;
             GameProgress.Instance.playTime = 0f;
-            // GameProgress.Instance.unlockedItems.Clear();
-            GameProgress.Instance.pocoes.Clear();
-            GameProgress.Instance.itens.Clear();
-            GameProgress.Instance.equipamentos.Clear();
+
+            foreach (var item in GameProgress.Instance.pocoes)
+            {
+                item.desbloqueada = false;
+            }
+
+            foreach (var item in GameProgress.Instance.itens)
+            {
+                item.desbloqueada = false;
+            }
+
+            foreach (var item in GameProgress.Instance.equipamentos)
+            {
+                item.desbloqueada = false;
+            }
+            
             GameProgress.Instance.heartsMax = 3;
             GameProgress.Instance.heartsCurrent = 3;
             GameProgress.Instance.dashes = false;
             GameProgress.Instance.currentScene = "CutScene"; // ou fase inicial
             Initiate.Fade("CutScene", loadToColor, 0.5f);
         }
+
+        InventoryControll.Instance.CarregarDoProgressoSalvo();
     }
 
     public void OnClickDeleteSlot()
@@ -89,9 +105,15 @@ public class SaveSlotUI : MonoBehaviour
         GameProgress.Instance.heartsCurrent = InventoryControll.Instance.currentHealth;
         GameProgress.Instance.dashes = InventoryControll.Instance.dashUnlocked;
         
-        GameProgress.Instance.pocoes = InventoryControll.Instance.pocoes;
-        GameProgress.Instance.itens = InventoryControll.Instance.itens;
-        GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos;
+        // GameProgress.Instance.pocoes = InventoryControll.Instance.pocoes;
+        // GameProgress.Instance.itens = InventoryControll.Instance.itens;
+        // GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos;
+
+        GameProgress.Instance.pocoes = InventoryControll.Instance.pocoes.Select(p => new InventoryEntry(p)).ToList();
+        GameProgress.Instance.itens = InventoryControll.Instance.itens.Select(i => new InventoryEntry(i)).ToList();
+        GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos.Select(e => new InventoryEntry(e)).ToList();
+
+
 
         Vector2 posicao = new Vector2(0f, 0f);
         GameProgress.Instance.playerPosition = posicao;

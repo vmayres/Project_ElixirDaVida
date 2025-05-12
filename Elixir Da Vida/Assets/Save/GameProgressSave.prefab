@@ -44,10 +44,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fd39a9371828449beaa89fc0a46318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pocoes:
+  - id: fire
+    titulo: Fire
+    descricao: Causes fire damage where it lands.
+    desbloqueada: 0
+    categoria: 0
+  - id: ice
+    titulo: Ice
+    descricao: Freezes enemies and water.
+    desbloqueada: 0
+    categoria: 0
+  - id: earth
+    titulo: Earth
+    descricao: "Causes an earthquake. Can damage enemies, yourself\_and\_rocks."
+    desbloqueada: 0
+    categoria: 0
+  - id: lightining
+    titulo: Lightining
+    descricao: Electrocute enemies. Can chain electrocute.
+    desbloqueada: 0
+    categoria: 0
+  itens:
+  - id: memory
+    titulo: Frozen Memory
+    descricao: "Memories preserved in water for a long\_time."
+    desbloqueada: 0
+    categoria: 1
+  - id: blood
+    titulo: Blood
+    descricao: Blood from an emotional hurt enemie.
+    desbloqueada: 0
+    categoria: 1
+  - id: root
+    titulo: Ancient Root
+    descricao: "Root from the oldest tree in the\_forest."
+    desbloqueada: 0
+    categoria: 1
+  equipamentos:
+  - id: armour
+    titulo: Armour
+    descricao: Gives extra protection (1 extra heart).
+    desbloqueada: 0
+    categoria: 2
+  - id: boots
+    titulo: Boots of Speed
+    descricao: Gives extra speed (unlocks dash ability).
+    desbloqueada: 0
+    categoria: 2
+  - id: crossbow
+    titulo: Crossbow
+    descricao: Gives extra range when shooting potions.
+    desbloqueada: 0
+    categoria: 2
   currentScene: 
   playTime: 0
   playerPosition: {x: 0, y: 0, z: 0}
-  unlockedItems: []
-  hearts: 3
+  heartsMax: 3
+  heartsCurrent: 3
   dashes: 0
   currentSlot: 1

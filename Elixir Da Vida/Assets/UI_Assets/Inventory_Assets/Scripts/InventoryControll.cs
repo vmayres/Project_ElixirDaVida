@@ -32,10 +32,6 @@ public class InventoryControll : MonoBehaviour
         
     }
 
-    void Start(){
-        CarregarDoProgressoSalvo();
-    }
-
     public void CarregarDoProgressoSalvo()
     {
         if (GameProgress.Instance == null)
@@ -44,24 +40,35 @@ public class InventoryControll : MonoBehaviour
             return;
         }
 
-        // Atualizando o estado de desbloqueio para os itens de poções
-        foreach (var pocao in pocoes)
+        // Atualiza as propriedades das poções existentes (sem substituir os objetos)
+        foreach (var entry in pocoes)
         {
-            // Verifica se o id da poção está na lista de desbloqueados
-            pocao.desbloqueada = GameProgress.Instance.pocoes.Any(p => p.id == pocao.id); // Comparando com o id de InventoryEntry
+            var dadosSalvos = GameProgress.Instance.pocoes.FirstOrDefault(p => p.id == entry.id);
+            if (dadosSalvos != null)
+            {
+                entry.desbloqueada = dadosSalvos.desbloqueada;
+                // Se quiser copiar mais campos (como quantidade, upgrades etc), adicione aqui
+            }
         }
 
-        // Atualizando o estado de desbloqueio para os itens
-        foreach (var item in itens)
+        foreach (var entry in itens)
         {
-            item.desbloqueada = GameProgress.Instance.itens.Any(i => i.id == item.id); // Comparando com o id de InventoryEntry
+            var dadosSalvos = GameProgress.Instance.itens.FirstOrDefault(i => i.id == entry.id);
+            if (dadosSalvos != null)
+            {
+                entry.desbloqueada = dadosSalvos.desbloqueada;
+            }
         }
 
-        // Atualizando o estado de desbloqueio para os equipamentos
-        foreach (var equipamento in equipamentos)
+        foreach (var entry in equipamentos)
         {
-            equipamento.desbloqueada = GameProgress.Instance.equipamentos.Any(e => e.id == equipamento.id); // Comparando com o id de InventoryEntry
-        }  
+            var dadosSalvos = GameProgress.Instance.equipamentos.FirstOrDefault(e => e.id == entry.id);
+            if (dadosSalvos != null)
+            {
+                entry.desbloqueada = dadosSalvos.desbloqueada;
+            }
+        }
+
 
         maxHealth = GameProgress.Instance.heartsMax;
         currentHealth = GameProgress.Instance.heartsCurrent;

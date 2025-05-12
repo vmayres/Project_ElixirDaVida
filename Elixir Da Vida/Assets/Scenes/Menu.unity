@@ -999,13 +999,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d16cc16dadb35346b8e5d72ef2dec15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotIndex: 1
+  slotIndex: 2
   saveInfoText: {fileID: 1285360017}
   delButton: {fileID: 1545321752}
   confirmDeletePanel: {fileID: 1611507916}
   loadToColor: {r: 0, g: 0, b: 0, a: 1}
-  testeVida: {fileID: 0}
-  inventoryDisplay: {fileID: 0}
 --- !u!114 &220825176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7253,7 +7251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1160982498
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7360,13 +7358,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d16cc16dadb35346b8e5d72ef2dec15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotIndex: 0
+  slotIndex: 1
   saveInfoText: {fileID: 517288392}
   delButton: {fileID: 758063414}
   confirmDeletePanel: {fileID: 1611507916}
   loadToColor: {r: 0, g: 0, b: 0, a: 1}
-  testeVida: {fileID: 0}
-  inventoryDisplay: {fileID: 0}
 --- !u!1 &1183483553
 GameObject:
   m_ObjectHideFlags: 0
@@ -9860,13 +9856,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d16cc16dadb35346b8e5d72ef2dec15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotIndex: 2
+  slotIndex: 3
   saveInfoText: {fileID: 122854937}
   delButton: {fileID: 1876899980}
   confirmDeletePanel: {fileID: 1611507916}
   loadToColor: {r: 0, g: 0, b: 0, a: 1}
-  testeVida: {fileID: 0}
-  inventoryDisplay: {fileID: 0}
 --- !u!114 &1683007755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11148,6 +11142,9 @@ MonoBehaviour:
     descricao: Gives extra range when shooting potions.
     desbloqueada: 0
     categoria: 2
+  maxHealth: 0
+  currentHealth: 0
+  dashUnlocked: 0
 --- !u!4 &2062605031
 Transform:
   m_ObjectHideFlags: 0
@@ -11301,6 +11298,162 @@ PrefabInstance:
     - target: {fileID: 5349467886727937091, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: m_Name
       value: GameProgressSave
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[0].id
+      value: memory
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[1].id
+      value: blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[2].id
+      value: root
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[0].id
+      value: fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[1].id
+      value: ice
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[2].id
+      value: earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[3].id
+      value: lightining
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[0].titulo
+      value: Frozen Memory
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[1].titulo
+      value: Blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[2].titulo
+      value: Ancient Root
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[0].titulo
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[1].titulo
+      value: Ice
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[2].titulo
+      value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[3].titulo
+      value: Lightining
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[0].id
+      value: armour
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[1].id
+      value: boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[2].id
+      value: crossbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[0].categoria
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[0].descricao
+      value: "Memories preserved in water for a long\_time."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[1].categoria
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[1].descricao
+      value: Blood from an emotional hurt enemie.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[2].categoria
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: itens.Array.data[2].descricao
+      value: "Root from the oldest tree in the\_forest."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[0].descricao
+      value: Causes fire damage where it lands.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[1].descricao
+      value: Freezes enemies and water.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[2].descricao
+      value: "Causes an earthquake. Can damage enemies, yourself\_and\_rocks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: pocoes.Array.data[3].descricao
+      value: Electrocute enemies. Can chain electrocute.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[0].titulo
+      value: Armour
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[1].titulo
+      value: Boots of Speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[2].titulo
+      value: Crossbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[0].categoria
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[0].descricao
+      value: Gives extra protection (1 extra heart).
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[1].categoria
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[1].descricao
+      value: Gives extra speed (unlocks dash ability).
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[2].categoria
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+      propertyPath: equipamentos.Array.data[2].descricao
+      value: Gives extra range when shooting potions.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
