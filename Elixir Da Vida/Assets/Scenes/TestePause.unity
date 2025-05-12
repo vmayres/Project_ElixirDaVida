@@ -6414,6 +6414,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852779}
+    - target: {fileID: 1867260807483940283, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216649997025018704, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3002
+      objectReference: {fileID: 0}
     - target: {fileID: 2414157737080602628, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6430,14 +6438,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852778}
+    - target: {fileID: 3578180269218983967, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111381670868524251, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146442345256458586, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3003
+      objectReference: {fileID: 0}
     - target: {fileID: 4763171305886477313, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852778}
+    - target: {fileID: 5037229751989057699, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3002
+      objectReference: {fileID: 0}
     - target: {fileID: 5825689682393182742, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852779}
+    - target: {fileID: 6084944856005775009, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3003
+      objectReference: {fileID: 0}
     - target: {fileID: 6263429393824854715, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6454,18 +6482,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852778}
-    - target: {fileID: 6582459976780991205, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleSettingsSection
-      objectReference: {fileID: 0}
     - target: {fileID: 7958155311738190786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852778}
+    - target: {fileID: 8040256205626059628, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3000
+      objectReference: {fileID: 0}
     - target: {fileID: 8166201440287523479, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 246934071}
+    - target: {fileID: 8944710312847887698, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
