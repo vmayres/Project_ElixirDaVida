@@ -72,7 +72,7 @@ public class PlayerControl : MonoBehaviour
     private HeartDisplay heartDisplay;
     void Start()
     {
-        heartDisplay = FindObjectOfType<HeartDisplay>();
+        heartDisplay = FindAnyObjectByType<HeartDisplay>();
 
         maxHealth = InventoryControll.Instance.maxHealth;
         currentHealth = InventoryControll.Instance.currentHealth;

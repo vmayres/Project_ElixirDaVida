@@ -423,13 +423,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potions:
-  - id: fire
+  - id: Fire
     uiImage: {fileID: 1511427145}
-  - id: earth
+  - id: Earth
     uiImage: {fileID: 1511427144}
-  - id: ice
+  - id: Ice
     uiImage: {fileID: 1511427143}
-  - id: lightining
+  - id: Lightning
     uiImage: {fileID: 1511427142}
   positions:
   - {x: 960, y: 470, z: 0}

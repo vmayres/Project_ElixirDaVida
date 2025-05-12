@@ -34,7 +34,7 @@ public class PotionSelect : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerControl>();
+        player = FindAnyObjectByType<PlayerControl>();
         AtualizarSelecaoVisual();
     }
 

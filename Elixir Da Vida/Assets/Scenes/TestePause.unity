@@ -8997,13 +8997,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potions:
-  - id: fire
+  - id: Fire
     uiImage: {fileID: 1435756311}
-  - id: earth
+  - id: Earth
     uiImage: {fileID: 1435756310}
-  - id: ice
+  - id: Ice
     uiImage: {fileID: 1435756309}
-  - id: lightining
+  - id: Lightning
     uiImage: {fileID: 1435756308}
   positions:
   - {x: 960, y: 470, z: 0}
