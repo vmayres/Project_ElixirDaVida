@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 416981323}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.810102, y: -1.1714988, z: -0.06157953}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,9 +544,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4083265951885760729, guid: f17c81a4b839eb04a91566d07a3c659b, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5014547686656961155, guid: f17c81a4b839eb04a91566d07a3c659b, type: 3}
       propertyPath: upDoorState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938309341260624485, guid: f17c81a4b839eb04a91566d07a3c659b, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: f17c81a4b839eb04a91566d07a3c659b, type: 3}
       propertyPath: m_Name
@@ -1135,6 +1143,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 839695660}
+    - target: {fileID: 5955552919730328330, guid: 6322a3a0ef5fe0d448d1402e59c9f075, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1156711
+      objectReference: {fileID: 0}
     - target: {fileID: 7074891941523564083, guid: 6322a3a0ef5fe0d448d1402e59c9f075, type: 3}
       propertyPath: m_Name
       value: Canvas_Testes
@@ -1598,6 +1610,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 453005680889125795, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495587292641892677, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1658,10 +1674,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 839695660}
-    - target: {fileID: 2725023115491216743, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 3238240837731565688, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1694,10 +1706,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 416981324}
-    - target: {fileID: 6582459976780991205, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleSettingsSection
-      objectReference: {fileID: 0}
     - target: {fileID: 7958155311738190786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1706,10 +1714,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 839695660}
-    - target: {fileID: 8166201440287523479, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
