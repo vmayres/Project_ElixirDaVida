@@ -21,7 +21,7 @@ public class DashBar : MonoBehaviour
         canvasGroup = dashBarUI.GetComponent<CanvasGroup>();
         rectTransform = dashBarUI.GetComponent<RectTransform>();
 
-        if (!InventoryControll.Instance.dashes)
+        if (!InventoryControll.Instance.dashUnlocked)
         {
             // Inicializa escondido
             canvasGroup.alpha = 0f;
