@@ -229,9 +229,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4020561170704695289, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: upDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: downDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: leftDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152329031307672395, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
       value: Room Ice (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631841510115967713, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -291,9 +315,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4020561170704695289, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: upDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: downDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: rightDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246981112227584273, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
       value: Room Ice (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631841510115967713, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1574,6 +1622,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4020561170704695289, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: downDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: leftDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152329031307672395, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
       value: Room Ice (25)
@@ -1900,9 +1964,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: upDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: leftDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152329031307672395, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
       value: Room Ice (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631841510115967713, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2039,7 +2119,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2182,9 +2262,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: upDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: rightDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246981112227584273, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
       value: Room Ice (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631841510115967713, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2701,9 +2797,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: upDoorState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
       value: Room Ice (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631841510115967713, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2839,6 +2943,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 124711351424350516, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: leftDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: rightDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246981112227584273, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152329031307672395, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
@@ -3074,6 +3194,14 @@ PrefabInstance:
     - target: {fileID: 124711351424350516, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020561170704695289, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: downDoorState
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_Name
@@ -3407,6 +3535,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 124711351424350516, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020561170704695289, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: downDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5014547686656961155, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: rightDoorState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246981112227584273, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8454589465714030580, guid: ddee5667a38c77447bc762f27c2476eb, type: 3}
