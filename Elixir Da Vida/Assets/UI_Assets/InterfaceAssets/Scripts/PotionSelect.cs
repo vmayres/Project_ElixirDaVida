@@ -6,11 +6,19 @@ using System.Collections.Generic;
 
 public class PotionSelect : MonoBehaviour
 {
+    public enum PotionType
+    {
+        Fire,
+        Ice,
+        Earth,
+        Lightning,
+    }
+
     [System.Serializable]
     public class PotionData
     {
         public string id;
-        public GameObject potionPrefab;
+        // public GameObject potionPrefab;
         public GameObject uiImage;
     }
 
@@ -22,8 +30,11 @@ public class PotionSelect : MonoBehaviour
     public Vector3[] scales;
     public float[] alphas;
 
+    private PlayerControl player;
+
     void Start()
     {
+        player = FindObjectOfType<PlayerControl>();
         AtualizarSelecaoVisual();
     }
 
@@ -81,6 +92,24 @@ public class PotionSelect : MonoBehaviour
                 StartCoroutine(AnimatePotion(rt, positions[indexNaLista], scales[indexNaLista], alphas[indexNaLista], img));
             }
         }
+
+        // Define a poção ativa no Player
+        if (player != null && poçõesDesbloqueadas.Count > 0)
+        {
+            int indexReal = poçõesDesbloqueadas[selectedPotionIndex];
+            string potionId = potions[indexReal].id;
+
+            // Converte string ID para enum, se os nomes forem iguais
+            if (System.Enum.TryParse(potionId, out PlayerControl.PotionType tipo))
+            {
+                player.ActivePotion = tipo;
+                Debug.Log("Poção ativa do player agora é: " + tipo);
+            }
+            else
+            {
+                Debug.LogWarning("ID de poção não corresponde ao enum: " + potionId);
+            }
+        }
     }
 
 
@@ -113,12 +142,13 @@ public class PotionSelect : MonoBehaviour
         Color finalColor = img.color;
         finalColor.a = targetAlpha;
         img.color = finalColor;
+
     }
 
-    public GameObject GetSelectedPotionPrefab()
-    {
-        return potions[selectedPotionIndex].potionPrefab;
-    }
+    // public GameObject GetSelectedPotionPrefab()
+    // {
+    //     return potions[selectedPotionIndex].potionPrefab;
+    // }
 
     public void UnlockPotionByID(string id)
     {

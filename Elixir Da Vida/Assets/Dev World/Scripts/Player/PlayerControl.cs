@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    
     [Header("Vida")]
-    [SerializeField] private int maxHealth = 3;
-    [SerializeField] private int currentHealth = 3;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int currentHealth;
+    [SerializeField] private int lastHealth;
 
     [Header("Movimento")]
     [SerializeField] private float moveSpeed = 5f;
-    private Vector2 lastLookDirection = Vector2.down; // padrão inicial
+    private Vector2 lastLookDirection = Vector2.down; // padrï¿½o inicial
 
     [Header("Dash")]
-    [SerializeField] private bool dashEnabled = false; // Só vira true se tiver com as botas
+    [SerializeField] public bool dashEnabled; // Sï¿½ vira true se tiver com as botas
     [SerializeField] private float dashDistance = 3f;
     [SerializeField] private float dashDuration = 0.2f;
     [SerializeField] private float dashCooldown = 1f;
@@ -25,8 +27,8 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float invulnerabilityTimeAfterHit = 1.0f;
     [SerializeField] private bool isInvulnerable = false;
 
-    // Lista das possíveis poções (precisa ser pública!)
-    [Header("Prefabs das Poções")]
+    // Lista das possï¿½veis poï¿½ï¿½es (precisa ser pï¿½blica!)
+    [Header("Prefabs das Poï¿½ï¿½es")]
     [SerializeField] public GameObject firePotionPrefab;
     [SerializeField] public GameObject icePotionPrefab;
     [SerializeField] public GameObject earthPotionPrefab;
@@ -40,7 +42,7 @@ public class PlayerControl : MonoBehaviour
         Lightning,
     }
 
-    [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Poção ativa inicial
+    [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Poï¿½ï¿½o ativa inicial
     public PotionType ActivePotion
     {
         get => _activePotion;
@@ -67,9 +69,18 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private CircleRenderer circleRenderer;
 
     // 
+    private HeartDisplay heartDisplay;
     void Start()
     {
+        heartDisplay = FindObjectOfType<HeartDisplay>();
 
+        maxHealth = InventoryControll.Instance.maxHealth;
+        currentHealth = InventoryControll.Instance.currentHealth;
+        lastHealth = currentHealth;
+        heartDisplay.ResetHearts(maxHealth, currentHealth);
+        heartDisplay.UpdateHearts(currentHealth, maxHealth);
+
+        dashEnabled = InventoryControll.Instance.dashUnlocked;
     }
 
     //
@@ -91,16 +102,16 @@ public class PlayerControl : MonoBehaviour
                 movementInput = movementInput.normalized;
             }
 
-            // Atualiza a direção "olhada" com base no input, mas normalizada para direção fixa (8 direções)
+            // Atualiza a direï¿½ï¿½o "olhada" com base no input, mas normalizada para direï¿½ï¿½o fixa (8 direï¿½ï¿½es)
             if (movementInput != Vector2.zero)
             {
                 lastLookDirection = GetMoveDirection(movementInput);
-                // TODO: Atualizar animação do personagem
-                //Debug.Log("Direção: " + lastLookDirection);
+                // TODO: Atualizar animaï¿½ï¿½o do personagem
+                //Debug.Log("Direï¿½ï¿½o: " + lastLookDirection);
                 
             }
 
-            // Atualiza a posição com movimento proporcional e corrigido
+            // Atualiza a posiï¿½ï¿½o com movimento proporcional e corrigido
             transform.position += new Vector3(movementInput.x * moveSpeed * Time.deltaTime, movementInput.y * moveSpeed * Time.deltaTime, 0);
 
             // === DASH ===
@@ -111,11 +122,11 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) //// esse vai sofrer mudanças (para verificar odano vai o zumbi no seu tempo de ataque
+    private void OnCollisionEnter2D(Collision2D other) //// esse vai sofrer mudanï¿½as (para verificar odano vai o zumbi no seu tempo de ataque
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            // Lógica de dano ao jogador
+            // Lï¿½gica de dano ao jogador
             TakeDamage(1);
         }
     }
@@ -148,7 +159,12 @@ public class PlayerControl : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (isInvulnerable) return;
-        currentHealth -= damage;
+        lastHealth = currentHealth;
+        currentHealth = Mathf.Max(0, currentHealth - damage);
+
+        heartDisplay.UpdateHearts(currentHealth, lastHealth);
+        InventoryControll.Instance.currentHealth = currentHealth;
+
         isInvulnerable = true;
         // Inicia a corrotina para lidar com a invulnerabilidade
         StartCoroutine(HandleInvulnerability());
@@ -156,13 +172,20 @@ public class PlayerControl : MonoBehaviour
 
     public void Heal(int healAmount)
     {
-        currentHealth += healAmount;
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
+        lastHealth = currentHealth;
+        currentHealth = Mathf.Min(maxHealth, currentHealth + healAmount);
+        heartDisplay.UpdateHearts(currentHealth, lastHealth);
+        InventoryControll.Instance.currentHealth = currentHealth;
     }
 
+    public void IncreaseMaxLife(int amount)
+    {
+        maxHealth += amount;
+        currentHealth = maxHealth;
+        heartDisplay.ResetHearts(maxHealth, currentHealth);
+        InventoryControll.Instance.currentHealth = currentHealth;
+        InventoryControll.Instance.maxHealth = maxHealth;
+    }
 
     private IEnumerator HandleInvulnerability()
     {
@@ -175,7 +198,7 @@ public class PlayerControl : MonoBehaviour
             SpriteRenderer sr = spriteTransform.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
-                sr.color = new Color(0.8f, 0f, 0f, 1f); // vermelho com transparência
+                sr.color = new Color(0.8f, 0f, 0f, 1f); // vermelho com transparï¿½ncia
                 yield return new WaitForSeconds(invulnerabilityTimeAfterHit);
                 sr.color = Color.white; // volta ao normal
             }
@@ -186,7 +209,7 @@ public class PlayerControl : MonoBehaviour
 
     private Vector2 GetMoveDirection(Vector2 input)
     {
-        return input.normalized; // mantém direção completa, incluindo diagonais
+        return input.normalized; // mantï¿½m direï¿½ï¿½o completa, incluindo diagonais
     }
 
 

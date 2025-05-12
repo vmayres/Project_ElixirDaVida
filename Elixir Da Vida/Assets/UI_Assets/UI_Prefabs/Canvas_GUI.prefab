@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8590433421469135615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,6 @@ GameObject:
   m_Component:
   - component: {fileID: 780086213281836358}
   - component: {fileID: 8450501564251440627}
-  - component: {fileID: 8518536715358540383}
   - component: {fileID: 2963487978368261335}
   m_Layer: 5
   m_Name: HeartsDisplay
@@ -206,27 +205,6 @@ MonoBehaviour:
   heartPrefab: {fileID: 3780044820300127083, guid: f05380e88a9e6fe438334c7c42f7518f, type: 3}
   fullHeartSprite: {fileID: 6434085029935898570, guid: 5ecd27dbe7a737e44bdecc82e62c41a6, type: 3}
   emptyHeartSprite: {fileID: 5179572197592630703, guid: 5ecd27dbe7a737e44bdecc82e62c41a6, type: 3}
---- !u!114 &8518536715358540383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087901272768607955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585d584a0266dad42bae940ddb069b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heartDisplay: {fileID: 8450501564251440627}
-  dashBar: {fileID: 5250888545452593924}
-  potionSelector: {fileID: 7154492772682313928}
-  inventoryControll: {fileID: 0}
-  maxLife: 3
-  lastlife: 0
-  currentLife: 0
-  contadorPotion: 0
-  contadorEquip: 0
 --- !u!114 &2963487978368261335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,7 +464,7 @@ RectTransform:
   m_Father: {fileID: 7309110766609657155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.074}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 2.9800186, y: 0.14000034}
   m_SizeDelta: {x: -2.25, y: -4.58}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -537,7 +515,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8382690880401442760}
-  - component: {fileID: 5250888545452593924}
   m_Layer: 5
   m_Name: DashBar
   m_TagString: Untagged
@@ -565,22 +542,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1900, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5250888545452593924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4600842574066587455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36582ff53c9f6c4fb0864cfd6abacd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashBarUI: {fileID: 1455362427673394019}
-  slider: {fileID: 7587118116718783935}
-  rechargeTime: 2
-  dashUnlocked: 0
 --- !u!1 &5558834610772582638
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +626,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2590542358483603450}
-  - component: {fileID: 7154492772682313928}
   m_Layer: 0
   m_Name: PotionSelect
   m_TagString: Untagged
@@ -692,38 +652,6 @@ Transform:
   - {fileID: 9023449310179110871}
   m_Father: {fileID: 2926938558433061424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7154492772682313928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6260318257538443308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6df4fdc813b75ec488523ffa8b879c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potions:
-  - {fileID: 9204086237401010424}
-  - {fileID: 6923728133728816649}
-  - {fileID: 8780861676093525782}
-  - {fileID: 5558834610772582638}
-  positions:
-  - {x: 960, y: 470, z: 0}
-  - {x: 1025, y: 506, z: 0}
-  - {x: 960, y: 540, z: 0}
-  - {x: 890, y: 506, z: 0}
-  scales:
-  - {x: 1.2, y: 1.2, z: 0}
-  - {x: 0.8, y: 0.8, z: 0}
-  - {x: 0.4, y: 0.5, z: 0}
-  - {x: 0.8, y: 0.8, z: 0}
-  alphas:
-  - 1
-  - 0.7
-  - 0.4
-  - 0.7
 --- !u!1 &6923728133728816649
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class DashBar : MonoBehaviour
         canvasGroup = dashBarUI.GetComponent<CanvasGroup>();
         rectTransform = dashBarUI.GetComponent<RectTransform>();
 
-        if (!GameProgress.Instance.dashes)
+        if (!InventoryControll.Instance.dashes)
         {
             // Inicializa escondido
             canvasGroup.alpha = 0f;

@@ -11225,19 +11225,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: pocoes.Array.data[0].id
-      value: fire
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: pocoes.Array.data[1].id
-      value: ice
+      value: Ice
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: pocoes.Array.data[2].id
-      value: earth
+      value: Earth
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: pocoes.Array.data[3].id
-      value: lightining
+      value: Lightning
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: itens.Array.data[0].titulo
@@ -11265,7 +11265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: pocoes.Array.data[3].titulo
-      value: Lightining
+      value: Lightning
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: equipamentos.Array.data[0].id
@@ -11411,6 +11411,26 @@ PrefabInstance:
     - target: {fileID: 1833428801741149243, guid: 33ce2f81799fe804287678af159bf154, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: pocoes.Array.data[0].id
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: pocoes.Array.data[1].id
+      value: Ice
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: pocoes.Array.data[2].id
+      value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: pocoes.Array.data[3].id
+      value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: pocoes.Array.data[3].titulo
+      value: Lightning
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

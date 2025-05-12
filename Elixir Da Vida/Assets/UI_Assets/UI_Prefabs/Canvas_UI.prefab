@@ -2218,7 +2218,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleSettingsSection
         m_Mode: 1
@@ -2928,7 +2928,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleInventory
         m_Mode: 1
@@ -3149,7 +3149,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleAreYouSure
         m_Mode: 1
@@ -5710,7 +5710,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleAreYouSure
         m_Mode: 1
@@ -10589,7 +10589,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleMainSettings
         m_Mode: 1
@@ -11099,7 +11099,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
@@ -12509,7 +12509,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1
@@ -12641,7 +12641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2575560296268730691}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: FunctionAbrirMapa
         m_Mode: 1
@@ -15363,8 +15363,6 @@ MonoBehaviour:
   delButton: {fileID: 0}
   confirmDeletePanel: {fileID: 0}
   loadToColor: {r: 0, g: 0, b: 0, a: 1}
-  testeVida: {fileID: 0}
-  inventoryDisplay: {fileID: 0}
 --- !u!1 &7425736423539657978
 GameObject:
   m_ObjectHideFlags: 0
@@ -16044,7 +16042,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ToggleSettingsSection
         m_Mode: 1
@@ -16492,7 +16490,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
         m_MethodName: ChangeSceneFade
         m_Mode: 5
@@ -17317,10 +17315,6 @@ GameObject:
   - component: {fileID: 5233032983870507789}
   - component: {fileID: 8726922117499066988}
   - component: {fileID: 1088309216548935930}
-  - component: {fileID: 8764826188666721497}
-  - component: {fileID: 6437929568805712908}
-  - component: {fileID: 2575560296268730691}
-  - component: {fileID: 1550813556161776542}
   m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
@@ -17389,88 +17383,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!114 &8764826188666721497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8610160688754376103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000767df73b801548806b795d740389d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pocoes: []
-  itens: []
-  equipamentos: []
---- !u!114 &6437929568805712908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8610160688754376103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5b842466edcf194f84a7fb4d0546db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausePanel: {fileID: 5882222858024948584}
-  mainPanel: {fileID: 5882222858024948584}
-  settingsPanel: {fileID: 8528367504856280610}
-  controlsPanel: {fileID: 3683311946289969420}
-  quitPanel: {fileID: 6830490607826532813}
-  savesPanel: {fileID: 0}
-  somButton: {fileID: 2961627667098780929}
-  somUIImage: {fileID: 0}
-  somLigadoSprite: {fileID: 1445855192857118339, guid: ef2182a23133c1c4996c3104d6bd568a, type: 3}
-  somDesligadoSprite: {fileID: 6041128183007045441, guid: ef2182a23133c1c4996c3104d6bd568a, type: 3}
-  inventoryPanel: {fileID: 344982648789115571}
-  inventarioTransform: {fileID: 6061521417203367851}
-  tempoDeTransicao: 0.3
-  posicaoFechado: {x: -30, y: 30}
-  posicaoAberto: {x: -900, y: 343}
-  inInventory: 0
-  mapController: {fileID: 2575560296268730691}
-  pausePanelRect: {fileID: 7780793123467081819}
-  transitionDuration: 0.5
-  loadToColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!114 &2575560296268730691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8610160688754376103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0451e1642e7d1db47a9a4c05ddc1ccbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapaAnimator: {fileID: 2466185216170866981}
-  mapaRect: {fileID: 8271850459179749246}
-  mapPannel: {fileID: 4158876755491268036}
-  posicaoFechado: {x: 680, y: 0}
-  posicaoAberto: {x: 0, y: 0}
-  velocidadeMovimento: 500
-  mapaAberto: 0
-  emTransicao: 0
-  menuController: {fileID: 6437929568805712908}
---- !u!114 &1550813556161776542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8610160688754376103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 759aadf023b8e1146a874faa781f9e34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 7902051876625978160}
-  texto: {fileID: 5088273970636797076}
 --- !u!1 &8622803693568632756
 GameObject:
   m_ObjectHideFlags: 0
@@ -17888,7 +17800,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2575560296268730691}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapController, Assembly-CSharp
         m_MethodName: FunctionFecharMapa
         m_Mode: 1
@@ -18573,9 +18485,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6437929568805712908}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuControllers, Assembly-CSharp
-        m_MethodName: ToggleMainSettings
+        m_MethodName: ToggleSettingsSection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

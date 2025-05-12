@@ -34,7 +34,6 @@ public class InventoryDisplay : MonoBehaviour
     public PotionSelect potionSelect;
     public DashBar dashBar;
     public bool dashUnlocked;
-    public TesteVida testeVida;
 
     private Dictionary<string, InventoryEntry> dicionarioPocoes;
     private Dictionary<string, InventoryEntry> dicionarioItens;
@@ -95,12 +94,18 @@ public class InventoryDisplay : MonoBehaviour
             {
                 dashBar.UnlockDash();
                 dashUnlocked = true;
+
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<PlayerControl>().dashEnabled = true;
+
                 InventoryControll.Instance.dashUnlocked = dashUnlocked;
+
                 Debug.Log("Dash desbloqueado!");
             }
             if (categoria == CategoriaItem.Equipamento && id == "armour")
             {
-                testeVida.IncreaseMaxLife(1);
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<PlayerControl>().IncreaseMaxLife(1);
             }
             if (categoria == CategoriaItem.Equipamento && id == "crossbow")
             {

@@ -13,7 +13,6 @@ public class SaveSlotUI : MonoBehaviour
     public Color loadToColor = Color.black;
 
     // [Header("Scripts")]
-    // public TesteVida testeVida;
     // public InventoryDisplay inventoryDisplay;
     // public InventoryControll inventoryController;
     // public DashBar dashBar;

@@ -41,7 +41,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 495587292641892677}
     m_Modifications:
+    - target: {fileID: 94166891350873255, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 149123099373006033, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 277597247431305355, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 277597247431305355, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleSettingsSection
+      objectReference: {fileID: 0}
     - target: {fileID: 601970137334091896, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040202432122884309, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916719590809226863, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
@@ -49,12 +73,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3959417613533043116, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319365278063387470, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5679039373257204085, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6437929568805712908, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
-      propertyPath: mapController
+    - target: {fileID: 5831673434837622197, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560322947166639253, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719935260155339370, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8851919011257653973, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
@@ -137,10 +177,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8764826188666721497, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
-    - {fileID: 2575560296268730691, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
-    - {fileID: 1550813556161776542, guid: a9cf23881d638fb448c0179fffeff3b0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -254,10 +291,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8518536715358540383, guid: d6b27e1a0206f1c45b70efef6e003c95, type: 3}
-    - {fileID: 5250888545452593924, guid: d6b27e1a0206f1c45b70efef6e003c95, type: 3}
-    - {fileID: 7154492772682313928, guid: d6b27e1a0206f1c45b70efef6e003c95, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

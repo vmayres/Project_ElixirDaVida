@@ -20,8 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 0d2e77e8c054d054f9e30ccfdb59bcec
-    path: Assets/Scenes/DevWorld.unity
-    guid: 7b90ba16feff0c8488ed1d3127de02eb
+  - enabled: 1
+    path: Assets/Scenes/Earth Dungeon.unity
+    guid: e6b8dc6fdb974b743ab2f770efec64d0
+  - enabled: 1
+    path: Assets/Scenes/Ice Dungeon.unity
+    guid: b08b054841213da47ac082f54c0903f5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

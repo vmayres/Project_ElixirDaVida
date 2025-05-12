@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      002-alchemy-preview-Photoroom_0: -8761238061159214743
+      002-alchemy-preview-Photoroom_1: -6214583770542657517
+      002-alchemy-preview-Photoroom_2: -8607404269657465713
+      002-alchemy-preview-Photoroom_3: -3001965743476434247
+      002-alchemy-preview-Photoroom_4: 3475952188617491290
+      002-alchemy-preview-Photoroom_5: -2496178056217616243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -63,7 +63,7 @@ public class MenuControllers : MonoBehaviour
 
     void Update()
     {
-        if (inventoryPanel != null && !isPaused && !inSettings && !inControls && Input.GetKeyDown(KeyCode.E)){
+        if (inventoryPanel != null && !isPaused && !inSettings && !inControls && Input.GetKeyDown(KeyCode.I)){
             if (!inInventory)
                 StartCoroutine(AbrirInventario());
             else

@@ -7,6 +7,6 @@ public class HealEffect : CollectibleEffect
     public override void Apply()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<TesteVida>().Heal(amount);
+        player.GetComponent<PlayerControl>().Heal(amount);
     }
 }
