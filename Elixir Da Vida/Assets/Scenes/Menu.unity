@@ -11060,106 +11060,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047638292}
   m_CullTransparentMesh: 1
---- !u!1 &2062605029
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2062605031}
-  - component: {fileID: 2062605030}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2062605030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062605029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000767df73b801548806b795d740389d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pocoes:
-  - id: fire
-    titulo: Fire
-    descricao: Causes fire damage where it lands.
-    desbloqueada: 0
-    categoria: 0
-  - id: ice
-    titulo: Ice
-    descricao: Freezes enemies and water.
-    desbloqueada: 0
-    categoria: 0
-  - id: earth
-    titulo: Earth
-    descricao: "Causes an earthquake. Can damage enemies, yourself\_and\_rocks."
-    desbloqueada: 0
-    categoria: 0
-  - id: lightining
-    titulo: Lightining
-    descricao: Electrocute enemies. Can chain electrocute.
-    desbloqueada: 0
-    categoria: 0
-  itens:
-  - id: memory
-    titulo: Frozen Memory
-    descricao: "Memories preserved in water for a long\_time."
-    desbloqueada: 0
-    categoria: 1
-  - id: blood
-    titulo: Blood
-    descricao: Blood from an emotional hurt enemie.
-    desbloqueada: 0
-    categoria: 1
-  - id: root
-    titulo: Ancient Root
-    descricao: "Root from the oldest tree in the\_forest."
-    desbloqueada: 0
-    categoria: 1
-  equipamentos:
-  - id: armour
-    titulo: Armour
-    descricao: Gives extra protection (1 extra heart).
-    desbloqueada: 0
-    categoria: 2
-  - id: boots
-    titulo: Boots of Speed
-    descricao: Gives extra speed (unlocks dash ability).
-    desbloqueada: 0
-    categoria: 2
-  - id: crossbow
-    titulo: Crossbow
-    descricao: Gives extra range when shooting potions.
-    desbloqueada: 0
-    categoria: 2
-  maxHealth: 0
-  currentHealth: 0
-  dashUnlocked: 0
---- !u!4 &2062605031
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062605029}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6079388, y: -0.18994132, z: 2.135517}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072880180
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,6 +11360,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
+--- !u!1001 &9101722058989141257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6079388
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18994132
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.135517
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67628732364618971, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833428801741149243, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: m_Name
+      value: Inventory
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33ce2f81799fe804287678af159bf154, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -11471,4 +11428,4 @@ SceneRoots:
   - {fileID: 1340503430}
   - {fileID: 1123033193}
   - {fileID: 120286400674972800}
-  - {fileID: 2062605031}
+  - {fileID: 9101722058989141257}
