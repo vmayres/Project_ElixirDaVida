@@ -10,6 +10,9 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private int currentHealth;
     [SerializeField] private int lastHealth;
 
+    [Header("Debug")]
+    [SerializeField] private string currentRoomName;
+
     [Header("Movimento")]
     [SerializeField] private float moveSpeed = 5f;
     private Vector2 lastLookDirection = Vector2.down; // padr�o inicial
@@ -40,6 +43,7 @@ public class PlayerControl : MonoBehaviour
         Ice,
         Earth,
         Lightning,
+        Null,
     }
 
     [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Po��o ativa inicial
@@ -86,6 +90,9 @@ public class PlayerControl : MonoBehaviour
     //
     void Update()
     {
+
+        UpdateCurrentRoomName();
+
         // === MOVIMENTO ===
         if (!isDashing)
         {
@@ -122,13 +129,8 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) //// esse vai sofrer mudan�as (para verificar odano vai o zumbi no seu tempo de ataque
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            // L�gica de dano ao jogador
-            TakeDamage(1);
-        }
+    private void OnCollisionEnter2D(Collision2D other) { 
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -234,5 +236,9 @@ public class PlayerControl : MonoBehaviour
         _canDash = true;
     }
 
-
+    void UpdateCurrentRoomName()
+    {
+        Collider2D myRoom = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("roomArea"));
+        currentRoomName = myRoom != null ? myRoom.gameObject.name : "Nenhuma";
+    }
 }

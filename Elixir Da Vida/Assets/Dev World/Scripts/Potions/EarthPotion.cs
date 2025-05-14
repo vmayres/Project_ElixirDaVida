@@ -60,18 +60,41 @@ public class EarthPotion : PotionBase
                 hitEnemies.Add(hit);
                 Debug.Log($"Inimigo atingido: {hit.name}");
 
-                // Chama a função TakeDamage no inimigo atingido
                 var enemyManager = hit.GetComponent<EnemyManager>();
                 if (enemyManager != null)
                 {
-                    enemyManager.TakeDamage(this.damage); // Aplica 1 de dano
+                    enemyManager.TakeDamage(this.damage);
+                    Destroy(gameObject); // Destroi a bomba após atingir
+                    break;
                 }
-                else
+            }
+            else if (hit.CompareTag("Player"))
+            {
+                Debug.Log($"Player atingido: {hit.name}");
+
+                var playerControl = hit.GetComponent<PlayerControl>();
+                if (playerControl != null)
                 {
-                    Debug.LogWarning($"Objeto com tag 'Enemy' não possui o componente 'EnemyManager': {hit.name}");
+                    Destroy(gameObject); // Destroi a bomba após atingir
+                    playerControl.TakeDamage(this.damage);
+                    break;
+                }
+            }
+            else if (hit.CompareTag("rock"))
+            {
+                Debug.Log($"Pedra atingida: {hit.name}");
+
+                var rockManager = hit.GetComponent<RockManager>();
+                if (rockManager != null)
+                {
+                    rockManager.DestroyRockAndActivateObject();
+                    Destroy(gameObject); // Destroi a bomba após atingir
+                    break;
                 }
             }
         }
+
+
 
         // Remove o círculo visual e a bomba
         Destroy(aoeVisual);
