@@ -26,6 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ice Dungeon.unity
     guid: b08b054841213da47ac082f54c0903f5
+  - enabled: 1
+    path: Assets/Scenes/Laboratory.unity
+    guid: 4a0fc56a3f69d75458a931a8bfe6a936
+  - enabled: 1
+    path: Assets/Scenes/FinalVive.unity
+    guid: 22d1b6b92a7f0da45a1186aad91696e7
+  - enabled: 1
+    path: Assets/Scenes/FinalMorre.unity
+    guid: 628d7e6ab2845d2438ba6059fe50c751
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 013c06b8f56fca74483b06b34434fb71
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -159,11 +159,21 @@ public class PlayerControl : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (isInvulnerable) return;
+
         lastHealth = currentHealth;
         currentHealth = Mathf.Max(0, currentHealth - damage);
 
         heartDisplay.UpdateHearts(currentHealth, lastHealth);
         InventoryControll.Instance.currentHealth = currentHealth;
+
+        if(currentHealth == 0){
+            GameProgress.Instance.deathCount += 1;
+            GameProgress.Instance.heartsCurrent = GameProgress.Instance.heartsMax;
+            GameProgress.Instance.Save();
+
+            Time.timeScale = 1;
+            Initiate.Fade("Death", Color.black, 0.8f);
+        }
 
         isInvulnerable = true;
         // Inicia a corrotina para lidar com a invulnerabilidade
