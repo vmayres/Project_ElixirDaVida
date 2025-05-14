@@ -7,13 +7,9 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (GameProgress.Instance != null)
         {
-            transform.position = GameProgress.Instance.playerPosition;
+            GameObject player = GameObject.FindWithTag("Player");
+            player.transform.position = GameProgress.Instance.playerPosition;
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

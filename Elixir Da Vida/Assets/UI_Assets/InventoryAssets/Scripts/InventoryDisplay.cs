@@ -35,6 +35,9 @@ public class InventoryDisplay : MonoBehaviour
     public DashBar dashBar;
     public bool dashUnlocked;
 
+    [Header("Portas Associadas")]
+    [SerializeField] private List<GameObject> linkedDoors;
+
     private Dictionary<string, InventoryEntry> dicionarioPocoes;
     private Dictionary<string, InventoryEntry> dicionarioItens;
     private Dictionary<string, InventoryEntry> dicionarioEquipamentos;
@@ -91,8 +94,19 @@ public class InventoryDisplay : MonoBehaviour
                 potionSelect.UnlockPotionByID(id);
 
             //Itens do elixir
-            if (categoria == CategoriaItem.Item)
+            if (categoria == CategoriaItem.Item){
                 player.GetComponent<PlayerControl>().IncreaseMaxLife(1);
+                
+                foreach (var doorObj in linkedDoors)
+                {
+                    if (doorObj == null) continue;
+                    room roomComponent = doorObj.GetComponentInParent<room>();
+                    if (roomComponent != null)
+                    {
+                        roomComponent.OpenDoor(doorObj);
+                    }
+                }
+            }
 
             //Equipamentos
             if (categoria == CategoriaItem.Equipamento && id == "boots")

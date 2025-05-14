@@ -11,6 +11,7 @@ public class SaveData
     public int heartsCurrent;
     public bool dashes;
     public int saveSlot;
+    public int deathCount;
 
     // Inventário
     public List<InventoryEntry> pocoes = new List<InventoryEntry>();
