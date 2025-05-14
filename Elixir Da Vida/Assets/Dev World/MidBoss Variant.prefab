@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2410583322122785013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6798821163576842573, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -2548415836387889380, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2548415836387889380, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: gridSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -2548415836387889380, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -2548415836387889380, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: attackRadius
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2548415836387889380, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: timeToDamage
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2548415836387889380, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: pathUpdateInterval
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7293532
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7293532
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7293532
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.12040404
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285250736046379499, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144909198869267938, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      propertyPath: m_Name
+      value: MidBoss Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9144909198869267938, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6694764032951601247}
+  m_SourcePrefab: {fileID: 100100000, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+--- !u!1 &6889701163941369111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9144909198869267938, guid: f6b60ca7aa614e24eaa2bf8dba71a8d9, type: 3}
+  m_PrefabInstance: {fileID: 2410583322122785013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6694764032951601247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6889701163941369111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e9ed2311e58f94590dccc8990ab690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedDoors: []
+  objectToActivate: {fileID: 0}
+  isPressed: 1
