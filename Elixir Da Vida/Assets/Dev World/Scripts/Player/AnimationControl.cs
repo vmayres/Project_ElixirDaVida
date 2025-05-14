@@ -23,9 +23,9 @@ public class PlayerMovement : MonoBehaviour
     {
         ProcessInputs();
         Animate();
-        if(input.x<0 && !facingLeft || input.x>0 && facingLeft){
-            Flip();
-        }
+        if (Input.GetKeyDown(KeyCode.Mouse0)) anim.SetTrigger("Shoot");
+        if (Input.GetKeyDown(KeyCode.Space)) anim.SetTrigger("Dash");
+
     }
 
         // FixedUpdate é chamado em intervalos de tempo fixos e é melhor para física
