@@ -1,15 +1,15 @@
-using UnityEngine;
+// using UnityEngine;
 
-public class GolenController : MonoBehaviour
-{
+// public class GolenController : MonoBehaviour
+// {
 
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            dialogueController.MostrarFalaDoGolem();
-        }
-    }
+//     void OnTriggerEnter(Collider other)
+//     {
+//         if (other.CompareTag("Player"))
+//         {
+//             dialogueController.MostrarFalaDoGolem();
+//         }
+//     }
 
-}
+// }
