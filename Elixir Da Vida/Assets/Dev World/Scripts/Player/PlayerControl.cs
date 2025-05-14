@@ -43,6 +43,7 @@ public class PlayerControl : MonoBehaviour
         Ice,
         Earth,
         Lightning,
+        Null,
     }
 
     [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Po��o ativa inicial
