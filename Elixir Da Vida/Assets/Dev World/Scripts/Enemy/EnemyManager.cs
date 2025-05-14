@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private int enemyHealth = 3;
-    [SerializeField] private bool frozen = false;
+    [SerializeField] public bool frozen = false;
 
     [Header("Efeitos Visuais")]
     [SerializeField] private SpriteRenderer spriteRenderer;

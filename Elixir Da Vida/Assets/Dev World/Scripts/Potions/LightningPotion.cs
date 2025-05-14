@@ -13,15 +13,18 @@ public class LightningPotion : PotionBase
         // Chama o comportamento base
         yield return base.LaunchPotion(targetPosition, spawnPosition);
 
+        // Cria o efeito visual inicial no ponto da explosão
+        CreateAoECircle(targetPosition, effectRadius, Color.yellow);
+
         // Inicia a propagação do raio
         var hitEnemies = new HashSet<Collider2D>();
-        yield return ApplyLightningEffect(targetPosition, 3, hitEnemies); // 3 inimigos em cadeia
+        yield return ApplyLightningEffect(targetPosition, 3, effectRadius, hitEnemies);
     }
 
-    private IEnumerator ApplyLightningEffect(Vector3 position, int chainCount, HashSet<Collider2D> hitEnemies)
+    private IEnumerator ApplyLightningEffect(Vector3 position, int chainCount, float detectionRadius, HashSet<Collider2D> hitEnemies)
     {
-        // Procura inimigos ao redor da posição
-        Collider2D[] hits = Physics2D.OverlapCircleAll(position, range);
+        // Procura inimigos dentro do raio especificado
+        Collider2D[] hits = Physics2D.OverlapCircleAll(position, detectionRadius);
         Collider2D currentTarget = null;
 
         foreach (var hit in hits)
@@ -42,9 +45,6 @@ public class LightningPotion : PotionBase
 
         Vector3 targetPos = currentTarget.transform.position;
 
-        // Cria o efeito visual (círculo de raio)
-        CreateAoECircle(targetPos, range, Color.yellow);
-
         // Aplica dano
         var enemyManager = currentTarget.GetComponent<EnemyManager>();
         if (enemyManager != null)
@@ -58,8 +58,8 @@ public class LightningPotion : PotionBase
 
         yield return new WaitForSeconds(0.2f);
 
-        // Busca o próximo inimigo mais próximo ainda não atingido
-        Collider2D[] allHits = Physics2D.OverlapCircleAll(targetPos, range);
+        // Busca o próximo inimigo mais próximo
+        Collider2D[] allHits = Physics2D.OverlapCircleAll(targetPos, range); // busca com range total
         Collider2D nextTarget = null;
         float closestDist = float.MaxValue;
 
@@ -76,10 +76,32 @@ public class LightningPotion : PotionBase
             }
         }
 
+        // Encadeia o próximo raio
         if (chainCount > 1 && nextTarget != null)
         {
-            yield return ApplyLightningEffect(nextTarget.transform.position, chainCount - 1, hitEnemies);
+            // Cria a linha entre os dois inimigos
+            CreateLightningLine(targetPos, nextTarget.transform.position, Color.yellow);
+            yield return ApplyLightningEffect(nextTarget.transform.position, chainCount - 1, range, hitEnemies);
         }
+    }
+
+    private void CreateLightningLine(Vector3 from, Vector3 to, Color color)
+    {
+        GameObject lineGO = new GameObject("LightningLine");
+        LineRenderer line = lineGO.AddComponent<LineRenderer>();
+
+        line.positionCount = 2;
+        line.SetPosition(0, from);
+        line.SetPosition(1, to);
+
+        line.widthMultiplier = 0.06f;
+        line.material = new Material(Shader.Find("Sprites/Default"));
+        line.startColor = color;
+        line.endColor = color;
+
+        // Opcional: pequeno "ziguezague" pode ser adicionado para parecer mais elétrico
+
+        GameObject.Destroy(lineGO, aoeDuration);
     }
 
     private GameObject CreateAoECircle(Vector3 position, float radius, Color color)

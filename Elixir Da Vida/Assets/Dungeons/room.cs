@@ -56,4 +56,25 @@ public class room : MonoBehaviour
         UpdateDoorState(door, DoorState.IsWall);
     }
 
+    public void ChangeDoorState(GameObject door)
+    {
+        if (door == null) return;
+
+        DoorState currentState = GetDoorState(door);
+
+        if (currentState == DoorState.IsWall)
+            UpdateDoorState(door, DoorState.IsOpen);
+        else if (currentState == DoorState.IsOpen)
+            UpdateDoorState(door, DoorState.IsWall);
+    }
+
+    private DoorState GetDoorState(GameObject door)
+    {
+        if (door == upDoor) return upDoorState;
+        if (door == downDoor) return downDoorState;
+        if (door == leftDoor) return leftDoorState;
+        if (door == rightDoor) return rightDoorState;
+        return DoorState.IsWall; // padrão de segurança
+    }
+
 }
