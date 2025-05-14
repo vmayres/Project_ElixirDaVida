@@ -62,6 +62,7 @@ public class InventoryDisplay : MonoBehaviour
 
     public void DesbloquearItem(string id, CategoriaItem categoria)
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
         var inventoryData = InventoryControll.Instance;
 
         Dictionary<string, InventoryEntry> dicionario = null;
@@ -89,13 +90,16 @@ public class InventoryDisplay : MonoBehaviour
             if (categoria == CategoriaItem.Pocao)
                 potionSelect.UnlockPotionByID(id);
 
+            //Itens do elixir
+            if (categoria == CategoriaItem.Item)
+                player.GetComponent<PlayerControl>().IncreaseMaxLife(1);
+
             //Equipamentos
             if (categoria == CategoriaItem.Equipamento && id == "boots")
             {
                 dashBar.UnlockDash();
                 dashUnlocked = true;
 
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
                 player.GetComponent<PlayerControl>().dashEnabled = true;
 
                 InventoryControll.Instance.dashUnlocked = dashUnlocked;
@@ -104,7 +108,6 @@ public class InventoryDisplay : MonoBehaviour
             }
             if (categoria == CategoriaItem.Equipamento && id == "armour")
             {
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
                 player.GetComponent<PlayerControl>().IncreaseMaxLife(1);
             }
             if (categoria == CategoriaItem.Equipamento && id == "crossbow")

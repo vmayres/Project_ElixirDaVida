@@ -294,10 +294,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -359,1827 +359,397 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_0
+      name: GolemSprite_0
       rect:
         serializedVersion: 2
-        x: 1873
-        y: 860
-        width: 307
-        height: 402
+        x: 0
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 357599982d31c7370800000000000000
-      internalID: 8321548006446421843
+      spriteID: 69cb7fcf9161fb341a98700ae90832ad
+      internalID: -685155028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_1
+      name: GolemSprite_1
       rect:
         serializedVersion: 2
-        x: 2459
-        y: 1260
-        width: 7
-        height: 7
+        x: 366
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d97ccebcb0377030800000000000000
-      internalID: 3492313623262165459
+      spriteID: ecd8bf0453f04944aac546b6d37327ea
+      internalID: 1079011924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_2
+      name: GolemSprite_2
       rect:
         serializedVersion: 2
-        x: 2474
-        y: 1255
-        width: 32
-        height: 12
+        x: 732
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a7f1f5e17cdf09cd0800000000000000
-      internalID: -2553261957069201542
+      spriteID: 32444bb6afd22e34094c1e657db3f226
+      internalID: 1010922402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_3
+      name: GolemSprite_3
       rect:
         serializedVersion: 2
-        x: 293
-        y: 1250
-        width: 7
-        height: 7
+        x: 1098
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cb306c43d751c4580800000000000000
-      internalID: -8841668340934638660
+      spriteID: 7ff7fc62c142ba144b418e69e5ad456c
+      internalID: -2058970291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_4
+      name: GolemSprite_4
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 1145
-        width: 97
-        height: 107
+        x: 1464
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: beb9d594ed2d7b6c0800000000000000
-      internalID: -4127598681306326037
+      spriteID: 9faa35dd58b6f6340b8d5b63d2fb3a20
+      internalID: 1112480125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_5
+      name: GolemSprite_5
       rect:
         serializedVersion: 2
-        x: 1512
-        y: 860
-        width: 302
-        height: 397
+        x: 1830
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f22f89a4e23405c40800000000000000
-      internalID: 5498969011118469679
+      spriteID: d9e0ec6fa94c1b54b995b541e435e7b0
+      internalID: 670904994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_6
+      name: GolemSprite_6
       rect:
         serializedVersion: 2
-        x: 2454
-        y: 1235
-        width: 57
-        height: 17
+        x: 2196
+        y: 856
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 557c07dfbc2f5b900800000000000000
-      internalID: 699732275070289749
+      spriteID: df58add6f6067354a85ea0d95afdac35
+      internalID: -1489361407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_7
+      name: GolemSprite_7
       rect:
         serializedVersion: 2
-        x: 2509
-        y: 1215
-        width: 42
-        height: 37
+        x: 0
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c12c77ddd5dbf380800000000000000
-      internalID: -8936313886806892094
+      spriteID: 9421ecd7a2666d148a334497c99c1fd3
+      internalID: -1462560157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_8
+      name: GolemSprite_8
       rect:
         serializedVersion: 2
-        x: 343
-        y: 1235
-        width: 12
-        height: 12
+        x: 366
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fff189dbe152d2020800000000000000
-      internalID: 2318550197125783551
+      spriteID: adac93e8cf1152646a8db552c6454779
+      internalID: 1753425564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_9
+      name: GolemSprite_9
       rect:
         serializedVersion: 2
-        x: 619
-        y: 1140
-        width: 97
-        height: 102
+        x: 732
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 08f8cd24e333d4120800000000000000
-      internalID: 2399630518961082240
+      spriteID: 86d11d7da84ffc0418a6fecdb2a87fea
+      internalID: -530866380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_10
+      name: GolemSprite_10
       rect:
         serializedVersion: 2
-        x: 714
-        y: 1240
-        width: 7
-        height: 7
+        x: 1098
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1ad3da4f0b321c8e0800000000000000
-      internalID: -1675018343478903391
+      spriteID: 705023917d10bcd4693201bfda18136c
+      internalID: -295298257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_11
+      name: GolemSprite_11
       rect:
         serializedVersion: 2
-        x: 990
-        y: 1145
-        width: 97
-        height: 102
+        x: 1464
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 66748fdac28c306a0800000000000000
-      internalID: -6484118944260536474
+      spriteID: ad6a13e2d4204de48a381587a4fcb4b9
+      internalID: 1817203829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_12
+      name: GolemSprite_12
       rect:
         serializedVersion: 2
-        x: 48
-        y: 860
-        width: 282
-        height: 377
+        x: 1830
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b924725bd25901b90800000000000000
-      internalID: -7273149374658035045
+      spriteID: 751cfa10e69a1f0439b6f935001e02ef
+      internalID: -287451734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_13
+      name: GolemSprite_13
       rect:
         serializedVersion: 2
-        x: 258
-        y: 1140
-        width: 87
-        height: 97
+        x: 2196
+        y: 428
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 71cb862258f8d27f0800000000000000
-      internalID: -635694170418660329
+      spriteID: b2b77ac1c0537e546b8fc7377b0be34a
+      internalID: 1866045322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_14
+      name: GolemSprite_14
       rect:
         serializedVersion: 2
-        x: 414
-        y: 860
-        width: 282
-        height: 377
+        x: 0
+        y: 0
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f39cec8ce6db5e240800000000000000
-      internalID: 4820467259683031359
+      spriteID: da84a969c7b27374ab1abbaf21bf4380
+      internalID: 1738715293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_15
+      name: GolemSprite_15
       rect:
         serializedVersion: 2
-        x: 780
-        y: 860
-        width: 282
-        height: 372
+        x: 366
+        y: 0
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 04e4043c01f93ec10800000000000000
-      internalID: 2081682347119365696
+      spriteID: 4536ebd98718c39489c4c7e72aa8726a
+      internalID: 1202868262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_16
+      name: GolemSprite_16
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 860
-        width: 277
-        height: 377
+        x: 732
+        y: 0
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 76f0266fce6879500800000000000000
-      internalID: 402939043976974183
+      spriteID: b08c6aebeba2f304dab88672c73a2bd7
+      internalID: -836239380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_17
+      name: GolemSprite_17
       rect:
         serializedVersion: 2
-        x: 2234
-        y: 860
-        width: 292
-        height: 377
+        x: 1098
+        y: 0
+        width: 366
+        height: 428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85624a4ed067f0940800000000000000
-      internalID: 5264556291462014552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_18
-      rect:
-        serializedVersion: 2
-        x: 2459
-        y: 1135
-        width: 82
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea690d456623742d0800000000000000
-      internalID: -3294609187307219282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_19
-      rect:
-        serializedVersion: 2
-        x: 1848
-        y: 920
-        width: 42
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fe0441e15b1387260800000000000000
-      internalID: 7095475866885701871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_20
-      rect:
-        serializedVersion: 2
-        x: 2209
-        y: 910
-        width: 47
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4a6dbbb055d091740800000000000000
-      internalID: 5123140710030890660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_21
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 832
-        width: 22
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c250adde316ca390800000000000000
-      internalID: -7805757131505773879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_22
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 837
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 880cf3a5c7ee9c590800000000000000
-      internalID: -7653323873881964408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_23
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 817
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0cd55f0e90ffb9f0800000000000000
-      internalID: -450376876060976113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_24
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 817
-        width: 32
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c9f8f36b07e2d350800000000000000
-      internalID: 6040144086365174212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_25
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 797
-        width: 37
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d4da6784b78e9600800000000000000
-      internalID: 476967819983639763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_26
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 822
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73e6e9f3816212140800000000000000
-      internalID: 4693074172285185591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_27
-      rect:
-        serializedVersion: 2
-        x: 654
-        y: 822
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fea8aa7166c055600800000000000000
-      internalID: 456284569871223535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_28
-      rect:
-        serializedVersion: 2
-        x: 694
-        y: 817
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5f931b92b4257f380800000000000000
-      internalID: -8937584452717954571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_29
-      rect:
-        serializedVersion: 2
-        x: 1025
-        y: 822
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5e6c104eb2e964d0800000000000000
-      internalID: -3140729958366941601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_30
-      rect:
-        serializedVersion: 2
-        x: 2088
-        y: 717
-        width: 97
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b365b4b376604a00800000000000000
-      internalID: 738702986027819954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_31
-      rect:
-        serializedVersion: 2
-        x: 2244
-        y: 432
-        width: 302
-        height: 397
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f008575190652120800000000000000
-      internalID: 2388421354741825782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_32
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 812
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18a222470185030d0800000000000000
-      internalID: -3445156887247312255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_33
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 802
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2937fd83d3856190800000000000000
-      internalID: -7969819020919097046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_34
-      rect:
-        serializedVersion: 2
-        x: 1075
-        y: 807
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d569bc72c3db0ff40800000000000000
-      internalID: 5760311989470205533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_35
-      rect:
-        serializedVersion: 2
-        x: 1351
-        y: 712
-        width: 97
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e488b5c09d3aca80800000000000000
-      internalID: -8445870459178154778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_36
-      rect:
-        serializedVersion: 2
-        x: 1446
-        y: 812
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: faa82e5ea88782840800000000000000
-      internalID: 5199538307756886703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_37
-      rect:
-        serializedVersion: 2
-        x: 1722
-        y: 717
-        width: 97
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70806f145d88b13c0800000000000000
-      internalID: -4387762962426361849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_38
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 432
-        width: 292
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c529af500c2e3680800000000000000
-      internalID: -8773526643954604599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_39
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 432
-        width: 282
-        height: 372
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05efae203801b6520800000000000000
-      internalID: 2696266956787088976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_40
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 707
-        width: 87
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7754d6b839e281b40800000000000000
-      internalID: 5411126163519915383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_41
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 432
-        width: 282
-        height: 377
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a9c9c113f4a11f10800000000000000
-      internalID: 2238751853662292392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_42
-      rect:
-        serializedVersion: 2
-        x: 990
-        y: 712
-        width: 87
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ef5c870c712bdfc0800000000000000
-      internalID: -3469142271372533785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_43
-      rect:
-        serializedVersion: 2
-        x: 1146
-        y: 432
-        width: 282
-        height: 377
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42e0549b9bbace4c0800000000000000
-      internalID: -4256838733606351324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_44
-      rect:
-        serializedVersion: 2
-        x: 1512
-        y: 432
-        width: 282
-        height: 372
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85a63a578bfa514d0800000000000000
-      internalID: -3164429956375418280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_45
-      rect:
-        serializedVersion: 2
-        x: 1883
-        y: 432
-        width: 277
-        height: 377
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6903603c25ee22870800000000000000
-      internalID: 8656743472986206358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_46
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 532
-        width: 17
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cd7ccf86a59ddd80800000000000000
-      internalID: -8224252801899004480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_47
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 552
-        width: 17
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69bbb43d16eb7bed0800000000000000
-      internalID: -2398238949185438826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_48
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 547
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c06d0236d909d9460800000000000000
-      internalID: 7250109980783728140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_49
-      rect:
-        serializedVersion: 2
-        x: 399
-        y: 552
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c15861e5637c6a60800000000000000
-      internalID: 7668631146915713474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_50
-      rect:
-        serializedVersion: 2
-        x: 379
-        y: 537
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9502b75aba4dc74c0800000000000000
-      internalID: -4288318911482748839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_51
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 507
-        width: 7
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d9f8f41ca2921450800000000000000
-      internalID: 6058065716550629848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_52
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 527
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9f0f2cc9a5c59010800000000000000
-      internalID: 1195078609202515867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_53
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 482
-        width: 17
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0aad3ddb9482a5de0800000000000000
-      internalID: -1343717241634170208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_54
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 502
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b0bbeab5c46d52f0800000000000000
-      internalID: -982518343289556816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_55
-      rect:
-        serializedVersion: 2
-        x: 379
-        y: 492
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b774de73eafbe5740800000000000000
-      internalID: 5142758579487197051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_56
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 477
-        width: 17
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7fd9ccb37587a870800000000000000
-      internalID: 8694064337797111677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_57
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 482
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0974c10270fb6730800000000000000
-      internalID: 3993549867040667919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_58
-      rect:
-        serializedVersion: 2
-        x: 399
-        y: 477
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cb94c0f297268440800000000000000
-      internalID: 4937677553516452800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_59
-      rect:
-        serializedVersion: 2
-        x: 629
-        y: 404
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d20f4235bb211e0e0800000000000000
-      internalID: -2242490543690682323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_60
-      rect:
-        serializedVersion: 2
-        x: 644
-        y: 399
-        width: 32
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c5f6304bd114dab0800000000000000
-      internalID: -4984339254219442752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_61
-      rect:
-        serializedVersion: 2
-        x: 1020
-        y: 404
-        width: 22
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae0b658b0a616d170800000000000000
-      internalID: 8202768650845204714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_62
-      rect:
-        serializedVersion: 2
-        x: 1401
-        y: 409
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f36756b33a625010800000000000000
-      internalID: 1176119223032177655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_63
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 4
-        width: 307
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45f3de7836403f260800000000000000
-      internalID: 7130047460586372948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_64
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 379
-        width: 57
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f2bdede0dabe3d60800000000000000
-      internalID: 7871934605197947634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_65
-      rect:
-        serializedVersion: 2
-        x: 679
-        y: 359
-        width: 42
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79bab0d2a74e760f0800000000000000
-      internalID: -1123678368612766825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_66
-      rect:
-        serializedVersion: 2
-        x: 995
-        y: 389
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d4e6a583b5af0470800000000000000
-      internalID: 8363085223510336726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_67
-      rect:
-        serializedVersion: 2
-        x: 1005
-        y: 389
-        width: 32
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b76be8731756eab90800000000000000
-      internalID: -7228728814945257861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_68
-      rect:
-        serializedVersion: 2
-        x: 1050
-        y: 369
-        width: 37
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b25354506f5f00790800000000000000
-      internalID: -7565776936983251669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_69
-      rect:
-        serializedVersion: 2
-        x: 1366
-        y: 394
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4de989bc10c966050800000000000000
-      internalID: 5793489502183399124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_70
-      rect:
-        serializedVersion: 2
-        x: 1386
-        y: 394
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4ecbc7f2e66d95e0800000000000000
-      internalID: -1901250342674510257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_71
-      rect:
-        serializedVersion: 2
-        x: 1426
-        y: 389
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2965eaf57e4dea80800000000000000
-      internalID: -8436000258367592145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_72
-      rect:
-        serializedVersion: 2
-        x: 1040
-        y: 384
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70bdc0c594a0de620800000000000000
-      internalID: 2804909453114923783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_73
-      rect:
-        serializedVersion: 2
-        x: 1436
-        y: 374
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63805a1735e028ef0800000000000000
-      internalID: -107507689551755210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_74
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 4
-        width: 292
-        height: 377
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9dc8f8a56d312d790800000000000000
-      internalID: -7506915817509909287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_75
-      rect:
-        serializedVersion: 2
-        x: 629
-        y: 279
-        width: 82
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edd32bd76a3e2b660800000000000000
-      internalID: 7400227441936055774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_76
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 4
-        width: 292
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c27a451972fb04090800000000000000
-      internalID: -8052225957075572948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_77
-      rect:
-        serializedVersion: 2
-        x: 1146
-        y: 4
-        width: 282
-        height: 372
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d233a0d610d92c90800000000000000
-      internalID: -7193990133339442477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_78
-      rect:
-        serializedVersion: 2
-        x: 1356
-        y: 279
-        width: 87
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b42448faf4393df60800000000000000
-      internalID: 8057946128752329291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_79
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 209
-        width: 22
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ad317aaf2ef4c970800000000000000
-      internalID: 8774417454701034914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_80
-      rect:
-        serializedVersion: 2
-        x: 389
-        y: 214
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e08f49c2b09e77c0800000000000000
-      internalID: -4071657915540340504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_81
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 209
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 194cc219199a37770800000000000000
-      internalID: 8607409755506132113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: golem-ezgif.com-gif-to-sprite-converter_82
-      rect:
-        serializedVersion: 2
-        x: 775
-        y: 149
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6ae8bea8f1f30610800000000000000
-      internalID: 1586377544150084205
+      spriteID: 6e18dabc93b3d5e4eab468f2a5455cd5
+      internalID: 600988955
       vertices: []
       indices: 
       edges: []
@@ -2188,7 +758,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 04e4d9db78270934a9f2f070cfed3705
     internalID: 0
     vertices: []
     indices: 
@@ -2198,89 +768,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      golem-ezgif.com-gif-to-sprite-converter_0: 8321548006446421843
-      golem-ezgif.com-gif-to-sprite-converter_1: 3492313623262165459
-      golem-ezgif.com-gif-to-sprite-converter_10: -1675018343478903391
-      golem-ezgif.com-gif-to-sprite-converter_11: -6484118944260536474
-      golem-ezgif.com-gif-to-sprite-converter_12: -7273149374658035045
-      golem-ezgif.com-gif-to-sprite-converter_13: -635694170418660329
-      golem-ezgif.com-gif-to-sprite-converter_14: 4820467259683031359
-      golem-ezgif.com-gif-to-sprite-converter_15: 2081682347119365696
-      golem-ezgif.com-gif-to-sprite-converter_16: 402939043976974183
-      golem-ezgif.com-gif-to-sprite-converter_17: 5264556291462014552
-      golem-ezgif.com-gif-to-sprite-converter_18: -3294609187307219282
-      golem-ezgif.com-gif-to-sprite-converter_19: 7095475866885701871
-      golem-ezgif.com-gif-to-sprite-converter_2: -2553261957069201542
-      golem-ezgif.com-gif-to-sprite-converter_20: 5123140710030890660
-      golem-ezgif.com-gif-to-sprite-converter_21: -7805757131505773879
-      golem-ezgif.com-gif-to-sprite-converter_22: -7653323873881964408
-      golem-ezgif.com-gif-to-sprite-converter_23: -450376876060976113
-      golem-ezgif.com-gif-to-sprite-converter_24: 6040144086365174212
-      golem-ezgif.com-gif-to-sprite-converter_25: 476967819983639763
-      golem-ezgif.com-gif-to-sprite-converter_26: 4693074172285185591
-      golem-ezgif.com-gif-to-sprite-converter_27: 456284569871223535
-      golem-ezgif.com-gif-to-sprite-converter_28: -8937584452717954571
-      golem-ezgif.com-gif-to-sprite-converter_29: -3140729958366941601
-      golem-ezgif.com-gif-to-sprite-converter_3: -8841668340934638660
-      golem-ezgif.com-gif-to-sprite-converter_30: 738702986027819954
-      golem-ezgif.com-gif-to-sprite-converter_31: 2388421354741825782
-      golem-ezgif.com-gif-to-sprite-converter_32: -3445156887247312255
-      golem-ezgif.com-gif-to-sprite-converter_33: -7969819020919097046
-      golem-ezgif.com-gif-to-sprite-converter_34: 5760311989470205533
-      golem-ezgif.com-gif-to-sprite-converter_35: -8445870459178154778
-      golem-ezgif.com-gif-to-sprite-converter_36: 5199538307756886703
-      golem-ezgif.com-gif-to-sprite-converter_37: -4387762962426361849
-      golem-ezgif.com-gif-to-sprite-converter_38: -8773526643954604599
-      golem-ezgif.com-gif-to-sprite-converter_39: 2696266956787088976
-      golem-ezgif.com-gif-to-sprite-converter_4: -4127598681306326037
-      golem-ezgif.com-gif-to-sprite-converter_40: 5411126163519915383
-      golem-ezgif.com-gif-to-sprite-converter_41: 2238751853662292392
-      golem-ezgif.com-gif-to-sprite-converter_42: -3469142271372533785
-      golem-ezgif.com-gif-to-sprite-converter_43: -4256838733606351324
-      golem-ezgif.com-gif-to-sprite-converter_44: -3164429956375418280
-      golem-ezgif.com-gif-to-sprite-converter_45: 8656743472986206358
-      golem-ezgif.com-gif-to-sprite-converter_46: -8224252801899004480
-      golem-ezgif.com-gif-to-sprite-converter_47: -2398238949185438826
-      golem-ezgif.com-gif-to-sprite-converter_48: 7250109980783728140
-      golem-ezgif.com-gif-to-sprite-converter_49: 7668631146915713474
-      golem-ezgif.com-gif-to-sprite-converter_5: 5498969011118469679
-      golem-ezgif.com-gif-to-sprite-converter_50: -4288318911482748839
-      golem-ezgif.com-gif-to-sprite-converter_51: 6058065716550629848
-      golem-ezgif.com-gif-to-sprite-converter_52: 1195078609202515867
-      golem-ezgif.com-gif-to-sprite-converter_53: -1343717241634170208
-      golem-ezgif.com-gif-to-sprite-converter_54: -982518343289556816
-      golem-ezgif.com-gif-to-sprite-converter_55: 5142758579487197051
-      golem-ezgif.com-gif-to-sprite-converter_56: 8694064337797111677
-      golem-ezgif.com-gif-to-sprite-converter_57: 3993549867040667919
-      golem-ezgif.com-gif-to-sprite-converter_58: 4937677553516452800
-      golem-ezgif.com-gif-to-sprite-converter_59: -2242490543690682323
-      golem-ezgif.com-gif-to-sprite-converter_6: 699732275070289749
-      golem-ezgif.com-gif-to-sprite-converter_60: -4984339254219442752
-      golem-ezgif.com-gif-to-sprite-converter_61: 8202768650845204714
-      golem-ezgif.com-gif-to-sprite-converter_62: 1176119223032177655
-      golem-ezgif.com-gif-to-sprite-converter_63: 7130047460586372948
-      golem-ezgif.com-gif-to-sprite-converter_64: 7871934605197947634
-      golem-ezgif.com-gif-to-sprite-converter_65: -1123678368612766825
-      golem-ezgif.com-gif-to-sprite-converter_66: 8363085223510336726
-      golem-ezgif.com-gif-to-sprite-converter_67: -7228728814945257861
-      golem-ezgif.com-gif-to-sprite-converter_68: -7565776936983251669
-      golem-ezgif.com-gif-to-sprite-converter_69: 5793489502183399124
-      golem-ezgif.com-gif-to-sprite-converter_7: -8936313886806892094
-      golem-ezgif.com-gif-to-sprite-converter_70: -1901250342674510257
-      golem-ezgif.com-gif-to-sprite-converter_71: -8436000258367592145
-      golem-ezgif.com-gif-to-sprite-converter_72: 2804909453114923783
-      golem-ezgif.com-gif-to-sprite-converter_73: -107507689551755210
-      golem-ezgif.com-gif-to-sprite-converter_74: -7506915817509909287
-      golem-ezgif.com-gif-to-sprite-converter_75: 7400227441936055774
-      golem-ezgif.com-gif-to-sprite-converter_76: -8052225957075572948
-      golem-ezgif.com-gif-to-sprite-converter_77: -7193990133339442477
-      golem-ezgif.com-gif-to-sprite-converter_78: 8057946128752329291
-      golem-ezgif.com-gif-to-sprite-converter_79: 8774417454701034914
-      golem-ezgif.com-gif-to-sprite-converter_8: 2318550197125783551
-      golem-ezgif.com-gif-to-sprite-converter_80: -4071657915540340504
-      golem-ezgif.com-gif-to-sprite-converter_81: 8607409755506132113
-      golem-ezgif.com-gif-to-sprite-converter_82: 1586377544150084205
-      golem-ezgif.com-gif-to-sprite-converter_9: 2399630518961082240
+      GolemSprite_0: -685155028
+      GolemSprite_1: 1079011924
+      GolemSprite_10: -295298257
+      GolemSprite_11: 1817203829
+      GolemSprite_12: -287451734
+      GolemSprite_13: 1866045322
+      GolemSprite_14: 1738715293
+      GolemSprite_15: 1202868262
+      GolemSprite_16: -836239380
+      GolemSprite_17: 600988955
+      GolemSprite_2: 1010922402
+      GolemSprite_3: -2058970291
+      GolemSprite_4: 1112480125
+      GolemSprite_5: 670904994
+      GolemSprite_6: -1489361407
+      GolemSprite_7: -1462560157
+      GolemSprite_8: 1753425564
+      GolemSprite_9: -530866380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
