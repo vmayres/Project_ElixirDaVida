@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class AnimationControl : MonoBehaviour
 {
     public float moveSpeed = 5f; // Velocidade de movimento do jogador
     private Vector2 input;
@@ -14,8 +14,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        rb = player.GetComponent<Rigidbody2D>();
+        anim = player.GetComponent<Animator>();
         
     }
 
