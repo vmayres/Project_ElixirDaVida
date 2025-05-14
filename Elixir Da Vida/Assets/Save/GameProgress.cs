@@ -19,6 +19,7 @@ public class GameProgress : MonoBehaviour
     public int heartsCurrent = 3;
     public bool dashes = false;
     public int currentSlot = 1;
+    public int deathCount = 0;
 
     void Awake()
     {
@@ -49,16 +50,11 @@ public class GameProgress : MonoBehaviour
         data.heartsCurrent = heartsCurrent;
         data.dashes = dashes;
         data.saveSlot = currentSlot;
-
-        // data.pocoes = pocoes.ToList();
-        // data.itens = itens.ToList();
-        // data.equipamentos = equipamentos.ToList();
+        data.deathCount = deathCount;
 
         data.pocoes = pocoes.Select(p => new InventoryEntry(p)).ToList();
         data.itens = itens.Select(i => new InventoryEntry(i)).ToList();
         data.equipamentos = equipamentos.Select(e => new InventoryEntry(e)).ToList();
-
-
 
         SaveSystem.SaveGame(data);
         string path = SaveSystem.GetSavePath(data.saveSlot);
@@ -80,6 +76,8 @@ public class GameProgress : MonoBehaviour
             heartsCurrent = data.heartsCurrent;
             dashes = data.dashes;
             currentSlot = slot;
+            deathCount = data.deathCount;
+            
 
             pocoes = data.pocoes;
             itens = data.itens;

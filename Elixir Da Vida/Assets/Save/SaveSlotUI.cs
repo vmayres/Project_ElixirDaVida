@@ -22,6 +22,9 @@ public class SaveSlotUI : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Menu")
             DisplaySaveInfo();
+
+        if(SceneManager.GetActiveScene().name == "TestePause")
+            OnClickSave();
     }
 
     public void DisplaySaveInfo()
@@ -70,9 +73,11 @@ public class SaveSlotUI : MonoBehaviour
                 item.desbloqueada = false;
             }
             
+            GameProgress.Instance.playerPosition = new Vector3(0, 0, 0);
             GameProgress.Instance.heartsMax = 3;
             GameProgress.Instance.heartsCurrent = 3;
             GameProgress.Instance.dashes = false;
+            GameProgress.Instance.deathCount = 0;
             GameProgress.Instance.currentScene = "CutScene"; // ou fase inicial
             Initiate.Fade("CutScene", loadToColor, 0.5f);
         }
@@ -99,24 +104,28 @@ public class SaveSlotUI : MonoBehaviour
 
     public void OnClickSave()
     {
+
         GameProgress.Instance.currentScene = SceneManager.GetActiveScene().name;
         GameProgress.Instance.heartsMax = InventoryControll.Instance.maxHealth;
         GameProgress.Instance.heartsCurrent = InventoryControll.Instance.currentHealth;
         GameProgress.Instance.dashes = InventoryControll.Instance.dashUnlocked;
-        
-        // GameProgress.Instance.pocoes = InventoryControll.Instance.pocoes;
-        // GameProgress.Instance.itens = InventoryControll.Instance.itens;
-        // GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos;
 
         GameProgress.Instance.pocoes = InventoryControll.Instance.pocoes.Select(p => new InventoryEntry(p)).ToList();
         GameProgress.Instance.itens = InventoryControll.Instance.itens.Select(i => new InventoryEntry(i)).ToList();
         GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos.Select(e => new InventoryEntry(e)).ToList();
 
 
-
-        Vector2 posicao = new Vector2(0f, 0f);
-        GameProgress.Instance.playerPosition = posicao;
-
         GameProgress.Instance.Save();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // InventoryControll.Instance.currentHealth = InventoryControll.Instance.maxHealth;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerControl>().Heal(InventoryControll.Instance.maxHealth);
+            OnClickSave();
+        }
     }
 }
