@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     [Header("Movimento")]
     [SerializeField] private float moveSpeed = 5f;
     private Vector2 lastLookDirection = Vector2.down; // padr�o inicial
+    private Vector2 movementInput;
 
     [Header("Dash")]
     [SerializeField] public bool dashEnabled; // S� vira true se tiver com as botas
@@ -74,9 +75,16 @@ public class PlayerControl : MonoBehaviour
 
     // 
     private HeartDisplay heartDisplay;
+
+    [Header("Animação")]
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+
     void Start()
     {
         heartDisplay = FindAnyObjectByType<HeartDisplay>();
+        animator = transform.Find("Sprite").GetComponent<Animator>();
+        spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
 
         maxHealth = InventoryControll.Instance.maxHealth;
         currentHealth = InventoryControll.Instance.currentHealth;
@@ -85,6 +93,7 @@ public class PlayerControl : MonoBehaviour
         heartDisplay.UpdateHearts(currentHealth, maxHealth);
 
         dashEnabled = InventoryControll.Instance.dashUnlocked;
+
     }
 
     //
@@ -121,11 +130,20 @@ public class PlayerControl : MonoBehaviour
             // Atualiza a posi��o com movimento proporcional e corrigido
             transform.position += new Vector3(movementInput.x * moveSpeed * Time.deltaTime, movementInput.y * moveSpeed * Time.deltaTime, 0);
 
+            // Animação de movimento
+            animator.SetFloat("MoveX", movementInput.x);
+            animator.SetFloat("MoveY", movementInput.y);
+            animator.SetFloat("MoveMag", movementInput.magnitude);
+            animator.SetFloat("LastMoveX", lastLookDirection.x);
+            animator.SetFloat("LastMoveY", lastLookDirection.y);
+
             // === DASH ===
             if (dashEnabled && Input.GetButtonDown("Dash") && _canDash)
             {
+                animator.SetTrigger("Dash");
                 StartCoroutine(Dash());
             }
+
         }
     }
 
