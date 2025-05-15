@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Linq;
+using System.Collections.Generic;
 
 
 public class SaveSlotUI : MonoBehaviour
@@ -78,6 +79,10 @@ public class SaveSlotUI : MonoBehaviour
             GameProgress.Instance.heartsCurrent = 3;
             GameProgress.Instance.dashes = false;
             GameProgress.Instance.deathCount = 0;
+
+            GameProgress.Instance.falasJaLidasGolemFora = new HashSet<int>();
+            GameProgress.Instance.falasJaLidasGolemLab = new HashSet<int>();
+
             GameProgress.Instance.currentScene = "CutScene"; // ou fase inicial
             Initiate.Fade("CutScene", loadToColor, 0.5f);
         }
@@ -114,6 +119,8 @@ public class SaveSlotUI : MonoBehaviour
         GameProgress.Instance.itens = InventoryControll.Instance.itens.Select(i => new InventoryEntry(i)).ToList();
         GameProgress.Instance.equipamentos = InventoryControll.Instance.equipamentos.Select(e => new InventoryEntry(e)).ToList();
 
+        GameProgress.Instance.falasJaLidasGolemFora = InventoryControll.Instance.falasJaLidasGolemFora;
+        GameProgress.Instance.falasJaLidasGolemLab = InventoryControll.Instance.falasJaLidasGolemLab;
 
         GameProgress.Instance.Save();
     }

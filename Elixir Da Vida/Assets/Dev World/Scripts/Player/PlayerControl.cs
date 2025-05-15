@@ -15,11 +15,11 @@ public class PlayerControl : MonoBehaviour
 
     [Header("Movimento")]
     [SerializeField] private float moveSpeed = 5f;
-    private Vector2 lastLookDirection = Vector2.down; // padr�o inicial
+    private Vector2 lastLookDirection = Vector2.down; // padr o inicial
     private Vector2 movementInput;
 
     [Header("Dash")]
-    [SerializeField] public bool dashEnabled; // S� vira true se tiver com as botas
+    [SerializeField] public bool dashEnabled; // S  vira true se tiver com as botas
     [SerializeField] private float dashDistance = 3f;
     [SerializeField] private float dashDuration = 0.2f;
     [SerializeField] private float dashCooldown = 1f;
@@ -31,8 +31,8 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float invulnerabilityTimeAfterHit = 1.0f;
     [SerializeField] private bool isInvulnerable = false;
 
-    // Lista das poss�veis po��es (precisa ser p�blica!)
-    [Header("Prefabs das Po��es")]
+    // Lista das poss veis po  es (precisa ser p blica!)
+    [Header("Prefabs das Po  es")]
     [SerializeField] public GameObject firePotionPrefab;
     [SerializeField] public GameObject icePotionPrefab;
     [SerializeField] public GameObject earthPotionPrefab;
@@ -47,7 +47,7 @@ public class PlayerControl : MonoBehaviour
         Null,
     }
 
-    [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Po��o ativa inicial
+    [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Po  o ativa inicial
     public PotionType ActivePotion
     {
         get => _activePotion;
@@ -118,16 +118,16 @@ public class PlayerControl : MonoBehaviour
                 movementInput = movementInput.normalized;
             }
 
-            // Atualiza a dire��o "olhada" com base no input, mas normalizada para dire��o fixa (8 dire��es)
+            // Atualiza a dire  o "olhada" com base no input, mas normalizada para dire  o fixa (8 dire  es)
             if (movementInput != Vector2.zero)
             {
                 lastLookDirection = GetMoveDirection(movementInput);
-                // TODO: Atualizar anima��o do personagem
-                //Debug.Log("Dire��o: " + lastLookDirection);
+                // TODO: Atualizar anima  o do personagem
+                //Debug.Log("Dire  o: " + lastLookDirection);
                 
             }
 
-            // Atualiza a posi��o com movimento proporcional e corrigido
+            // Atualiza a posi  o com movimento proporcional e corrigido
             transform.position += new Vector3(movementInput.x * moveSpeed * Time.deltaTime, movementInput.y * moveSpeed * Time.deltaTime, 0);
 
             // Animação de movimento
@@ -228,7 +228,7 @@ public class PlayerControl : MonoBehaviour
             SpriteRenderer sr = spriteTransform.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
-                sr.color = new Color(0.8f, 0f, 0f, 1f); // vermelho com transpar�ncia
+                sr.color = new Color(0.8f, 0f, 0f, 1f); // vermelho com transpar ncia
                 yield return new WaitForSeconds(invulnerabilityTimeAfterHit);
                 sr.color = Color.white; // volta ao normal
             }
@@ -239,7 +239,7 @@ public class PlayerControl : MonoBehaviour
 
     private Vector2 GetMoveDirection(Vector2 input)
     {
-        return input.normalized; // mant�m dire��o completa, incluindo diagonais
+        return input.normalized; // mant m dire  o completa, incluindo diagonais
     }
 
 

@@ -18,6 +18,9 @@ public class InventoryControll : MonoBehaviour
     public int currentHealth;
     public bool dashUnlocked;
 
+    public HashSet<int> falasJaLidasGolemFora;
+    public HashSet<int> falasJaLidasGolemLab;
+
     private void Awake()
     {
         if (Instance == null)
@@ -29,7 +32,7 @@ public class InventoryControll : MonoBehaviour
         {
             Destroy(gameObject); // Garante que só exista uma instância do singleton
         }
-        
+
     }
 
     public void CarregarDoProgressoSalvo()
@@ -69,12 +72,28 @@ public class InventoryControll : MonoBehaviour
             }
         }
 
-
+        falasJaLidasGolemFora = GameProgress.Instance.falasJaLidasGolemFora;
+        falasJaLidasGolemLab = GameProgress.Instance.falasJaLidasGolemLab;
         maxHealth = GameProgress.Instance.heartsMax;
         currentHealth = GameProgress.Instance.heartsCurrent;
         dashUnlocked = GameProgress.Instance.dashes;
 
         Debug.Log("Inventário carregado do GameProgress.");
+    }
+
+    public bool TemItemDesbloqueado(string id)
+    {
+        return itens.Any(p => p.id == id && p.desbloqueada);
+    }
+
+    public bool TemPocaoDesbloqueada(string id)
+    {
+        return pocoes.Any(p => p.id == id && p.desbloqueada);
+    }
+    
+    public bool TemEquipDesbloqueado(string id)
+    {
+        return equipamentos.Any(p => p.id == id && p.desbloqueada);
     }
 
 }

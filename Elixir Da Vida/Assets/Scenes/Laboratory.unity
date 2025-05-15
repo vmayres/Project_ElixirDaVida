@@ -8222,7 +8222,7 @@ PrefabInstance:
       objectReference: {fileID: 886525853}
     - target: {fileID: 6582459976780991205, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleSettingsSection
+      value: ToggleMainSettings
       objectReference: {fileID: 0}
     - target: {fileID: 7958155311738190786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

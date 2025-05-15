@@ -38,6 +38,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Death.unity
     guid: 013c06b8f56fca74483b06b34434fb71
+  - enabled: 1
+    path: Assets/Scenes/FinalBoss.unity
+    guid: e138f1f24de5a6b499882a703aa1976f
+  - enabled: 1
+    path: Assets/Scenes/MidBoss.unity
+    guid: 7c845be1a19f6d045bf0f0953efc82f6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

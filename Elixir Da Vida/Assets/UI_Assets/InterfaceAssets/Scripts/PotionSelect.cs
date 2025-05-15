@@ -32,6 +32,9 @@ public class PotionSelect : MonoBehaviour
 
     private PlayerControl player;
 
+    public static event System.Action<string> OnPotionChanged;
+
+
     void Start()
     {
         player = FindAnyObjectByType<PlayerControl>();
@@ -104,6 +107,8 @@ public class PotionSelect : MonoBehaviour
             {
                 player.ActivePotion = tipo;
                 Debug.Log("Poção ativa do player agora é: " + tipo);
+
+                OnPotionChanged?.Invoke(potionId);
             }
             else
             {

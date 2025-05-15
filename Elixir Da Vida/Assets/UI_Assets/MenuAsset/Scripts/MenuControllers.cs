@@ -306,6 +306,8 @@ public class MenuControllers : MonoBehaviour
     public void ToggleAreYouSure(){
         inAreYourSure = !inAreYourSure;
         mainPanel.SetActive(!inAreYourSure);
+        settingsPanel.SetActive(false);
+        controlsPanel.SetActive(false);
         quitPanel.SetActive(inAreYourSure);
     }
 }

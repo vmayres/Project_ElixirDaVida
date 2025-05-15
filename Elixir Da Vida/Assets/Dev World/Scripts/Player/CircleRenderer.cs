@@ -6,8 +6,8 @@ public class CircleRenderer : MonoBehaviour
     [SerializeField] private int segments = 64;
     [SerializeField] private float radius = 1f;
 
-    // Prefabs das poções com seus valores
-    [Header("Prefabs das Poções")]
+    // Prefabs das poï¿½ï¿½es com seus valores
+    [Header("Prefabs das Poï¿½ï¿½es")]
     [SerializeField] private GameObject firePotionPrefab;
     [SerializeField] private GameObject icePotionPrefab;
     [SerializeField] private GameObject earthPotionPrefab;
@@ -28,7 +28,7 @@ public class CircleRenderer : MonoBehaviour
         lineRenderer.startColor = Color.white;
         lineRenderer.endColor = Color.white;
 
-        // Sobe até o PlayerControl
+        // Sobe atï¿½ o PlayerControl
         player = GetComponentInParent<PlayerControl>();
     }
 

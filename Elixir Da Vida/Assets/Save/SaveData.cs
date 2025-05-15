@@ -14,7 +14,10 @@ public class SaveData
     public int deathCount;
 
     // Inventário
-    public List<InventoryEntry> pocoes = new List<InventoryEntry>();
-    public List<InventoryEntry> itens = new List<InventoryEntry>();
-    public List<InventoryEntry> equipamentos = new List<InventoryEntry>();
+    public List<InventoryEntry> pocoes;
+    public List<InventoryEntry> itens;
+    public List<InventoryEntry> equipamentos;
+
+    public HashSet<int> falasJaLidasGolemFora;
+    public HashSet<int> falasJaLidasGolemLab;
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
+
 public class GameProgress : MonoBehaviour
 {
     public static GameProgress Instance;
@@ -20,6 +21,8 @@ public class GameProgress : MonoBehaviour
     public bool dashes = false;
     public int currentSlot = 1;
     public int deathCount = 0;
+    public HashSet<int> falasJaLidasGolemFora = new HashSet<int>();
+    public HashSet<int> falasJaLidasGolemLab = new HashSet<int>();
 
     void Awake()
     {
@@ -42,10 +45,10 @@ public class GameProgress : MonoBehaviour
     public void Save()
     {
         SaveData data = new SaveData();
+
         data.currentScene = currentScene;
         data.playTime = playTime;
         data.playerPosition = new float[] { playerPosition.x, playerPosition.y, playerPosition.z };
-        // data.unlockedItems = unlockedItems;
         data.heartsMax = heartsMax;
         data.heartsCurrent = heartsCurrent;
         data.dashes = dashes;
@@ -55,6 +58,9 @@ public class GameProgress : MonoBehaviour
         data.pocoes = pocoes.Select(p => new InventoryEntry(p)).ToList();
         data.itens = itens.Select(i => new InventoryEntry(i)).ToList();
         data.equipamentos = equipamentos.Select(e => new InventoryEntry(e)).ToList();
+
+        data.falasJaLidasGolemFora = falasJaLidasGolemFora;
+        data.falasJaLidasGolemLab = falasJaLidasGolemLab;
 
         SaveSystem.SaveGame(data);
         string path = SaveSystem.GetSavePath(data.saveSlot);
@@ -71,7 +77,6 @@ public class GameProgress : MonoBehaviour
             currentScene = data.currentScene;
             playTime = data.playTime;
             playerPosition = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
-            // unlockedItems = data.unlockedItems;
             heartsMax = data.heartsMax;
             heartsCurrent = data.heartsCurrent;
             dashes = data.dashes;
@@ -82,6 +87,9 @@ public class GameProgress : MonoBehaviour
             pocoes = data.pocoes;
             itens = data.itens;
             equipamentos = data.equipamentos;
+
+            falasJaLidasGolemFora = data.falasJaLidasGolemFora;
+            falasJaLidasGolemLab = data.falasJaLidasGolemLab;
 
             string path = SaveSystem.GetSavePath(slot);
             Debug.Log($"Carregando do slot {slot}, caminho: {path}");
@@ -106,6 +114,5 @@ public class GameProgress : MonoBehaviour
         var item = GetItem(id, categoria);
         return item != null && item.desbloqueada;
     }
-
 
 }

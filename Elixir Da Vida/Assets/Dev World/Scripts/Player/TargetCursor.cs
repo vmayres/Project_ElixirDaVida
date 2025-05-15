@@ -20,20 +20,20 @@ public class TargetCursor : MonoBehaviour
 
         timeSinceLastPotion += Time.deltaTime;
 
-        // Pega posição do mouse e calcula direção
+        // Pega posiï¿½ï¿½o do mouse e calcula direï¿½ï¿½o
         Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0;
 
         Vector3 direction = mouseWorldPos - playerTransform.position;
 
-        // Restringe o alcance ao raio da poção
+        // Restringe o alcance ao raio da poï¿½ï¿½o
         if (direction.magnitude > MaxRange)
             direction = direction.normalized * MaxRange;
 
-        // Atualiza a posição da mira (cursor)
+        // Atualiza a posiï¿½ï¿½o da mira (cursor)
         transform.position = playerTransform.position + direction;
 
-        // Lançar poção
+        // Lanï¿½ar poï¿½ï¿½o
         if (Input.GetButtonDown("Fire1") && timeSinceLastPotion >= potionCooldown)
         {
             PotionBase potion = GetPotionPrefab(player.ActivePotion)?.GetComponent<PotionBase>();
@@ -44,7 +44,7 @@ public class TargetCursor : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("O prefab da poção não contém um script que herda de PotionBase.");
+                Debug.LogWarning("O prefab da poï¿½ï¿½o nï¿½o contï¿½m um script que herda de PotionBase.");
             }
         }
     }

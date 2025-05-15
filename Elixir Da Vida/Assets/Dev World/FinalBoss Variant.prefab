@@ -12,9 +12,29 @@ PrefabInstance:
       propertyPath: enemyHealth
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4544879661412894141, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2965599932687856292, guid: 57de0e79dbb82934aab0cbb552f26702, type: 3}
     - target: {fileID: 6889701163941369111, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
       propertyPath: m_Name
       value: FinalBoss Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965455272538713176, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965455272538713176, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.43225807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965455272538713176, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6451613
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965455272538713176, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7506628978673090846, guid: 22e70ccb57bbbfc4e9b33028e9129d1d, type: 3}
       propertyPath: m_LocalPosition.x
