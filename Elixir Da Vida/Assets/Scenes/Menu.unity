@@ -11474,7 +11474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: equipamentos.Array.data[1].descricao
-      value: Gives extra speed (unlocks dash ability).
+      value: Gives extra speed (unlocks dash ability, press SPACE).
       objectReference: {fileID: 0}
     - target: {fileID: 8970419242174536238, guid: dc661d269ec0dd74eaa0067a02ef7a3a, type: 3}
       propertyPath: equipamentos.Array.data[2].categoria
@@ -11560,6 +11560,10 @@ PrefabInstance:
     - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
       propertyPath: pocoes.Array.data[3].titulo
       value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771249798274857432, guid: 33ce2f81799fe804287678af159bf154, type: 3}
+      propertyPath: equipamentos.Array.data[1].descricao
+      value: Gives extra speed (unlocks dash ability, press SPACE).
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

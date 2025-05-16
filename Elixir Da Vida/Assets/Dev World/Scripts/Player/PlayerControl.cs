@@ -75,6 +75,7 @@ public class PlayerControl : MonoBehaviour
 
     // 
     private HeartDisplay heartDisplay;
+    private DashBar dashControl;
 
     [Header("Animação")]
     public Animator animator;
@@ -93,6 +94,8 @@ public class PlayerControl : MonoBehaviour
         heartDisplay.UpdateHearts(currentHealth, maxHealth);
 
         dashEnabled = InventoryControll.Instance.dashUnlocked;
+        dashControl = FindAnyObjectByType<DashBar>();
+
 
     }
 
@@ -141,6 +144,7 @@ public class PlayerControl : MonoBehaviour
             if (dashEnabled && Input.GetButtonDown("Dash") && _canDash)
             {
                 animator.SetTrigger("Dash");
+                dashControl.TryUseDash();
                 StartCoroutine(Dash());
             }
 

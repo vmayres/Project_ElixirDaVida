@@ -2,16 +2,21 @@ using UnityEngine;
 
 public class GolenController : MonoBehaviour
 {
-    public GameObject pocao;
+    public GameObject TEXT;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Deu trigger e encontrou player");
-            // dialogueController.MostrarFalaDoGolem();
-            pocao.SetActive(true);
+            TEXT.SetActive(true);
         }
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            TEXT.SetActive(false);
+        }
+    }
 }

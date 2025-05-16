@@ -63,6 +63,10 @@ public class DialogueGuideController : MonoBehaviour
 
     public GameObject pocao;
     public GameObject panel;
+    public GameObject zumbi1;
+    public GameObject zumbi2;
+
+    public int falaDeafault;
 
     private void Start()
     {
@@ -132,10 +136,7 @@ public class DialogueGuideController : MonoBehaviour
 
             Debug.Log("Deu trigger e encontrou player");
         // dialogueController.MostrarFalaDoGolem();
-        if (pocao != null)
-        {
-            pocao.SetActive(true);
-        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -222,13 +223,32 @@ public class DialogueGuideController : MonoBehaviour
         
         Debug.Log("falas!");
         // Se tudo foi lido, pode repetir a fala default se quiser
-        falaAtual = 0;
-        MostrarFalaEspecifica(0);
+        falaAtual = falaDeafault;
+        MostrarFalaEspecifica(falaDeafault);
     }
 
 
     public void MostrarFalaEspecifica(int i)
     {
+        if (nomeDoNPC == "GolemFora")
+        {
+            if (i == 5)
+            {
+                pocao.SetActive(true);
+            }
+
+            if (i == 6)
+            {
+                if (zumbi1 != null && zumbi2 != null)
+                {
+                    zumbi1.SetActive(true);
+                    zumbi2.SetActive(true);
+                }
+            }
+        }
+        
+
+
         if (lines == null)
         {
             Debug.LogError("Lines está nulo!");
