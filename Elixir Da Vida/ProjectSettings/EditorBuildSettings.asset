@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestePause.unity
     guid: 080205b61e9c630449860e17a01f5a26
   - enabled: 1
+    path: Assets/Scenes/TestePause.unity
+    guid: 080205b61e9c630449860e17a01f5a26
+  - enabled: 1
     path: Assets/Scenes/Earth Dungeon.unity
     guid: e6b8dc6fdb974b743ab2f770efec64d0
   - enabled: 1
