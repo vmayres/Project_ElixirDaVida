@@ -61,16 +61,22 @@ public class DialogueGuideController : MonoBehaviour
     
     private int falaAtual = -1;
 
+    public GameObject pocao;
+
     private void Start()
     {
-        if (nomeDoNPC == "GolemFora")
-        {
-            falasJaLidas = InventoryControll.Instance.falasJaLidasGolemFora;
-        }
-        else if (nomeDoNPC == "GolemLab")
-        {
-            falasJaLidas = InventoryControll.Instance.falasJaLidasGolemLab;
-        }
+        // if (nomeDoNPC == "GolemFora")
+        // {
+        //     falasJaLidas = InventoryControll.Instance.falasJaLidasGolemFora;
+        // }
+        // else if (nomeDoNPC == "GolemLab")
+        // {
+        //     falasJaLidas = InventoryControll.Instance.falasJaLidasGolemLab;
+        // }
+        // else
+        // {
+        falasJaLidas = new HashSet<int>();
+        // }
 
         condicoesDeFala = new List<CondicaoDeFala>();
 
@@ -122,6 +128,13 @@ public class DialogueGuideController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             podeFalar = true;
+
+            Debug.Log("Deu trigger e encontrou player");
+        // dialogueController.MostrarFalaDoGolem();
+        if (pocao != null)
+        {
+            pocao.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -172,29 +185,39 @@ public class DialogueGuideController : MonoBehaviour
     private void MostrarProximaFala()
     {
         // Primeiro, fala livre não lida
-        foreach (int i in falasLivres)
+        if (falasLivres != null)
         {
-            if (!falasJaLidas.Contains(i))
+            Debug.Log("falas livrtes!");
+            foreach (int i in falasLivres)
             {
+                // if (!falasJaLidas.Contains(i))
+                // {
                 falaAtual = i;
-                falasJaLidas.Add(i);
+                // falasJaLidas.Add(i);
                 MostrarFalaEspecifica(i);
-                return;
+                // return;
+                // }
             }
         }
 
+
         // Depois, fala condicional
-        foreach (var fala in condicoesDeFala)
+        if (condicoesDeFala != null)
         {
-            if (!falasJaLidas.Contains(fala.index) && fala.condicao())
+            Debug.Log("falas coms!");
+            foreach (var fala in condicoesDeFala)
             {
+                // if (!falasJaLidas.Contains(fala.index) && fala.condicao())
+                // {
                 falaAtual = fala.index;
                 falasJaLidas.Add(fala.index);
                 MostrarFalaEspecifica(fala.index);
-                return;
+                //     return;
+                // }
             }
         }
-
+        
+        Debug.Log("falas!");
         // Se tudo foi lido, pode repetir a fala default se quiser
         falaAtual = 0;
         MostrarFalaEspecifica(0);
@@ -203,7 +226,23 @@ public class DialogueGuideController : MonoBehaviour
 
     public void MostrarFalaEspecifica(int i)
     {
-        if (i < 0 || i >= lines.Count) return;
+        if (lines == null)
+        {
+            Debug.LogError("Lines está nulo!");
+            return;
+        }
+
+        if (i < 0 || i >= lines.Count)
+        {
+            Debug.LogWarning($"Índice inválido: {i}, tamanho de lines: {lines.Count}");
+            return;
+        }
+
+        if (textComponent == null)
+        {
+            Debug.LogError("TextComponent está nulo!");
+            return;
+        }
 
         index = i;
         SetSpeakerInfo();

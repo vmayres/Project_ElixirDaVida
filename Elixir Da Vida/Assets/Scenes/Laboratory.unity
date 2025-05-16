@@ -9299,6 +9299,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 598ed5209ea241c4cad023b178297c28, type: 3}
+--- !u!114 &2119464008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8372215077521900999, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+  m_PrefabInstance: {fileID: 1353672853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2119464009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8194906800676722590, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+  m_PrefabInstance: {fileID: 1353672853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2119464010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3365318127542062418, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+  m_PrefabInstance: {fileID: 1353672853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2138652555384256824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9371,6 +9404,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4418641779365316953, guid: 3bf2e5b9a90fdfb43874e984022b7418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2138652555384256826}
+    - targetCorrespondingSourceObject: {fileID: 4418641779365316953, guid: 3bf2e5b9a90fdfb43874e984022b7418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2138652555384256827}
   m_SourcePrefab: {fileID: 100100000, guid: 3bf2e5b9a90fdfb43874e984022b7418, type: 3}
 --- !u!1 &2138652555384256825 stripped
 GameObject:
@@ -9655,6 +9691,38 @@ PolygonCollider2D:
       - {x: 3.6957238, y: 5.7880116}
       - {x: 3.6175072, y: 5.866228}
   m_UseDelaunayMesh: 0
+--- !u!114 &2138652555384256827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138652555384256825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e10472f1ef3f0a49a5cd404584c01b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeDoNPC: GolemLab
+  speakerSprite: {fileID: -1372394201, guid: 8b4b9ba4bd86495499797c9419fab7aa, type: 3}
+  lines:
+  - "Estava esperando voc\xEA chegar."
+  - "N\xE3o se assuste, Vez. Calculei que voc\xEA chegaria aqui neste exato momento. "
+  - "Tamb\xE9m conclu\xED que teria um pequeno problema, como uma praga zumbi."
+  - "Acredite ou n\xE3o, mas ela n\xE3o \xE9 culpa sua. Mas n\xE3o vamos falar disso
+    agora."
+  - "O importante \xE9, existe uma forma de acabar com ela. Voc\xEA precisa criar,
+    uma antiga receita: o Elixir da Vida."
+  - "Vejo que voc\xEA encontrou meu amigo, e ele te deu essa po\xE7\xE3o."
+  textComponent: {fileID: 2119464010}
+  speakerNameText: {fileID: 2119464008}
+  speakerImage: {fileID: 2119464009}
+  timeWrite: 0
+  falasLivres: 0000000001000000020000000300000004000000
+  falasComCondicao:
+  - index: 5
+    tipo: pocao
+    chave: Fire
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

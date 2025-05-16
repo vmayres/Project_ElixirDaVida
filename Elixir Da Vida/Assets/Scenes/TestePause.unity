@@ -12628,13 +12628,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4113830919043323945, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 315006372}
   m_SourcePrefab: {fileID: 100100000, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
 --- !u!4 &315006370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2572520470840641902, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
   m_PrefabInstance: {fileID: 315006369}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &315006371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4113830919043323945, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
+  m_PrefabInstance: {fileID: 315006369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &315006372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315006371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb915b2841b01ec4d95ee225c35d5a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 0}
 --- !u!1 &354577592
 GameObject:
   m_ObjectHideFlags: 0
@@ -70948,13 +70969,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4113830919043323945, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 627117711}
   m_SourcePrefab: {fileID: 100100000, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
 --- !u!4 &627117709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2572520470840641902, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
   m_PrefabInstance: {fileID: 627117708}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &627117710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4113830919043323945, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
+  m_PrefabInstance: {fileID: 627117708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &627117711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627117710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb915b2841b01ec4d95ee225c35d5a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 0}
 --- !u!1 &648321127
 GameObject:
   m_ObjectHideFlags: 0
@@ -106553,6 +106595,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 246934071}
+    - target: {fileID: 8559551913608631417, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -106978,13 +107024,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4113830919043323945, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1498557198}
   m_SourcePrefab: {fileID: 100100000, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
 --- !u!4 &1498557196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2572520470840641902, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
   m_PrefabInstance: {fileID: 1498557195}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1498557197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4113830919043323945, guid: 245939a9ceb9ead4abd4dc6e16765722, type: 3}
+  m_PrefabInstance: {fileID: 1498557195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1498557198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498557197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb915b2841b01ec4d95ee225c35d5a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 0}
 --- !u!1 &1506770999
 GameObject:
   m_ObjectHideFlags: 0
@@ -139966,7 +140033,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GolemOutside
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2331277662293787102, guid: e40559977ee176a4d99911f9a66e4955, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -139994,12 +140062,23 @@ MonoBehaviour:
   nomeDoNPC: GolemFora
   speakerSprite: {fileID: 1783732447, guid: e670b3d8b66c1d847b8a47a2c020f6cb, type: 3}
   lines:
-  - 
-  - 
+  - "Quem est\xE1 a\xED?"
+  - "Ah, \xE9 apenas uma garotinha."
+  - ...
+  - "Voc\xEA \xE9 a aprendiz do antigo mestre, n\xE3o \xE9?"
+  - "Tome cuidado, percebemos que uma praga zumbi est\xE1 se espalhando."
+  - "Pegue isto para se proteger. E se precisar de abrigo, tem um laborat\xF3rio
+    mais \xE0 frente!"
   textComponent: {fileID: 698237209}
   speakerNameText: {fileID: 698237207}
   speakerImage: {fileID: 698237208}
   timeWrite: 0
+  falasLivres: 000000000100000002000000030000000400000005000000
+  falasComCondicao:
+  - index: 5
+    tipo: pocao
+    chave: Fire
+  pocao: {fileID: 1334164648}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
