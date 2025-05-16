@@ -230,7 +230,7 @@ public class DialogueGuideController : MonoBehaviour
 
     public void MostrarFalaEspecifica(int i)
     {
-        if (nomeDoNPC == "GolemFora")
+        if (nomeDoNPC == "Alfonse")
         {
             if (i == 5)
             {

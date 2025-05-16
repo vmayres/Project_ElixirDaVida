@@ -9,17 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Animation Display.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/TestePause.unity
-    guid: 080205b61e9c630449860e17a01f5a26
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: d80f3a4f5de13d34e865f97198de677d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0d2e77e8c054d054f9e30ccfdb59bcec
   - enabled: 1
     path: Assets/Scenes/CutScene.unity
     guid: 2262f831c158f9242bd9b06d4d5eba05
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 0d2e77e8c054d054f9e30ccfdb59bcec
+    path: Assets/Scenes/Death.unity
+    guid: 013c06b8f56fca74483b06b34434fb71
+  - enabled: 1
+    path: Assets/Scenes/TestePause.unity
+    guid: 080205b61e9c630449860e17a01f5a26
   - enabled: 1
     path: Assets/Scenes/Earth Dungeon.unity
     guid: e6b8dc6fdb974b743ab2f770efec64d0
@@ -30,20 +33,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Laboratory.unity
     guid: 4a0fc56a3f69d75458a931a8bfe6a936
   - enabled: 1
+    path: Assets/Scenes/MidBoss.unity
+    guid: 7c845be1a19f6d045bf0f0953efc82f6
+  - enabled: 1
+    path: Assets/Scenes/FinalBoss.unity
+    guid: e138f1f24de5a6b499882a703aa1976f
+  - enabled: 1
     path: Assets/Scenes/FinalVive.unity
     guid: 22d1b6b92a7f0da45a1186aad91696e7
   - enabled: 1
     path: Assets/Scenes/FinalMorre.unity
     guid: 628d7e6ab2845d2438ba6059fe50c751
-  - enabled: 1
-    path: Assets/Scenes/Death.unity
-    guid: 013c06b8f56fca74483b06b34434fb71
-  - enabled: 1
-    path: Assets/Scenes/FinalBoss.unity
-    guid: e138f1f24de5a6b499882a703aa1976f
-  - enabled: 1
-    path: Assets/Scenes/MidBoss.unity
-    guid: 7c845be1a19f6d045bf0f0953efc82f6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
