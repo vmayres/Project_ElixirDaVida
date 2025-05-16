@@ -105655,6 +105655,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1377921638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 60960725089441928, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+  m_PrefabInstance: {fileID: 1435756306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1383929261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106459,6 +106464,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60960725089441928, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495587292641892677, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -106503,6 +106512,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852778}
+    - target: {fileID: 961120280923800474, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1247936667189690656, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -106511,6 +106524,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852779}
+    - target: {fileID: 1617537094408823002, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1974602585033188914, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_LocalScale.x
       value: 150
@@ -106559,6 +106576,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1867852778}
+    - target: {fileID: 4321047641279400531, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4763171305886477313, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -106597,7 +106618,7 @@ PrefabInstance:
       objectReference: {fileID: 246934071}
     - target: {fileID: 8559551913608631417, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -140073,12 +140094,13 @@ MonoBehaviour:
   speakerNameText: {fileID: 698237207}
   speakerImage: {fileID: 698237208}
   timeWrite: 0
-  falasLivres: 000000000100000002000000030000000400000005000000
+  falasLivres: 0000000001000000020000000300000004000000
   falasComCondicao:
   - index: 5
     tipo: pocao
     chave: Fire
   pocao: {fileID: 1334164648}
+  panel: {fileID: 1377921638}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

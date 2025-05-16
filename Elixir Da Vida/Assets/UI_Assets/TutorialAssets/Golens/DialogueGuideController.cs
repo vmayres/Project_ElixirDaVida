@@ -62,6 +62,7 @@ public class DialogueGuideController : MonoBehaviour
     private int falaAtual = -1;
 
     public GameObject pocao;
+    public GameObject panel;
 
     private void Start()
     {
@@ -141,12 +142,14 @@ public class DialogueGuideController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             podeFalar = false;
+            panel.SetActive(false);
     }
 
     private void Update()
     {
         if (podeFalar && Input.GetKeyDown(KeyCode.F))
         {
+            panel.SetActive(true);
             MostrarProximaFala();
         }
     }
@@ -190,13 +193,13 @@ public class DialogueGuideController : MonoBehaviour
             Debug.Log("falas livrtes!");
             foreach (int i in falasLivres)
             {
-                // if (!falasJaLidas.Contains(i))
-                // {
-                falaAtual = i;
-                // falasJaLidas.Add(i);
-                MostrarFalaEspecifica(i);
-                // return;
-                // }
+                if (!falasJaLidas.Contains(i))
+                {
+                    falaAtual = i;
+                    falasJaLidas.Add(i);
+                    MostrarFalaEspecifica(i);
+                    return;
+                }
             }
         }
 
@@ -207,13 +210,13 @@ public class DialogueGuideController : MonoBehaviour
             Debug.Log("falas coms!");
             foreach (var fala in condicoesDeFala)
             {
-                // if (!falasJaLidas.Contains(fala.index) && fala.condicao())
-                // {
-                falaAtual = fala.index;
-                falasJaLidas.Add(fala.index);
-                MostrarFalaEspecifica(fala.index);
-                //     return;
-                // }
+                if (!falasJaLidas.Contains(fala.index) && fala.condicao())
+                {
+                    falaAtual = fala.index;
+                    falasJaLidas.Add(fala.index);
+                    MostrarFalaEspecifica(fala.index);
+                    return;
+                }
             }
         }
         
@@ -247,7 +250,7 @@ public class DialogueGuideController : MonoBehaviour
         index = i;
         SetSpeakerInfo();
         textComponent.text = lines[index];
-        StartCoroutine(TypeLine());
+        // StartCoroutine(TypeLine());
     }
 
 
@@ -275,16 +278,16 @@ public class DialogueGuideController : MonoBehaviour
     //     StartCoroutine(TypeLine());
     // }
 
-    IEnumerator TypeLine()
-    {
-        textComponent.text = "";
+    // IEnumerator TypeLine()
+    // {
+    //     textComponent.text = "";
 
-        foreach (char c in lines[index].ToCharArray())
-        {
-            textComponent.text += c;
-            yield return new WaitForSecondsRealtime(timeWrite);
-        }
-    }
+    //     foreach (char c in lines[index].ToCharArray())
+    //     {
+    //         textComponent.text += c;
+    //         yield return new WaitForSecondsRealtime(timeWrite);
+    //     }
+    // }
 
     // void NextLine()
     // {
