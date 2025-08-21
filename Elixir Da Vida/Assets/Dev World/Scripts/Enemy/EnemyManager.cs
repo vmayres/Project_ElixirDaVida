@@ -30,7 +30,22 @@ public class EnemyManager : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Debug.Log("Inimigo derrotado!");
-            Destroy(gameObject);
+            if (!gameObject.CompareTag("Boss"))
+            {
+                Destroy(gameObject);
+            }
+            else if (gameObject.CompareTag("Boss"))
+            {
+                var killBoss = gameObject.GetComponent<OnkillBoss>();
+                if (killBoss != null)
+                {
+                    killBoss.onKill();
+                }
+                else
+                {
+                    Debug.LogWarning("OnKillBoss component not found on Boss object.");
+                }
+            }
         }
     }
 

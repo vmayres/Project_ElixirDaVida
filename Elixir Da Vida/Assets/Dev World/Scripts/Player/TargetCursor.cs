@@ -8,7 +8,7 @@ public class TargetCursor : MonoBehaviour
     [SerializeField] private CircleRenderer circleRenderer;
     [SerializeField] private Camera mainCamera;
 
-    [SerializeField] private float potionCooldown = 2.0f;
+    [SerializeField] private float potionCooldown = 0.5f;
     private float timeSinceLastPotion = Mathf.Infinity;
 
     private float MaxRange => circleRenderer != null ? circleRenderer.GetRadius() : 1f;

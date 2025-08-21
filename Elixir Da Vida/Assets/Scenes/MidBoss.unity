@@ -527,11 +527,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6650196677506007261, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
   m_PrefabInstance: {fileID: 55181024}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &55181054 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8185980527063426927, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-  m_PrefabInstance: {fileID: 55181024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55181055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7754743308040395618, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
@@ -633,10 +628,6 @@ MonoBehaviour:
   controlsPanel: {fileID: 55181055}
   quitPanel: {fileID: 55181058}
   savesPanel: {fileID: 0}
-  somButton: {fileID: 55181054}
-  somUIImage: {fileID: 0}
-  somLigadoSprite: {fileID: 1445855192857118339, guid: ef2182a23133c1c4996c3104d6bd568a, type: 3}
-  somDesligadoSprite: {fileID: 6041128183007045441, guid: ef2182a23133c1c4996c3104d6bd568a, type: 3}
   inventoryPanel: {fileID: 55181053}
   inventarioTransform: {fileID: 55181028}
   tempoDeTransicao: 0.3
@@ -702,9 +693,9 @@ MonoBehaviour:
   - icone: {fileID: 55181040}
     titulo: {fileID: 55181039}
   itensSprites:
-  - {fileID: 8361751297272463746, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
-  - {fileID: -6614553410548192088, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
-  - {fileID: 2486827473776425114, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
+  - {fileID: 9014865531732418419, guid: f40742f5f9943c64b82822a3e49f8006, type: 3}
+  - {fileID: -2126246720042785711, guid: 2a8c79c36ca57784e8ab7a678925c93b, type: 3}
+  - {fileID: 21300000, guid: 5c9c63c87cf8ce045a5f5f7d90cfae1d, type: 3}
   slotsDosEquipamentos:
   - icone: {fileID: 55181036}
     titulo: {fileID: 55181035}
@@ -1478,7 +1469,7 @@ AudioSource:
   m_GameObject: {fileID: 963045333}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1bfacb3bb26e49341b94b7a4725f040b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6b71201cc25d06648bdb6df4b3e2831d, type: 3}
   m_Resource: {fileID: 8300000, guid: 6b71201cc25d06648bdb6df4b3e2831d, type: 3}
   m_PlayOnAwake: 1

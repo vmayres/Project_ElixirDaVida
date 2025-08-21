@@ -12,6 +12,7 @@ public class PotionSelect : MonoBehaviour
         Ice,
         Earth,
         Lightning,
+        Null
     }
 
     [System.Serializable]

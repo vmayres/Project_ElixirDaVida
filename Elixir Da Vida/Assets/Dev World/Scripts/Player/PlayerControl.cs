@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private string currentRoomName;
 
     [Header("Movimento")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 4f;
     private Vector2 lastLookDirection = Vector2.down; // padr o inicial
     private Vector2 movementInput;
 
@@ -31,8 +31,8 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float invulnerabilityTimeAfterHit = 1.0f;
     [SerializeField] private bool isInvulnerable = false;
 
-    // Lista das poss veis po  es (precisa ser p blica!)
-    [Header("Prefabs das Po  es")]
+    // Lista das poss veis poces (precisa ser publica!)
+    [Header("Prefabs das Poces")]
     [SerializeField] public GameObject firePotionPrefab;
     [SerializeField] public GameObject icePotionPrefab;
     [SerializeField] public GameObject earthPotionPrefab;
@@ -47,7 +47,7 @@ public class PlayerControl : MonoBehaviour
         Null,
     }
 
-    [SerializeField] private PotionType _activePotion = PotionType.Fire;        // Po  o ativa inicial
+    [SerializeField] private PotionType _activePotion;        // Po  o ativa inicial
     public PotionType ActivePotion
     {
         get => _activePotion;

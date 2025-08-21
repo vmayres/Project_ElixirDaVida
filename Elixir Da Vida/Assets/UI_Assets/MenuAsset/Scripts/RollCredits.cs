@@ -18,7 +18,10 @@ public class RollCredits : MonoBehaviour
             creditsContainer.anchoredPosition += Vector2.up * scrollSpeed * Time.deltaTime;
 
             float screenHeight = Screen.height;
-            if (creditsContainer.anchoredPosition.y >= creditsContainer.sizeDelta.y + screenHeight)
+            float contentTopY = creditsContainer.anchoredPosition.y;
+            float contentHeight = creditsContainer.sizeDelta.y;
+
+            if (contentTopY >= contentHeight)
             {
                 creditsFinished = true;
                 timer = 0f;

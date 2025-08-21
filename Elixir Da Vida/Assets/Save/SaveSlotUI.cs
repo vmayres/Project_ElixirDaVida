@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Linq;
 using System.Collections.Generic;
+using System.Collections;
 
 
 public class SaveSlotUI : MonoBehaviour
@@ -17,6 +18,8 @@ public class SaveSlotUI : MonoBehaviour
     // public InventoryDisplay inventoryDisplay;
     // public InventoryControll inventoryController;
     // public DashBar dashBar;
+
+    public GameObject saveIcon;
 
 
     void Start()
@@ -123,6 +126,28 @@ public class SaveSlotUI : MonoBehaviour
         GameProgress.Instance.falasJaLidasGolemLab = InventoryControll.Instance.falasJaLidasGolemLab;
 
         GameProgress.Instance.Save();
+
+        if(saveIcon != null){
+            StartCoroutine(ShowSaveIcon());
+        }
+    }
+
+    IEnumerator ShowSaveIcon()
+    {
+        saveIcon.SetActive(true);
+        float timer = 0;
+        // vector = new Vector3(1.2f, 1.2f, 1.2f);
+        // otherVector = new Vector3(0.2f, 0.2f, 0.2f);
+
+        while (timer < 1f)
+        {
+            // transform.localScale = Vector3.Lerp(transform.localScale, vector, Time.unscaledDeltaTime * 10);
+            saveIcon.transform.Rotate(Vector3.up * 180f * Time.deltaTime);
+            timer += Time.deltaTime;
+            
+            yield return null;
+        }
+        saveIcon.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)

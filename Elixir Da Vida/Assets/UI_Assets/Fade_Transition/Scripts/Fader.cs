@@ -64,13 +64,13 @@ public class Fader : MonoBehaviour
             //waiting to start
             yield return null;
         }
-        lastTime = Time.time;
+        lastTime = Time.unscaledTime;
         float coDelta = lastTime;
         bool hasFadedIn = false;
 
         while (!hasFadedIn)
         {
-            coDelta = Time.time - lastTime;
+            coDelta = Time.unscaledTime - lastTime;
             if (!isFadeIn)
             {
                 //Fade in
@@ -93,12 +93,14 @@ public class Fader : MonoBehaviour
 
 
             }
-            lastTime = Time.time;
+            lastTime = Time.unscaledTime;
             myCanvas.alpha = alpha;
             yield return null;
         }
-
+        
+        Time.timeScale = 1;
         Initiate.DoneFading();
+        
 
         Debug.Log("Your scene has been loaded , and fading in has just ended");
 

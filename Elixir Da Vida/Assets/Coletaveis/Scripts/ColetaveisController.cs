@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+    using System.Collections;
 
 public class ColetaveisController : MonoBehaviour
 {
@@ -50,7 +50,7 @@ public class ColetaveisController : MonoBehaviour
             transform.position += Vector3.up * collectRiseSpeed * Time.deltaTime;
             transform.Rotate(Vector3.up * collectRotationSpeed * Time.deltaTime);
             timer += Time.deltaTime;
-            yield return null;
+            yield return null;  
         }
 
         Destroy(gameObject);

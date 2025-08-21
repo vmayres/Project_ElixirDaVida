@@ -18,12 +18,12 @@ public class MenuControllers : MonoBehaviour
     private bool inAreYourSure = false;
     private bool inSavePage = false;
 
-    [Header("Controle de Som")]
-    public SpriteRenderer somButton;
-    public Image somUIImage;
-    public Sprite somLigadoSprite;
-    public Sprite somDesligadoSprite;
-    private bool somLigado = true;    
+    // [Header("Controle de Som")]
+    // public SpriteRenderer somButton;
+    // public Image somUIImage;
+    // public Sprite somLigadoSprite;
+    // public Sprite somDesligadoSprite;
+    // private bool somLigado = true;    
 
     [Header("Paineis de Inventario")]
     public GameObject inventoryPanel;
@@ -50,7 +50,7 @@ public class MenuControllers : MonoBehaviour
     void Start()
     {
         // somLigado = PlayerPrefs.GetInt("SomLigado", 1) == 1;
-        AtualizarSom();
+        // AtualizarSom();
 
         if (inventarioTransform != null)
         {
@@ -107,32 +107,32 @@ public class MenuControllers : MonoBehaviour
         }
     }
 
-    public void ToggleSound()
-    {
-        somLigado = !somLigado;
-        PlayerPrefs.SetInt("SomLigado", somLigado ? 1 : 0);
-        PlayerPrefs.Save();
-        AtualizarSom();
-    }
+    // public void ToggleSound()
+    // {
+    //     somLigado = !somLigado;
+    //     PlayerPrefs.SetInt("SomLigado", somLigado ? 1 : 0);
+    //     PlayerPrefs.Save();
+    //     AtualizarSom();
+    // }
 
-    void AtualizarSom()
-    {
-        AudioListener.volume = somLigado ? 1f : 0f;
-        Sprite spriteAtual = somLigado ? somLigadoSprite : somDesligadoSprite;
+    // void AtualizarSom()
+    // {
+    //     AudioListener.volume = somLigado ? 1f : 0f;
+    //     Sprite spriteAtual = somLigado ? somLigadoSprite : somDesligadoSprite;
 
-        if (somUIImage != null)
-        {
-            somUIImage.sprite = spriteAtual;
-        }
-        else if (somButton != null)
-        {
-            somButton.sprite = spriteAtual;
-        }
-    }
+    //     if (somUIImage != null)
+    //     {
+    //         somUIImage.sprite = spriteAtual;
+    //     }
+    //     else if (somButton != null)
+    //     {
+    //         somButton.sprite = spriteAtual;
+    //     }
+    // }
 
     public void ChangeSceneFade(string sceneName)
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         Initiate.Fade(sceneName, loadToColor, 0.5f);
     }
     public void ChangeScene(string sceneName)

@@ -8,15 +8,15 @@ public class LightningPotion : PotionBase
 
     public override IEnumerator LaunchPotion(Vector3 targetPosition, Vector3 spawnPosition)
     {
-        Debug.Log("[LIGHTNING] Poção de raio lançada em: " + targetPosition);
+        Debug.Log("[LIGHTNING] Poï¿½ï¿½o de raio lanï¿½ada em: " + targetPosition);
 
         // Chama o comportamento base
         yield return base.LaunchPotion(targetPosition, spawnPosition);
 
-        // Cria o efeito visual inicial no ponto da explosão
+        // Cria o efeito visual inicial no ponto da explosï¿½o
         CreateAoECircle(targetPosition, effectRadius, Color.yellow);
 
-        // Inicia a propagação do raio
+        // Inicia a propagaï¿½ï¿½o do raio
         var hitEnemies = new HashSet<Collider2D>();
         yield return ApplyLightningEffect(targetPosition, 3, effectRadius, hitEnemies);
     }
@@ -29,7 +29,7 @@ public class LightningPotion : PotionBase
 
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Enemy") && !hitEnemies.Contains(hit))
+            if ((hit.CompareTag("Enemy")||hit.CompareTag("Boss")) && !hitEnemies.Contains(hit))
             {
                 currentTarget = hit;
                 hitEnemies.Add(hit);
@@ -39,7 +39,7 @@ public class LightningPotion : PotionBase
 
         if (currentTarget == null)
         {
-            Debug.Log("Nenhum inimigo válido encontrado.");
+            Debug.Log("Nenhum inimigo vï¿½lido encontrado.");
             yield break;
         }
 
@@ -53,12 +53,12 @@ public class LightningPotion : PotionBase
         }
         else
         {
-            Debug.LogWarning($"Objeto com tag 'Enemy' não possui o componente 'EnemyManager': {currentTarget.name}");
+            Debug.LogWarning($"Objeto com tag 'Enemy' nï¿½o possui o componente 'EnemyManager': {currentTarget.name}");
         }
 
         yield return new WaitForSeconds(0.2f);
 
-        // Busca o próximo inimigo mais próximo
+        // Busca o prï¿½ximo inimigo mais prï¿½ximo
         Collider2D[] allHits = Physics2D.OverlapCircleAll(targetPos, range); // busca com range total
         Collider2D nextTarget = null;
         float closestDist = float.MaxValue;
@@ -76,7 +76,7 @@ public class LightningPotion : PotionBase
             }
         }
 
-        // Encadeia o próximo raio
+        // Encadeia o prï¿½ximo raio
         if (chainCount > 1 && nextTarget != null)
         {
             // Cria a linha entre os dois inimigos
@@ -99,7 +99,7 @@ public class LightningPotion : PotionBase
         line.startColor = color;
         line.endColor = color;
 
-        // Opcional: pequeno "ziguezague" pode ser adicionado para parecer mais elétrico
+        // Opcional: pequeno "ziguezague" pode ser adicionado para parecer mais elï¿½trico
 
         GameObject.Destroy(lineGO, aoeDuration);
     }

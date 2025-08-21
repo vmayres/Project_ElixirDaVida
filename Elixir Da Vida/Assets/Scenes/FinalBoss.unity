@@ -516,7 +516,7 @@ AudioSource:
   m_GameObject: {fileID: 175238838}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1bfacb3bb26e49341b94b7a4725f040b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6b71201cc25d06648bdb6df4b3e2831d, type: 3}
   m_Resource: {fileID: 8300000, guid: 6b71201cc25d06648bdb6df4b3e2831d, type: 3}
   m_PlayOnAwake: 1
@@ -10376,6 +10376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalBoss Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5162049816874424909, guid: 2f5fe3d847961cd4db905b748e75dbdc, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 8075672152638950980, guid: 2f5fe3d847961cd4db905b748e75dbdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07669891
@@ -10503,7 +10507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &524870764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10612,6 +10616,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560169316520788786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560169316520788786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560169316520788786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 607393689174622171, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10632,13 +10648,13 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1622594609}
-    - target: {fileID: 2725023115491216743, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 3238240837731565688, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375861678728301644, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3488047716651448059, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10668,9 +10684,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 749616392}
-    - target: {fileID: 6582459976780991205, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleMainSettings
+    - target: {fileID: 7806896931862939276, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806896931862939276, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7958155311738190786, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10680,10 +10700,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1622594609}
-    - target: {fileID: 8166201440287523479, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10972,11 +10988,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6650196677506007261, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
   m_PrefabInstance: {fileID: 649615534}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &649615564 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8185980527063426927, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
-  m_PrefabInstance: {fileID: 649615534}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649615565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7754743308040395618, guid: 26c265a61fe3416419a0e869d3e46ed0, type: 3}
@@ -11078,10 +11089,6 @@ MonoBehaviour:
   controlsPanel: {fileID: 649615565}
   quitPanel: {fileID: 649615568}
   savesPanel: {fileID: 0}
-  somButton: {fileID: 649615564}
-  somUIImage: {fileID: 0}
-  somLigadoSprite: {fileID: 1445855192857118339, guid: ef2182a23133c1c4996c3104d6bd568a, type: 3}
-  somDesligadoSprite: {fileID: 6041128183007045441, guid: ef2182a23133c1c4996c3104d6bd568a, type: 3}
   inventoryPanel: {fileID: 649615563}
   inventarioTransform: {fileID: 649615538}
   tempoDeTransicao: 0.3
@@ -11147,9 +11154,9 @@ MonoBehaviour:
   - icone: {fileID: 649615550}
     titulo: {fileID: 649615549}
   itensSprites:
-  - {fileID: 8361751297272463746, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
-  - {fileID: -6614553410548192088, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
-  - {fileID: 2486827473776425114, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
+  - {fileID: 9014865531732418419, guid: f40742f5f9943c64b82822a3e49f8006, type: 3}
+  - {fileID: -2126246720042785711, guid: 2a8c79c36ca57784e8ab7a678925c93b, type: 3}
+  - {fileID: 21300000, guid: 5c9c63c87cf8ce045a5f5f7d90cfae1d, type: 3}
   slotsDosEquipamentos:
   - icone: {fileID: 649615546}
     titulo: {fileID: 649615545}

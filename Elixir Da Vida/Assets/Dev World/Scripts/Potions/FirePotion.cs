@@ -42,7 +42,7 @@ public class FirePotion : PotionBase
             Collider2D[] hits = Physics2D.OverlapCircleAll(targetPosition, effectRadius);
             foreach (var hit in hits)
             {
-                if (hit.CompareTag("Enemy") && !hitEnemies.Contains(hit))
+                if ((hit.CompareTag("Enemy")||hit.CompareTag("Boss")) && !hitEnemies.Contains(hit))
                 {
                     hitEnemies.Add(hit);
                     Debug.Log($"Inimigo atingido: {hit.name}");

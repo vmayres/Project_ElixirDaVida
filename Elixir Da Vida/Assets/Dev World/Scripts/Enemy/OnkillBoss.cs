@@ -9,12 +9,12 @@ public class OnkillBoss : MonoBehaviour
     [Header("Objeto a ser ativado ao morrer (opcional)")]
     [SerializeField] private GameObject objectToActivate;
 
-    [Header("Estado da ação (true = abrir portas, false = fechar)")]
+    [Header("Estado da aï¿½ï¿½o (true = abrir portas, false = fechar)")]
     [SerializeField] private bool isPressed = true;
 
     private bool alreadyTriggered = false;
 
-    private void OnDestroy()
+    public void onKill()
     {
         if (alreadyTriggered) return;
         alreadyTriggered = true;
@@ -36,5 +36,21 @@ public class OnkillBoss : MonoBehaviour
                     roomComponent.CloseDoor(doorObj);
             }
         }
+
+        if (TryGetComponent<EnemyManager>(out var enemyManager))
+            enemyManager.enabled = false;
+
+        if (TryGetComponent<EnemyAI>(out var enemyAI))
+            enemyAI.enabled = false;
+
+        // foreach (var col in GetComponents<Collider2D>())
+        //     col.enabled = false;
+
+        if (TryGetComponent<Rigidbody2D>(out var rb))
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.isKinematic = true;
+        }
+
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - botao
   - rock
+  - Boss
   layers:
   - Default
   - TransparentFX

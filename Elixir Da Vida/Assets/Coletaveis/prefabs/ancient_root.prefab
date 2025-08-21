@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7243002580213426202}
   - component: {fileID: 431357556759152385}
-  - component: {fileID: 5984934604496595731}
   - component: {fileID: 6235039421542956495}
   - component: {fileID: 2064536414020434586}
+  - component: {fileID: 6526279567154058756}
   m_Layer: 0
   m_Name: ancient_root
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.94031715, y: -3.104677, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 2486827473776425114, guid: 0557992b4ae74de48bbd81993b23c66b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c9c63c87cf8ce045a5f5f7d90cfae1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,7 +90,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5984934604496595731
+--- !u!114 &6235039421542956495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835887163202206174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42197fc3f80c841458a8c45941846975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatAmplitude: 0.25
+  floatSpeed: 2
+  collectRiseSpeed: 2
+  collectRotationSpeed: 180
+  effect: {fileID: 2064536414020434586}
+--- !u!114 &2064536414020434586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835887163202206174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371f83f06e8c2bd44a71a6ea7e0f5e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: root
+  categoria: 1
+  inventoryDisplay: {fileID: 0}
+--- !u!60 &6526279567154058756
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +160,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.18}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.18, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -136,44 +168,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.089999996}
-      - {x: -0.089999996, y: 0}
-      - {x: -0.089999996, y: -0.06}
-      - {x: -0.06, y: -0.089999996}
-      - {x: 0, y: -0.089999996}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.089999996, y: 0.06}
-      - {x: 0.06, y: 0.089999996}
+    - - {x: -0.040457666, y: 0.29108644}
+      - {x: -0.072913885, y: 0.3727877}
+      - {x: -0.41886508, y: 0.3087535}
+      - {x: -0.3554635, y: -0.045361757}
+      - {x: -0.45940793, y: -0.12533426}
+      - {x: -0.46584666, y: -0.41180563}
+      - {x: -0.21621466, y: -0.4152286}
+      - {x: -0.25079954, y: -0.5173857}
+      - {x: 0.21602774, y: -0.5405679}
+      - {x: 0.28907526, y: -0.33319855}
+      - {x: 0.22046399, y: -0.22956347}
+      - {x: 0.46343142, y: -0.23751974}
+      - {x: 0.4942615, y: -0.06785202}
+      - {x: 0.2913672, y: 0.30420685}
+      - {x: 0.1585232, y: 0.4188652}
   m_UseDelaunayMesh: 0
---- !u!114 &6235039421542956495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5835887163202206174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42197fc3f80c841458a8c45941846975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatAmplitude: 0.25
-  floatSpeed: 2
-  collectRiseSpeed: 2
-  collectRotationSpeed: 180
-  effect: {fileID: 2064536414020434586}
---- !u!114 &2064536414020434586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5835887163202206174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371f83f06e8c2bd44a71a6ea7e0f5e81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: root
-  categoria: 1
-  inventoryDisplay: {fileID: 0}

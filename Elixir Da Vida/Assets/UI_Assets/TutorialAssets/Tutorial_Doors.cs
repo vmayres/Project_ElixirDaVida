@@ -11,7 +11,7 @@ public class Tutorial_Doors : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if(SceneManager.GetActiveScene().name == "TestePause")
-                GameProgress.Instance.playerPosition = other.transform.position;
+                GameProgress.Instance.playerPosition = other.transform.position + new Vector3(0, -1f, 0);
             
             menuControllers.ChangeSceneFade(dungeon);
         }

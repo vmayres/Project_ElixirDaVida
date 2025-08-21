@@ -138,6 +138,7 @@ MonoBehaviour:
   range: 2
   effectRadius: 1.5
   bombPrefab: {fileID: 4697397011196275831, guid: 88d74bd25a03d7c46b7fb4996709aff7, type: 3}
+  lineMaterial: {fileID: 2100000, guid: 6037a66151fe5f649928ecf954a3d9a9, type: 2}
 --- !u!120 &5257037821485714771
 LineRenderer:
   serializedVersion: 2

@@ -32,7 +32,8 @@ public static class Initiate
         
     }
 
-    public static void DoneFading() {
+    public static void DoneFading()
+    {
         areWeFading = false;
     }
 }

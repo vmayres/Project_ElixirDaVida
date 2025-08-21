@@ -5,19 +5,21 @@ using UnityEngine;
 public class EarthPotion : PotionBase
 {
     [SerializeField] private GameObject bombPrefab; // Prefab da bomba a ser instanciada
+    [SerializeField] private Material lineMaterial; // Material para o cÃ­rculo visual
     private float aoeDuration = 3.0f;
 
     public override IEnumerator LaunchPotion(Vector3 targetPosition, Vector3 spawnPosition)
     {
-        Debug.Log("[EARTH] Poção de terremoto lançada em: " + targetPosition);
+        Debug.Log("[EARTH] Poï¿½ï¿½o de terremoto lanï¿½ada em: " + targetPosition);
 
         // Chama o comportamento base
         yield return base.LaunchPotion(targetPosition, spawnPosition);
+        
 
         // Instancia o prefab da bomba no local do impacto
         GameObject bomb = Instantiate(bombPrefab, targetPosition, Quaternion.identity);
 
-        // === VISUAL: cria círculo de efeito ao redor usando LineRenderer ===
+        // === VISUAL: cria cï¿½rculo de efeito ao redor usando LineRenderer ===
         GameObject aoeVisual = new GameObject("AoEVisual");
         aoeVisual.transform.position = targetPosition;
 
@@ -25,8 +27,8 @@ public class EarthPotion : PotionBase
         lineRenderer.loop = true;
         lineRenderer.useWorldSpace = false;
         lineRenderer.widthMultiplier = 0.02f;
-        lineRenderer.positionCount = 64; // Número de segmentos do círculo
-        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.positionCount = 64; // Nï¿½mero de segmentos do cï¿½rculo
+        lineRenderer.material = lineMaterial; //new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = Color.white;
         lineRenderer.endColor = Color.white;
 
@@ -37,12 +39,12 @@ public class EarthPotion : PotionBase
             lineRenderer.SetPosition(i, new Vector3(Mathf.Cos(angle) * radius, Mathf.Sin(angle) * radius, 0f));
         }
 
-        // === LÓGICA: transição de cor do círculo ===
+        // === Lï¿½GICA: transiï¿½ï¿½o de cor do cï¿½rculo ===
         float elapsed = 0f;
         while (elapsed < aoeDuration)
         {
             float t = elapsed / aoeDuration; // Progresso de 0 a 1
-            Color currentColor = Color.Lerp(Color.white, Color.red, t); // Transição de branco para vermelho
+            Color currentColor = Color.Lerp(Color.white, Color.red, t); // Transiï¿½ï¿½o de branco para vermelho
             lineRenderer.startColor = currentColor;
             lineRenderer.endColor = currentColor;
 
@@ -50,12 +52,12 @@ public class EarthPotion : PotionBase
             yield return null;
         }
 
-        // === LÓGICA: detectar inimigos na área (2D) ===
+        // === Lï¿½GICA: detectar inimigos na ï¿½rea (2D) ===
         HashSet<Collider2D> hitEnemies = new HashSet<Collider2D>();
         Collider2D[] hits = Physics2D.OverlapCircleAll(targetPosition, effectRadius);
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Enemy") && !hitEnemies.Contains(hit))
+            if ((hit.CompareTag("Enemy")||hit.CompareTag("Boss")) && !hitEnemies.Contains(hit))
             {
                 hitEnemies.Add(hit);
                 Debug.Log($"Inimigo atingido: {hit.name}");
@@ -64,7 +66,7 @@ public class EarthPotion : PotionBase
                 if (enemyManager != null)
                 {
                     enemyManager.TakeDamage(this.damage);
-                    Destroy(gameObject); // Destroi a bomba após atingir
+                    // Destroy(gameObject); // Destroi a bomba apï¿½s atingir
                     break;
                 }
             }
@@ -75,7 +77,7 @@ public class EarthPotion : PotionBase
                 var playerControl = hit.GetComponent<PlayerControl>();
                 if (playerControl != null)
                 {
-                    Destroy(gameObject); // Destroi a bomba após atingir
+                    // Destroy(gameObject); // Destroi a bomba apï¿½s atingir
                     playerControl.TakeDamage(this.damage);
                     break;
                 }
@@ -88,7 +90,7 @@ public class EarthPotion : PotionBase
                 if (rockManager != null)
                 {
                     rockManager.DestroyRockAndActivateObject();
-                    Destroy(gameObject); // Destroi a bomba após atingir
+                    // Destroy(gameObject); // Destroi a bomba apï¿½s atingir
                     break;
                 }
             }
@@ -96,10 +98,10 @@ public class EarthPotion : PotionBase
 
 
 
-        // Remove o círculo visual e a bomba
+        // Remove o cï¿½rculo visual e a bomba
         Destroy(aoeVisual);
         Destroy(bomb);
 
-        Debug.Log("[EARTH] Explosão concluída e dano aplicado.");
+        Debug.Log("[EARTH] Explosï¿½o concluï¿½da e dano aplicado.");
     }
 }
